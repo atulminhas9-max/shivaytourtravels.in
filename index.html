@@ -2,403 +2,136 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Shivay Tour & Travels | Himachal Cab & Taxi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivay Tour & Travels | Himachal Cab & Tours</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f3f8fc;
-color:#12345a;
-line-height:1.5
-}
-a{text-decoration:none;color:inherit}
-header{
-background:#fff;
-position:sticky;
-top:0;
-z-index:100;
-box-shadow:0 3px 18px #12345a22
-}
-.nav{
-max-width:1200px;
-margin:auto;
-padding:8px 18px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:15px
-}
-.logo{
-width:105px;
-height:105px;
-object-fit:contain
-}
-nav{
-display:flex;
-align-items:center;
-gap:8px;
-flex-wrap:wrap
-}
-nav a{
-font-weight:800;
-padding:10px 13px;
-color:#12345a
-}
-nav a:hover{color:#0863bd}
-.wa-nav{
-background:#0863bd;
-color:white!important;
-border-radius:30px;
-padding:13px 20px
-}
+body{font-family:Arial,sans-serif;color:#222;background:#fff;line-height:1.6}
+header{position:sticky;top:0;z-index:99;background:#fff;box-shadow:0 2px 12px #0002}
+.nav{max-width:1150px;margin:auto;padding:10px 20px;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:64px;height:64px;object-fit:contain}
+.logo{font-size:23px;font-weight:800;color:#0b4ea2}
+.logo span{color:#f08c00}
+nav a{margin-left:18px;text-decoration:none;color:#0b3d73;font-weight:700}
 
 .hero{
-min-height:650px;
-display:flex;
-align-items:flex-end;
-justify-content:center;
-text-align:center;
-padding:30px 18px 35px;
-background:
-linear-gradient(90deg,#ffffffdd,#ffffff22),
-url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=90")
-center/cover no-repeat
+min-height:590px;display:flex;align-items:center;justify-content:center;
+text-align:center;color:#fff;padding:70px 20px;
+background:linear-gradient(90deg,rgba(5,48,110,.88),rgba(9,91,170,.55),rgba(245,140,0,.12)),
+url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85") center/cover
 }
-.hero-box{
-width:100%;
-max-width:1100px;
-text-align:left;
-padding:40px
-}
-.hero h1{
-font-size:75px;
-line-height:1;
-color:#073d78
-}
-.hero h1 span{color:#f59d00}
-.hero p{
-font-size:25px;
-font-weight:700;
-margin-top:18px;
-color:#073d78
-}
-.tagline{
-font-size:25px!important;
-font-style:italic;
-margin-top:25px!important
-}
-.hero-wa{
-display:block;
-width:max-content;
-margin:25px auto 0;
-background:#0863bd;
-color:#fff;
-padding:15px 35px;
-border-radius:50px;
-font-size:21px;
-font-weight:900;
-box-shadow:0 8px 25px #12345a55
-}
+.hero h1{font-size:50px;margin-bottom:12px}
+.hero p{font-size:20px;max-width:720px;margin:auto auto 25px}
 
-.features{
-max-width:1100px;
-margin:-5px auto 0;
-background:#ffffffee;
-border-radius:20px;
-padding:18px;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
-box-shadow:0 5px 25px #12345a22;
-position:relative
+.btn{
+display:inline-block;padding:13px 23px;border-radius:28px;background:#f08c00;
+color:#fff;text-decoration:none;font-weight:bold;margin:5px;border:0;cursor:pointer
 }
-.feature{
-text-align:center;
-font-weight:800;
-padding:8px;
-border-right:1px solid #f59d00
-}
-.feature:last-child{border:0}
+.green{background:#0b4ea2}
+.wa{background:#25D366}
+.wa-logo{width:22px;height:22px;vertical-align:-5px;margin-right:7px;color:#fff}
+.wa-btn{display:inline-flex;align-items:center;justify-content:center}
 
-section{padding:55px 18px}
-.container{max-width:1100px;margin:auto}
+section{padding:60px 20px}
+.container{max-width:1150px;margin:auto}
+.title{text-align:center;margin-bottom:35px}
+.title h2{font-size:35px;color:#0b4ea2}
+.title p{color:#666}
 
-.search-box{
-background:white;
-border-radius:25px;
-padding:30px;
-box-shadow:0 10px 35px #12345a22
+.search-box,.booking-box{
+background:#fff;padding:28px;border-radius:18px;
+box-shadow:0 8px 30px rgba(11,78,162,.16);
+margin-top:-70px;position:relative;border-top:4px solid #f08c00
 }
-.search-title{
-font-size:34px;
-font-weight:900;
-color:#073d78;
-margin-bottom:8px
-}
-.subtitle{color:#718096;margin-bottom:25px}
+.search-box h2,.booking-box h2{text-align:center;color:#0b4ea2;margin-bottom:20px}
 
-.form-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px
-}
-.field label{
-display:block;
-font-weight:800;
-margin-bottom:7px;
-font-size:17px
-}
+.form-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+label{font-weight:bold;font-size:14px}
 input,select{
-width:100%;
-padding:15px;
-border:1px solid #cbd8e5;
-border-radius:12px;
-font-size:17px;
-background:white
+width:100%;padding:13px;margin-top:5px;border:1px solid #ccc;
+border-radius:8px;font-size:15px
 }
-
 .search-btn{
-width:100%;
-border:0;
-margin-top:20px;
-padding:16px;
-border-radius:35px;
-background:#0863bd;
-color:#fff;
-font-size:20px;
-font-weight:900
+width:100%;padding:13px;border:0;border-radius:8px;
+background:#0b4ea2;color:#fff;font-size:16px;font-weight:bold;
+cursor:pointer;margin-top:21px
 }
+#result,#bookingResult{margin-top:20px;text-align:center;font-weight:bold}
 
-.location{
-margin-top:15px
-}
-.location button{
-border:0;
-background:#eef6ff;
-color:#0758a5;
-padding:12px 18px;
-border-radius:25px;
-font-weight:800
-}
-.status{
-font-size:14px;
-color:#65758b;
-margin-left:8px
-}
-
-.result{
-margin-top:20px;
-background:#f5faff;
-border:1px solid #d8e8f5;
-border-radius:18px;
-padding:20px
-}
-.result h3{color:#0758a5;margin-bottom:12px}
-.result p{margin:7px 0}
-
-.wa-btn{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-background:#25d366;
-color:#fff;
-padding:15px;
-border-radius:12px;
-font-weight:900;
-margin-top:16px
-}
-.wa-icon{width:27px;height:27px}
-
-.title{
-text-align:center;
-margin-bottom:30px
-}
-.title h2{
-font-size:34px;
-color:#073d78
-}
-.title p{color:#718096}
-
-.fares{
-background:#edf6ff
-}
-.fare-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
-}
-.fare{
-background:white;
-border-radius:18px;
-padding:25px;
-text-align:center;
-box-shadow:0 5px 20px #12345a18
-}
-.fare h3{color:#0758a5}
-.price{
-font-size:28px;
-font-weight:900;
-color:#f59d00;
-margin:10px 0
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px
-}
+.routes{background:#f4f8ff}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .card{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 5px 20px #12345a18
+background:#fff;border-radius:15px;overflow:hidden;
+box-shadow:0 4px 18px #0002
 }
-.card img{
-width:100%;
-height:170px;
-object-fit:cover
-}
-.card-body{padding:18px}
-.card h3{color:#073d78;margin-bottom:8px}
-.route-btn{
-display:block;
-background:#0863bd;
-color:white;
-text-align:center;
-padding:12px;
-border-radius:25px;
-margin-top:15px;
-font-weight:800
-}
+.card img{width:100%;height:190px;object-fit:cover}
+.card-content{padding:20px}
+.card h3{color:#0b4ea2;margin-bottom:8px}
+.route{font-weight:bold;color:#333;margin:8px 0}
+.card .btn{font-size:14px}
 
-.shared{
-background:#edf6ff
+.fares{background:#f7faff}
+.fare-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fare-card{
+background:#fff;padding:20px;border-radius:15px;
+box-shadow:0 4px 18px #0002;text-align:center
 }
-.shared-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px
+.fare-card .vehicle{font-size:35px}
+.fare-card h3{color:#0b4ea2;font-size:17px;margin:8px 0}
+.rate{font-size:25px;font-weight:800;color:#f08c00}
+
+.oneway-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.oneway-card{
+background:#fff;padding:20px;border-radius:15px;
+box-shadow:0 4px 18px #0002
 }
+.oneway-card h3{color:#0b4ea2;font-size:17px}
+.oneway-card strong{font-size:23px;color:#f08c00}
+
+.shared{background:linear-gradient(135deg,#eaf3ff,#fff)}
+.shared-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .shared-card{
-background:white;
-padding:25px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 5px 20px #12345a18
+background:#fff;border:2px solid #1d67c1;border-radius:18px;
+padding:25px;text-align:center;box-shadow:0 5px 20px #0002
 }
-.shared-card h3{color:#073d78}
-.shared-price{
-font-size:30px;
-font-weight:900;
-color:#f59d00;
-margin:10px
-}
-.booking{
-margin-top:25px;
-background:white;
-border-radius:22px;
-padding:28px;
-box-shadow:0 5px 20px #12345a18
-}
-.booking h2{
-color:#073d78;
-margin-bottom:20px
-}
+.shared-card h3{color:#0b4ea2}
+.shared-price{font-size:30px;font-weight:800;color:#0b4ea2}
+.note{font-size:13px;color:#666;margin-top:14px;text-align:center}
 
-.book-btn{
-width:100%;
-border:0;
-margin-top:18px;
-padding:16px;
-border-radius:30px;
-background:#25d366;
-color:white;
-font-size:18px;
-font-weight:900
-}
-
-.about{
-background:white
-}
 .about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:35px;
-align-items:center
+display:grid;grid-template-columns:1fr 1fr;
+gap:40px;align-items:center
 }
-.about-grid img{
-width:100%;
-border-radius:20px
-}
-.about h2{
-color:#073d78;
-font-size:32px;
-margin-bottom:15px
-}
-.about li{
-list-style:none;
-margin:10px 0;
-font-weight:700
-}
+.about-grid img{width:100%;border-radius:18px}
+.about-grid h2{font-size:36px;color:#0b4ea2;margin-bottom:12px}
+.about-grid li{list-style:none;margin:10px 0}
 
-.contact{
-background:#073d78;
-color:white;
-text-align:center
-}
-.contact h2{font-size:35px;margin-bottom:15px}
-.contact p{margin:7px}
-.contact-btn{
-display:inline-block;
-margin:18px 5px 0;
-padding:13px 25px;
-border-radius:30px;
-font-weight:900
-}
-.email{background:#f59d00;color:#12345a}
-.whatsapp{background:#25d366;color:white}
-.call{background:white;color:#073d78}
+.contact{background:#0b4ea2;color:#fff;text-align:center}
+.contact h2{font-size:36px}
+.contact a{margin-top:15px}
 
-footer{
-background:#062e5b;
-color:white;
-text-align:center;
-padding:20px
+footer{background:#082b5c;color:#fff;text-align:center;padding:25px}
+
+@media(max-width:900px){
+.fare-grid{grid-template-columns:repeat(2,1fr)}
+.oneway-grid{grid-template-columns:repeat(2,1fr)}
 }
 
 @media(max-width:800px){
-.logo{width:75px;height:75px}
-nav a{font-size:12px;padding:6px}
-.wa-nav{padding:9px 12px}
-.hero{min-height:520px}
-.hero-box{padding:20px}
-.hero h1{font-size:48px}
-.hero p{font-size:19px}
-.tagline{font-size:20px!important}
-.features{grid-template-columns:repeat(2,1fr)}
-.feature{border-right:0}
-.form-grid,.about-grid,.shared-grid{grid-template-columns:1fr}
-.fare-grid,.cards{grid-template-columns:1fr}
-.search-title{font-size:29px}
+.brand img{width:54px;height:54px}
+.logo{font-size:18px}
+.hero h1{font-size:36px}
+.form-grid{grid-template-columns:1fr}
+.cards{grid-template-columns:1fr}
+.about-grid{grid-template-columns:1fr}
+.shared-grid{grid-template-columns:1fr}
+nav a{font-size:12px;margin-left:6px}
 }
 
-@media(max-width:500px){
-.nav{padding:5px 8px}
-.logo{width:65px;height:65px}
-nav{gap:0}
-nav a{font-size:10px;padding:5px 4px}
-.wa-nav{font-size:10px;padding:8px 9px}
-.hero{min-height:470px}
-.hero h1{font-size:40px}
-.hero p{font-size:17px}
-.hero-box{padding:12px}
-.features{margin:0 10px}
-.search-box{padding:20px}
-section{padding:40px 12px}
+@media(max-width:520px){
+.fare-grid,.oneway-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -407,72 +140,63 @@ section{padding:40px 12px}
 
 <header>
 <div class="nav">
-
-<img src="shivay-logo.png" class="logo" alt="Shivay Tour & Travels">
+<div class="brand">
+<img src="shivay-logo.png" alt="Shivay Tour & Travels logo">
+<div class="logo">Shivay <span>Tour & Travels</span></div>
+</div>
 
 <nav>
-<a href="#home">🏠 Home</a>
-<a href="#search">📍 Routes</a>
-<a href="#contact">☎ Contact</a>
-<a class="wa-nav" href="https://wa.me/918219360228" target="_blank">
-🟢 WhatsApp Booking
-</a>
+<a href="#home">Home</a>
+<a href="#routes">Routes</a>
+<a href="#fares">Fares</a>
+<a href="#shared">Shared Cab</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </nav>
-
 </div>
 </header>
 
 <section class="hero" id="home">
-<div class="hero-box">
+<div>
+<h1>Explore Himachal With Shivay</h1>
+<p>Comfortable cabs, beautiful Himalayan journeys and customized travel routes.</p>
 
-<h1>Shivay <span>Tour & Travels</span></h1>
+<a class="btn" href="#search">Search Your Route</a>
 
-<p>Cab • Taxi • Shared Cab • Himachal Travel</p>
-
-<p class="tagline">Your Journey<br>Our Responsibility</p>
-
-<a class="hero-wa" href="https://wa.me/918219360228" target="_blank">
-🟢 WhatsApp Booking →
+<a class="btn green"
+href="https://wa.me/918219360228"
+target="_blank">
+💬 WhatsApp Us
 </a>
-
 </div>
 </section>
 
-<div class="features">
-<div class="feature">🛡️ Safe & Reliable</div>
-<div class="feature">₹ Best Fare</div>
-<div class="feature">📍 On-Time Pickup</div>
-<div class="feature">🏔️ Himachal Special</div>
-</div>
 
 <section id="search">
 <div class="container">
 
 <div class="search-box">
 
-<div class="search-title">📍 Search Your Route</div>
-<div class="subtitle">
-Find the best cab, taxi or shared cab for your journey
-</div>
+<h2>🔎 Search Route & Fare</h2>
 
 <div class="form-grid">
 
-<div class="field">
+<div>
 <label>From</label>
-<input id="from" placeholder="e.g. Chandigarh">
+<input id="from" list="places" placeholder="Enter pickup city">
 </div>
 
-<div class="field">
+<div>
 <label>To</label>
-<input id="to" placeholder="e.g. Palampur">
+<input id="to" list="places" placeholder="Enter destination">
 </div>
 
-<div class="field">
+<div>
 <label>Travel Date</label>
 <input id="date" type="date">
 </div>
 
-<div class="field">
+<div>
 <label>Passengers</label>
 <select id="passengers">
 <option value="1">1 Passenger</option>
@@ -484,20 +208,48 @@ Find the best cab, taxi or shared cab for your journey
 </select>
 </div>
 
-</div>
+<div style="grid-column:1/-1">
 
-<div class="location">
-<button onclick="getLocation('search')">
+<button type="button" class="btn" onclick="getCustomerLocation()">
 📍 Use My Current Location
 </button>
-<span id="locationStatus" class="status">
-Location optional
+
+<span id="locationStatus"
+style="margin-left:8px;color:#666;font-size:14px">
 </span>
+
+<input id="customerLocation" type="hidden">
+
 </div>
 
+</div>
+
+
+<datalist id="places">
+<option value="Amritsar">
+<option value="Palampur">
+<option value="Chandigarh">
+<option value="Kangra">
+<option value="Baijnath">
+<option value="Panchrukhi">
+<option value="Dharamshala">
+<option value="Jalandhar">
+<option value="Shimla">
+<option value="Manali">
+</datalist>
+
+
 <button class="search-btn" onclick="searchRoute()">
-🔎 Search Fare
+Search Fare
 </button>
+
+
+<a class="btn green"
+style="display:block;text-align:center;margin-top:14px"
+target="_blank"
+href="https://wa.me/918219360228?text=Hello%20Shivay%20Tour%20%26%20Travels%2C%20I%20want%20to%20ask%20about%20a%20cab%20fare%20or%20booking.">
+💬 WhatsApp for Fare / Booking
+</a>
 
 <div id="result"></div>
 
@@ -505,125 +257,113 @@ Location optional
 </div>
 </section>
 
-<section class="fares">
+
+<section class="fares" id="fares">
+
 <div class="container">
 
 <div class="title">
 <h2>🚕 Shivay Tour & Travels — Cab Rate Card</h2>
-<p>Private cab starting rates</p>
+<p>Private cab rates</p>
 </div>
+
 
 <div class="fare-grid">
 
-<div class="fare">
-<h3>Chandigarh → Palampur</h3>
-<div class="price">₹3,500+</div>
-<p>Private one-way cab</p>
+<div class="fare-card">
+<div class="vehicle">🚗</div>
+<h3>WagonR</h3>
+<p>Capacity: 4+1</p>
+<div class="rate">₹13/km</div>
 </div>
 
-<div class="fare">
-<h3>Chandigarh → Baijnath</h3>
-<div class="price"></div>
-<p>Private one-way cab</p>
+
+<div class="fare-card">
+<div class="vehicle">🚗</div>
+<h3>Dzire</h3>
+<p>Capacity: 4+1</p>
+<div class="rate">₹15/km</div>
 </div>
 
-<div class="fare">
-<h3>Shared Cab</h3>
-<div class="price">₹800</div>
-<p>Per seat</p>
+
+<div class="fare-card">
+<div class="vehicle">🚙</div>
+<h3>Innova</h3>
+<p>Capacity: 7+1</p>
+<div class="rate">₹29/km</div>
+</div>
+
+
+<div class="fare-card">
+<div class="vehicle">🚌</div>
+<h3>Traveller</h3>
+<p>Capacity: 12+1</p>
+<div class="rate">₹30/km</div>
 </div>
 
 </div>
+
+<p class="note">
+Rates are starting/indicative rates. Toll, parking and route-specific charges may apply.
+Final fare confirmed at booking.
+</p>
+
 </div>
 </section>
+
 
 <section>
+
 <div class="container">
 
 <div class="title">
-<h2>🛣️ Popular Routes</h2>
-<p>Choose a route and search fare</p>
+<h2>🛣️ One-Way Fixed Fare</h2>
+<p>Starting fares</p>
 </div>
 
-<div class="cards">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85">
-<div class="card-body">
+<div class="oneway-grid">
+
+<div class="oneway-card">
 <h3>Chandigarh → Palampur</h3>
-<p>🚕 Cab service • From ₹3,500</p>
-<a class="route-btn" href="#search" onclick="setRoute('Chandigarh','Palampur')">
-Search Route
-</a>
-</div>
+<strong>₹3,500 से</strong>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=85">
-<div class="card-body">
+<div class="oneway-card">
 <h3>Chandigarh → Baijnath</h3>
-<p>🚕 Cab service • From ₹3,500</p>
-<a class="route-btn" href="#search" onclick="setRoute('Chandigarh','Baijnath')">
-Search Route
-</a>
-</div>
+<strong>₹3,500 से</strong>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=900&q=85">
-<div class="card-body">
-<h3>Chandigarh → Dharamshala</h3>
-<p>🏔️ Himachal journey</p>
-<a class="route-btn" href="#search" onclick="setRoute('Chandigarh','Dharamshala')">
-Search Route
-</a>
-</div>
+<div class="oneway-card">
+<h3>Palampur → Chandigarh</h3>
+<strong>₹3,500 से</strong>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85">
-<div class="card-body">
-<h3>Amritsar → Palampur</h3>
-<p>🚕 Comfortable cab</p>
-<a class="route-btn" href="#search" onclick="setRoute('Amritsar','Palampur')">
-Search Route
-</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85">
-<div class="card-body">
-<h3>Palampur → Amritsar</h3>
-<p>🚕 Comfortable cab</p>
-<a class="route-btn" href="#search" onclick="setRoute('Palampur','Amritsar')">
-Search Route
-</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=900&q=85">
-<div class="card-body">
-<h3>Custom Route</h3>
-<p>🛣️ Choose your own route</p>
-<a class="route-btn" href="#search">
-Search Your Route
-</a>
-</div>
+<div class="oneway-card">
+<h3>Baijnath → Chandigarh</h3>
+<strong>₹3,500 से</strong>
 </div>
 
 </div>
+
+<p class="note">
+Final fare may vary by pickup location, route, toll, parking and vehicle.
+Final fare confirmed at booking.
+</p>
+
 </div>
 </section>
 
-<section class="shared">
+
+<section class="shared" id="shared">
+
 <div class="container">
 
 <div class="title">
-<h2>💺 Daily Shared Cab — ₹800 / Seat</h2>
-<p>Chandigarh ↔ Palampur</p>
+<h2>💺 Daily Shared Cab</h2>
+<p>Chandigarh ↔ Palampur • Chandigarh ↔ Panchrukhi/Baijnath</p>
 </div>
+
 
 <div class="shared-grid">
 
@@ -631,43 +371,69 @@ Search Your Route
 <h3>Chandigarh → Palampur</h3>
 <div class="shared-price">₹800 / seat</div>
 <p>Daily service • Limited seats</p>
-<a class="route-btn" href="#booking" onclick="setSharedRoute('Chandigarh → Palampur')">
-Book Your Seat
-</a>
+<a class="btn wa" href="#booking">Book Your Seat</a>
 </div>
+
 
 <div class="shared-card">
 <h3>Palampur → Chandigarh</h3>
 <div class="shared-price">₹800 / seat</div>
 <p>Daily service • Limited seats</p>
-<a class="route-btn" href="#booking" onclick="setSharedRoute('Palampur → Chandigarh')">
-Book Your Seat
-</a>
+<a class="btn wa" href="#booking">Book Your Seat</a>
+</div>
+
+
+<div class="shared-card">
+<h3>Chandigarh → Panchrukhi / Baijnath</h3>
+<div class="shared-price">₹900 / seat</div>
+<p>Daily service • Limited seats</p>
+<a class="btn wa" href="#booking">Book Your Seat</a>
+</div>
+
+
+<div class="shared-card">
+<h3>Panchrukhi / Baijnath → Chandigarh</h3>
+<div class="shared-price">₹900 / seat</div>
+<p>Daily service • Limited seats</p>
+<a class="btn wa" href="#booking">Book Your Seat</a>
 </div>
 
 </div>
+</div>
+</section>
 
-<div class="booking" id="booking">
 
-<h2>💬 Shared Cab Booking</h2>
+<section id="booking">
+
+<div class="container">
+
+<div class="booking-box">
+
+<h2>📅 Book Your Shared Cab Seat</h2>
 
 <div class="form-grid">
 
-<div class="field">
+<div>
 <label>Route</label>
+
 <select id="sharedRoute">
 <option>Chandigarh → Palampur</option>
 <option>Palampur → Chandigarh</option>
+<option>Chandigarh → Panchrukhi / Baijnath</option>
+<option>Panchrukhi / Baijnath → Chandigarh</option>
 </select>
 </div>
 
-<div class="field">
+
+<div>
 <label>Travel Date</label>
 <input id="sharedDate" type="date">
 </div>
 
-<div class="field">
+
+<div>
 <label>Seats</label>
+
 <select id="sharedSeats">
 <option value="1">1 Seat</option>
 <option value="2">2 Seats</option>
@@ -678,61 +444,204 @@ Book Your Seat
 </select>
 </div>
 
-<div class="field">
+
+<div>
 <label>Your Name</label>
 <input id="customerName" placeholder="Enter your name">
 </div>
 
-<div class="field">
+</div>
+
+
+<div class="form-grid" style="margin-top:14px">
+
+<div>
 <label>Mobile Number</label>
 <input id="customerMobile" type="tel" placeholder="Enter mobile number">
 </div>
 
-<div class="field">
-<label>Pickup / Drop</label>
-<input id="pickupDetails" placeholder="Pickup or drop details">
+
+<div>
+<label>Pickup / Drop Details</label>
+<input id="pickupDetails" placeholder="Optional">
 </div>
 
-</div>
 
-<div class="location">
-<button onclick="getLocation('shared')">
-📍 Add My Current Location
-</button>
-<span id="sharedLocationStatus" class="status"></span>
-</div>
+<div>
+<label>Current Location</label>
 
-<button class="book-btn" onclick="bookSharedSeat()">
-🟢 Book Seat on WhatsApp
+<button type="button"
+class="btn"
+onclick="getSharedLocation()">
+📍 Use My Location
 </button>
 
-<div id="bookingResult" class="status"></div>
+<span id="sharedLocationStatus"
+style="display:block;color:#666;font-size:13px">
+</span>
+
+<input id="sharedLocation" type="hidden">
+
+</div>
+
+</div>
+
+
+<button class="btn wa" onclick="bookSharedSeat()">
+💬 Book Seat on WhatsApp
+</button>
+
+<div id="bookingResult"></div>
+
+<p class="note">
+Shared cab fare: ₹800/seat for Palampur routes and ₹900/seat for Panchrukhi/Baijnath routes.
+Booking is subject to seat availability.
+</p>
 
 </div>
 </div>
 </section>
 
-<section class="about">
+
+<section class="routes" id="routes">
+
+<div class="container">
+
+<div class="title">
+<h2>Our Popular Routes</h2>
+<p>Book comfortable cab journeys across Himachal and nearby cities.</p>
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85">
+
+<div class="card-content">
+<h3>Palampur → Chandigarh</h3>
+<p class="route">🚕 Comfortable Cab Service</p>
+
+<a class="btn green"
+href="https://wa.me/918219360228?text=I%20want%20to%20book%20Palampur%20to%20Chandigarh"
+target="_blank">
+Book Now
+</a>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=85">
+
+<div class="card-content">
+<h3>Baijnath → Chandigarh</h3>
+<p class="route">🚕 Comfortable Cab Service</p>
+
+<a class="btn green"
+href="https://wa.me/918219360228?text=I%20want%20to%20book%20Baijnath%20to%20Chandigarh"
+target="_blank">
+Book Now
+</a>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1000&q=85">
+
+<div class="card-content">
+<h3>Chandigarh → Palampur → Kangra → Baijnath → Dharamshala</h3>
+<p class="route">🏔️ Complete Himachal Journey</p>
+
+<a class="btn green"
+href="https://wa.me/918219360228?text=I%20want%20to%20book%20the%20Chandigarh%20to%20Dharamshala%20Himachal%20route"
+target="_blank">
+Book Now
+</a>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85">
+
+<div class="card-content">
+<h3>Amritsar → Palampur</h3>
+<p class="route">🚕 Comfortable Cab Service</p>
+
+<a class="btn green"
+href="https://wa.me/918219360228?text=I%20want%20to%20book%20Amritsar%20to%20Palampur"
+target="_blank">
+Book Now
+</a>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1000&q=85">
+
+<div class="card-content">
+<h3>Palampur → Amritsar → Jalandhar</h3>
+<p class="route">🚕 Multi-City Cab Journey</p>
+
+<a class="btn green"
+href="https://wa.me/918219360228?text=I%20want%20to%20book%20Palampur%20to%20Amritsar%20to%20Jalandhar"
+target="_blank">
+Book Now
+</a>
+</div>
+</div>
+
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=1000&q=85">
+
+<div class="card-content">
+<h3>Custom Route</h3>
+<p class="route">🛣️ Tell us your own route</p>
+
+<a class="btn green" href="#search">
+Search Your Route
+</a>
+
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<section id="about">
+
 <div class="container">
 
 <div class="about-grid">
 
-<img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1000&q=85">
+<div>
+<img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=85">
+</div>
+
 
 <div>
+
 <h2>Why Choose Shivay Tour & Travels?</h2>
 
 <p>
-Comfortable cab services for Himachal tours,
+We provide comfortable cab services for Himachal tours,
 sightseeing, outstation travel and customized journeys.
 </p>
 
 <ul>
-<li>🚕 Clean & comfortable cars</li>
-<li>🏔️ Himachal & Himalayan routes</li>
-<li>👨‍✈️ Experienced drivers</li>
-<li>📅 Customized travel plans</li>
-<li>💬 Easy WhatsApp booking</li>
+<li>🚕 Clean & Comfortable Cars</li>
+<li>🏔️ Himachal & Himalayan Routes</li>
+<li>👨‍✈️ Experienced Drivers</li>
+<li>📅 Customized Travel Plans</li>
+<li>💬 Easy WhatsApp Booking</li>
 </ul>
 
 </div>
@@ -741,137 +650,76 @@ sightseeing, outstation travel and customized journeys.
 </div>
 </section>
 
+
 <section class="contact" id="contact">
+
+<div class="container">
 
 <h2>Plan Your Himalayan Journey</h2>
 
 <p>📧 atulminhas9@gmail.com</p>
 <p>📱 WhatsApp: +91 8219360228</p>
 
-<a class="contact-btn email" href="mailto:atulminhas9@gmail.com">
-✉️ Email Us
+<a class="btn"
+href="mailto:atulminhas9@gmail.com">
+Email Us
 </a>
 
-<a class="contact-btn whatsapp" href="https://wa.me/918219360228" target="_blank">
-🟢 WhatsApp
+<a class="btn"
+href="https://wa.me/918219360228"
+target="_blank">
+💬 WhatsApp Us
 </a>
 
-<a class="contact-btn call" href="tel:8219360228">
+<a class="btn green"
+href="tel:8219360228">
 📞 Call Now
 </a>
 
+</div>
 </section>
 
+
 <footer>
+
 <p>© 2026 Shivay Tour & Travels. All Rights Reserved.</p>
-<p>Himachal Pradesh • Tours • Cabs • Shared Travel</p>
+<p>Himachal Pradesh • Tours • Cabs • Travel</p>
+
 </footer>
+
 
 <script>
 
-const WA_NUMBER="918219360228";
+function getCustomerLocation(){
 
-let currentLocation={
-search:"",
-shared:""
-};
-
-function formatDate(date){
-
-if(!date) return "Not selected";
-
-let parts=date.split("-");
-
-return parts[2]+"/"+parts[1]+"/"+parts[0];
-
-}
-
-function mapsLink(lat,lon){
-
-return "https://www.google.com/maps?q="+lat+","+lon;
-
-}
-
-function getLocation(type){
-
-let status=document.getElementById(
-type==="search" ? "locationStatus" : "sharedLocationStatus"
-);
+const status=document.getElementById("locationStatus");
 
 if(!navigator.geolocation){
-
-status.textContent="Location is not supported.";
-
+status.textContent="Location is not supported on this device.";
 return;
+}
+
+status.textContent="Getting location…";
+
+navigator.geolocation.getCurrentPosition(pos=>{
+
+const lat=pos.coords.latitude.toFixed(6);
+const lon=pos.coords.longitude.toFixed(6);
+
+const maps=`https://www.google.com/maps?q=${lat},${lon}`;
+
+document.getElementById("customerLocation").value=maps;
+
+status.innerHTML=`✅ Location added <a href="${maps}" target="_blank">View map</a>`;
+
+},()=>{
+
+status.textContent="⚠️ Location permission was denied.";
+
+},{enableHighAccuracy:true,timeout:10000,maximumAge:60000});
 
 }
 
-status.textContent="Getting your location...";
-
-navigator.geolocation.getCurrentPosition(
-
-function(pos){
-
-let lat=pos.coords.latitude.toFixed(6);
-let lon=pos.coords.longitude.toFixed(6);
-
-let link=mapsLink(lat,lon);
-
-currentLocation[type]=link;
-
-status.innerHTML="✅ Location added";
-
-},
-
-function(){
-
-status.textContent="⚠️ Location permission denied.";
-
-},
-
-{
-enableHighAccuracy:true,
-timeout:12000,
-maximumAge:60000
-}
-
-);
-
-}
-
-function wa(message){
-
-return "https://wa.me/"+WA_NUMBER+
-"?text="+encodeURIComponent(message);
-
-}
-
-function setRoute(from,to){
-
-document.getElementById("from").value=from;
-document.getElementById("to").value=to;
-
-}
-
-function setSharedRoute(route){
-
-document.getElementById("sharedRoute").value=route;
-
-}
-
-function getFare(from,to){
-
-let r=(from+" "+to).toLowerCase();
-
-if(r.includes("chandigarh") && r.includes("palampur"))
-return "Shared Cab ₹800/seat | Private Cab from ₹3,500";
-
-if(r.includes("chandigarh") && r.includes("baijnath"))
-return "Private Cab from ₹3,500";
-
-return "Fare on enquiry";
-
-}
 
 function searchRoute(){
 
@@ -879,98 +727,224 @@ let from=document.getElementById("from").value.trim();
 let to=document.getElementById("to").value.trim();
 let date=document.getElementById("date").value;
 let passengers=document.getElementById("passengers").value;
-
+let customerLocation=document.getElementById("customerLocation").value;
 let result=document.getElementById("result");
 
-if(!from || !to){
-
-result.innerHTML=
-"<div class='result'>⚠️ Please enter From and To.</div>";
-
+if(!from||!to){
+result.innerHTML="⚠️ Please enter both pickup and destination.";
 return;
+}
+
+let a=from.toLowerCase();
+let b=to.toLowerCase();
+let route=a+" "+b;
+
+let fareText="";
+
+if(route.includes("chandigarh") && route.includes("palampur")){
+
+fareText=
+"💺 Daily Shared Cab: ₹800/seat<br>"+
+"🚕 Private one-way fare: from ₹3,500";
+
+}
+else if(
+route.includes("chandigarh") &&
+(route.includes("baijnath") || route.includes("panchrukhi"))
+){
+
+fareText=
+"💺 Daily Shared Cab: ₹900/seat<br>"+
+"🚕 Private one-way fare: from ₹3,500";
+
+}
+else{
+
+fareText=
+"🚕 Fare available on enquiry. Please get a quote on WhatsApp.";
 
 }
 
-let location=currentLocation.search || "Not shared";
+
+let locationLine=customerLocation
+?`📍 Customer Location: ${customerLocation}`
+:"📍 Customer Location: Not shared";
+
 
 let message=
-"Hello Shivay Tour & Travels,\n\n"+
-"🚕 ROUTE / FARE ENQUIRY\n\n"+
-"📍 From: "+from+"\n"+
-"🏁 To: "+to+"\n"+
-"📅 Travel Date: "+formatDate(date)+"\n"+
-"👥 Passengers: "+passengers+"\n"+
-"📍 Customer Current Location: "+location+"\n\n"+
-"💰 Please send fare and availability.\n"+
-"Please confirm the booking.";
+`Hello Shivay Tour & Travels,
+
+🚕 CAB FARE / BOOKING ENQUIRY
+
+📍 From: ${from}
+🏁 To: ${to}
+📅 Travel Date: ${date||"Not selected"}
+👥 Passengers: ${passengers}
+📍 Customer Current Location: ${customerLocation||"Not shared"}
+
+Please send the fare and confirm availability.`;
+
+let waUrl=
+"https://wa.me/918219360228?text="+
+encodeURIComponent(message);
+
 
 result.innerHTML=
-"<div class='result'>"+
-"<h3>✅ Route Details Ready</h3>"+
-"<p>📍 <b>From:</b> "+from+"</p>"+
-"<p>🏁 <b>To:</b> "+to+"</p>"+
-"<p>📅 <b>Date:</b> "+formatDate(date)+"</p>"+
-"<p>👥 <b>Passengers:</b> "+passengers+"</p>"+
-"<p>💰 <b>Fare:</b> "+getFare(from,to)+"</p>"+
-"<a class='wa-btn' href='"+wa(message)+"' target='_blank'>"+
-"🟢 Send Complete Route Details on WhatsApp"+
-"</a>"+
-"</div>";
+
+`<div style="background:#f0faf5;border-radius:12px;padding:16px;margin-top:15px;text-align:left">
+
+<strong>Route Details</strong><br>
+
+📍 ${from} → ${to}<br>
+📅 ${date||"Date not selected"}<br>
+👥 ${passengers} passenger(s)<br>
+${locationLine}
+
+<hr style="margin:10px 0;border:0;border-top:1px solid #dcefe5">
+
+${fareText}
+
+<a class="btn wa"
+target="_blank"
+href="${waUrl}"
+style="display:block;text-align:center;margin-top:15px">
+
+💬 Send Route Details on WhatsApp
+
+</a>
+
+</div>`;
 
 }
+
+
+function getSharedLocation(){
+
+const status=document.getElementById("sharedLocationStatus");
+
+if(!navigator.geolocation){
+status.textContent="Location not supported.";
+return;
+}
+
+status.textContent="Getting location…";
+
+navigator.geolocation.getCurrentPosition(pos=>{
+
+const lat=pos.coords.latitude.toFixed(6);
+const lon=pos.coords.longitude.toFixed(6);
+
+const maps=`https://www.google.com/maps?q=${lat},${lon}`;
+
+document.getElementById("sharedLocation").value=maps;
+
+status.innerHTML=
+`✅ Location added <a href="${maps}" target="_blank">View map</a>`;
+
+},()=>{
+
+status.textContent="⚠️ Location permission denied.";
+
+},{enableHighAccuracy:true,timeout:10000,maximumAge:60000});
+
+}
+
 
 function bookSharedSeat(){
 
-let route=document.getElementById("sharedRoute").value;
-let date=document.getElementById("sharedDate").value;
-let seats=document.getElementById("sharedSeats").value;
-let name=document.getElementById("customerName").value.trim();
-let mobile=document.getElementById("customerMobile").value.trim();
-let pickup=document.getElementById("pickupDetails").value.trim();
+const route=document.getElementById("sharedRoute").value;
 
-let location=currentLocation.shared || "Not shared";
+const date=document.getElementById("sharedDate").value;
 
-let output=document.getElementById("bookingResult");
+const seats=document.getElementById("sharedSeats").value;
 
-if(!date || !name || !mobile){
+const name=document.getElementById("customerName").value.trim();
 
-output.textContent=
-"⚠️ Please enter date, name and mobile number.";
+const mobile=document.getElementById("customerMobile").value.trim();
+
+const pickup=document.getElementById("pickupDetails").value.trim();
+
+const sharedLocation=document.getElementById("sharedLocation").value;
+
+const result=document.getElementById("bookingResult");
+
+
+if(!date||!name||!mobile){
+
+result.innerHTML=
+"⚠️ Please enter travel date, name and mobile number.";
 
 return;
 
 }
 
-let total=Number(seats)*800;
 
-let message=
-"Hello Shivay Tour & Travels,\n\n"+
-"💺 SHARED CAB BOOKING\n\n"+
-"📍 Route: "+route+"\n"+
-"📅 Travel Date: "+formatDate(date)+"\n"+
-"💺 Seats: "+seats+"\n"+
-"💰 Total Fare: ₹"+total+"\n"+
-"👤 Name: "+name+"\n"+
-"📱 Mobile: "+mobile+"\n"+
-"📍 Pickup / Drop: "+(pickup||"Not specified")+"\n"+
-"📍 Customer Current Location: "+location+"\n\n"+
-"Please confirm my booking.";
+const lowerRoute=route.toLowerCase();
 
-window.location.href=wa(message);
+const perSeatFare=
+(lowerRoute.includes("panchrukhi") ||
+ lowerRoute.includes("baijnath"))
+?900
+:800;
+
+
+const total=Number(seats)*perSeatFare;
+
+
+const message=
+`Hello Shivay Tour & Travels,
+
+💺 SHARED CAB BOOKING
+
+📍 Route: ${route}
+📅 Travel Date: ${date}
+💺 Seats: ${seats}
+💰 Per Seat: ₹${perSeatFare}
+💰 Total Fare: ₹${total}
+👤 Name: ${name}
+📱 Mobile: ${mobile}
+📍 Pickup / Drop: ${pickup||"Not specified"}
+📍 Current Location: ${sharedLocation||"Not shared"}
+
+Please confirm my booking.`;
+
+
+const whatsappUrl=
+"https://wa.me/918219360228?text="+
+encodeURIComponent(message);
+
+
+result.innerHTML=
+"✅ Booking details ready. Opening WhatsApp...";
+
+window.location.href=whatsappUrl;
 
 }
 
-let today=new Date();
 
-let iso=new Date(
-today.getTime()-today.getTimezoneOffset()*60000
-).toISOString().slice(0,10);
+/* Today's date */
+
+(function(){
+
+const today=new Date();
+
+const iso=
+new Date(
+today.getTime()-
+today.getTimezoneOffset()*60000
+)
+.toISOString()
+.slice(0,10);
 
 document.getElementById("date").min=iso;
+
 document.getElementById("sharedDate").min=iso;
 
 document.getElementById("date").value=iso;
+
 document.getElementById("sharedDate").value=iso;
+
+})();
 
 </script>
 
