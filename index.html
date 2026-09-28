@@ -436,7 +436,18 @@ return;
 
 }
 
-let total=Number(seats)*800;
+let farePerSeat = 800;
+
+let routeText = route.toLowerCase();
+
+if(
+  (routeText.includes("baijnath") || routeText.includes("panchrukhi")) &&
+  routeText.includes("chandigarh")
+){
+  farePerSeat = 900;
+}
+
+let total = Number(seats) * farePerSeat;
 
 let message=
 "Hello Shivay Tour & Travels%0A%0A"+
