@@ -640,12 +640,12 @@ function openBookingWhatsApp(){
   const passengers = document.getElementById("passenger").value || "1";
 
   const customerName = prompt("Customer Name:");
-if(!customerName) return;
+  if(!customerName) return;
 
-const customerMobile = prompt("Customer Mobile Number:");
-if(!customerMobile) return;
+  const customerMobile = prompt("Customer Mobile Number:");
+  if(!customerMobile) return;
 
-const message =
+  const message =
 `Hello Shivay Tour & Travels,
 
 🚕 CAB FARE / BOOKING ENQUIRY
@@ -660,6 +660,18 @@ const message =
 
 Please send the fare and confirm availability.`;
 
+  const whatsappUrl1 =
+    "https://wa.me/918219360228?text=" +
+    encodeURIComponent(message);
+
+  const whatsappUrl2 =
+    "https://wa.me/917590075000?text=" +
+    encodeURIComponent(message);
+
+  const whatsappUrl3 =
+    "https://wa.me/918988889818?text=" +
+    encodeURIComponent(message);
+
   const result = document.getElementById("result");
 
   result.innerHTML = `
@@ -667,31 +679,33 @@ Please send the fare and confirm availability.`;
 
       <strong>✅ Booking details ready</strong>
 
-      <a class="btn green"
-target="_self"
-rel="noopener"
-href="https://wa.me/91${numbers[0]}?text=${encodeURIComponent(message)}"
-style="display:block;margin-top:12px">
-💬 WhatsApp 8219360228
-</a>
+      <a class="btn wa"
+      target="_blank"
+      rel="noopener"
+      href="${whatsappUrl1}"
+      style="display:block;margin-top:12px">
+      💬 WhatsApp 8219360228
+      </a>
 
-<a class="btn green"
-target="_self"
-rel="noopener"
-href="https://wa.me/91${numbers[1]}?text=${encodeURIComponent(message)}"
-style="display:block;margin-top:10px">
-💬 WhatsApp 7590075000
-</a>
+      <a class="btn wa"
+      target="_blank"
+      rel="noopener"
+      href="${whatsappUrl2}"
+      style="display:block;margin-top:10px">
+      💬 WhatsApp 7590075000
+      </a>
 
-<a class="btn green"
-target="_self"
-rel="noopener"
-href="https://wa.me/91${numbers[2]}?text=${encodeURIComponent(message)}"
-style="display:block;margin-top:10px">
-💬 WhatsApp 8988889818
-</a>
-    </div>
-  `;
-}</script>
+      <a class="btn wa"
+      target="_blank"
+      rel="noopener"
+      href="${whatsappUrl3}"
+      style="display:block;margin-top:10px">
+      💬 WhatsApp 8988889818
+      </a>
+
+    </div>`;
+
+}
+</script>
 </body>
 </html>
