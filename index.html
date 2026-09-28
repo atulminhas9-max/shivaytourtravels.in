@@ -83,7 +83,9 @@ footer{background:#082b5c;color:#fff;text-align:center;padding:25px}
 </datalist>
 
 <button class="search-btn" onclick="searchRoute()">Search Fare</button>
-<a class="btn green" style="display:block;text-align:center;margin-top:14px" target="_blank" href="https://wa.me/918219360228">WhatsApp for Fare / Booking</a>
+<button class="btn green"
+style="display:block;width:100%;margin-top:14px"
+onclick="openBookingWhatsApp()">WhatsApp for Fare / Booking</button>
 <div id="result"></div>
 </div>
 </div>
@@ -571,6 +573,64 @@ style="display:block;margin-top:10px">
 
 }
 
-</script>
+function openBookingWhatsApp(){
+
+  const from = document.getElementById("from").value || "Not selected";
+  const to = document.getElementById("to").value || "Not selected";
+  const date = document.getElementById("date").value || "Not selected";
+  const passengers = document.getElementById("passenger").value || "1";
+
+  const message =
+`Hello Shivay Tour & Travels,
+
+🚕 CAB FARE / BOOKING ENQUIRY
+
+📍 From: ${from}
+📍 To: ${to}
+📅 Travel Date: ${date}
+👥 Passengers: ${passengers}
+
+Please send the fare and confirm availability.`;
+
+  const numbers = [
+    "8219360228",
+    "7590075000",
+    "8988889818"
+  ];
+
+  const result = document.getElementById("result");
+
+  result.innerHTML = `
+    <div style="background:#f0faf5;border-radius:12px;padding:16px;margin-top:15px;text-align:center">
+
+      <strong>✅ Booking details ready</strong>
+
+      <a class="btn green"
+      target="_blank"
+      rel="noopener"
+      href="https://wa.me/91${numbers[0]}?text=${encodeURIComponent(message)}"
+      style="display:block;margin-top:12px">
+      💬 WhatsApp 8219360228
+      </a>
+
+      <a class="btn green"
+      target="_blank"
+      rel="noopener"
+      href="https://wa.me/91${numbers[1]}?text=${encodeURIComponent(message)}"
+      style="display:block;margin-top:10px">
+      💬 WhatsApp 7590075000
+      </a>
+
+      <a class="btn green"
+      target="_blank"
+      rel="noopener"
+      href="https://wa.me/91${numbers[2]}?text=${encodeURIComponent(message)}"
+      style="display:block;margin-top:10px">
+      💬 WhatsApp 8988889818
+      </a>
+
+    </div>
+  `;
+}</script>
 </body>
 </html>
