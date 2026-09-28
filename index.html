@@ -417,43 +417,72 @@ Call Now
 
 <script>
 
-function bookSeat(){  
+  function bookSeat(){
 
-let name = document.getElementById("customerName").value.trim();
-let mobile = document.getElementById("customerMobile").value.trim();
+  let name =
+    document.getElementById("customerName").value.trim();
 
-let from = document.getElementById("from").value.trim();
-let to = document.getElementById("to").value.trim();
+  let mobile =
+    document.getElementById("customerMobile").value.trim();
 
-let date = document.getElementById("date").value;
-let seats = document.getElementById("seats").value;
-let route = from + " to " + to;
+  let from =
+    document.getElementById("from").value.trim();
 
-if(!date || !name || !mobile){
+  let to =
+    document.getElementById("to").value.trim();
 
-document.getElementById("bookingResult").innerHTML=
-"⚠️ Please enter Date, Name and Mobile Number.";
+  let date =
+    document.getElementById("date").value;
 
-return;
+  let seats =
+    document.getElementById("seats").value;
 
-}
+  let pickup =
+    document.getElementById("pickup").value.trim();
 
-let farePerSeat = 800;
+  let route = from + " → " + to;
 
-let routeText = route.toLowerCase();
+  if(!date || !name || !mobile){
 
-if(
-  (routeText.includes("baijnath") || routeText.includes("panchrukhi")) &&
-  routeText.includes("chandigarh")
-){
-  farePerSeat = 900;
-}
+    document.getElementById("bookingResult").innerHTML =
+    "⚠️ Please enter Date, Name and Mobile Number.";
 
-let total = Number(seats) * farePerSeat;
+    return;
+  }
 
-);
+  let farePerSeat = 800;
 
-}
+  let routeText = route.toLowerCase();
+
+  if(
+    (routeText.includes("baijnath") ||
+     routeText.includes("panchrukhi")) &&
+    routeText.includes("chandigarh")
+  ){
+    farePerSeat = 900;
+  }
+
+  let total = Number(seats) * farePerSeat;
+
+  let message =
+  "Hello Shivay Tour & Travels%0A%0A" +
+  "🚕 SHARED CAB BOOKING%0A" +
+  "Route: " + encodeURIComponent(route) + "%0A" +
+  "Date: " + encodeURIComponent(date) + "%0A" +
+  "Seats: " + seats + "%0A" +
+  "Total Fare: ₹" + total + "%0A" +
+  "Name: " + encodeURIComponent(name) + "%0A" +
+  "Mobile: " + encodeURIComponent(mobile) + "%0A" +
+  "Pickup/Drop: " + encodeURIComponent(pickup);
+
+  document.getElementById("bookingResult").innerHTML =
+  "✅ Opening WhatsApp for booking...";
+
+  window.open(
+    "https://wa.me/918219360228?text=" + message,
+    "_blank"
+  );
+  }
 
 </script>
 
