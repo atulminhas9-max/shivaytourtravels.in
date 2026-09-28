@@ -452,8 +452,8 @@ let message=
 document.getElementById("bookingResult").innerHTML=
 "✅ Opening WhatsApp for booking...";
 
-window.open(
-"https://wa.me/918219360228?text="+message,
+  window.open(
+"https://wa.me/918219360228?text="+encodeURIComponent(message),
 "_blank"
 );
 
