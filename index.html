@@ -417,56 +417,17 @@ Call Now
 
 <script>
 
-function searchFare(){
+function bookSeat(){  
 
-let from=document.getElementById("from").value.trim().toLowerCase();
-let to=document.getElementById("to").value.trim().toLowerCase();
+let name = document.getElementById("customerName").value.trim();
+let mobile = document.getElementById("customerMobile").value.trim();
 
-let result=document.getElementById("fareResult");
+let from = document.getElementById("from").value.trim();
+let to = document.getElementById("to").value.trim();
 
-if(!from || !to){
-result.innerHTML="⚠️ Please enter From and To.";
-return;
-}
-
-if(
-(from.includes("chandigarh") && to.includes("palampur")) ||
-(from.includes("palampur") && to.includes("chandigarh"))
-){
-
-result.innerHTML=
-"💺 Daily Shared Cab: ₹800 / Seat<br>"+
-"🚕 Private One-Way Fare: ₹3,500 से";
-
-}
-
-else if(
-(from.includes("chandigarh") && to.includes("baijnath")) ||
-(from.includes("baijnath") && to.includes("chandigarh"))
-){
-
-result.innerHTML=
-"🚕 One-Way Fare: ₹3,500 से";
-
-}
-
-else{
-
-window.location.href = "https://wa.me/918219360228?text=Hello%20Shivay%20Tour%20%26%20Travels%2C%20I%20want%20to%20enquire%20about%20fare.";
-
-}
-
-}
-
-
-function bookSeat(){
-
-let route=document.getElementById("route").value;
-let date=document.getElementById("date").value;
-let seats=document.getElementById("seats").value;
-let name=document.getElementById("name").value;
-let mobile=document.getElementById("mobile").value;
-let pickup=document.getElementById("pickup").value;
+let date = document.getElementById("date").value;
+let seats = document.getElementById("seats").value;
+let route = from + " to " + to;
 
 if(!date || !name || !mobile){
 
@@ -490,23 +451,6 @@ if(
 
 let total = Number(seats) * farePerSeat;
 
-let message=
-"Hello Shivay Tour & Travels%0A%0A"+
-"💺 SHARED CAB BOOKING%0A"+
-"Route: "+encodeURIComponent(route)+"%0A"+
-"Date: "+encodeURIComponent(date)+"%0A"+
-"Seats: "+seats+"%0A"+
-"Total Fare: ₹"+total+"%0A"+
-"Name: "+encodeURIComponent(name)+"%0A"+
-"Mobile: "+encodeURIComponent(mobile)+"%0A"+
-"Pickup/Drop: "+encodeURIComponent(pickup);
-
-document.getElementById("bookingResult").innerHTML=
-"✅ Opening WhatsApp for booking...";
-
-  window.open(
-"https://wa.me/918219360228?text="+encodeURIComponent(message),
-"_blank"
 );
 
 }
