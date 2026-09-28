@@ -1,0 +1,22 @@
+{
+  "name": "Shivay Tour & Travels",
+  "short_name": "Shivay Travels",
+  "description": "Himachal Cab, Taxi & Shared Cab Booking",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b4ea2",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "shivay-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "shivay-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
