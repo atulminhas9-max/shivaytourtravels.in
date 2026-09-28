@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+ <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b4ea2">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shivay Tour & Travels | Himachal Cab & Tours</title>
 
@@ -947,6 +949,14 @@ document.getElementById("sharedDate").value=iso;
 })();
 
 </script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker.register("./sw.js");
+  });
+}
+</script>
 
 </body>
 </html>
+
