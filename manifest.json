@@ -1,20 +1,21 @@
 {
   "name": "Shivay Tour & Travels",
   "short_name": "Shivay Travels",
-  "description": "Himachal Cab, Taxi & Shared Cab Booking",
+  "description": "Himachal Cab, Taxi, Tours and Daily Shared Cab Service",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0b4ea2",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "shivay-logo.png",
+      "src": "./shivay-logo-4.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "shivay-logo.png",
+      "src": "./shivay-logo-4.png",
       "sizes": "512x512",
       "type": "image/png"
     }
