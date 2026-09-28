@@ -330,6 +330,7 @@ Shared cab fare: ₹800/seat for Palampur routes and ₹900/seat for Panchrukhi/
 <p>📧 atulminhas9@gmail.com</p>
 <p>📱 WhatsApp: +91 8219360228</p>
 <p>📱 WhatsApp: +91 7590075000</p>
+<p>📱 WhatsApp: +91 8988889818</p>
 <a class="btn" href="mailto:atulminhas9@gmail.com">Email Us</a>
 <a class="btn" href="https://wa.me/918219360228" target="_blank">WhatsApp Us</a>
 <a class="btn green" href="tel:8219360228">📞 Call Now</a>
@@ -531,6 +532,10 @@ const whatsappUrl2 =
 "https://wa.me/917590075000?text="+
 encodeURIComponent(message);
 
+  const whatsappUrl2 =
+"https://wa.me/918988889818?text="+
+encodeURIComponent(message);
+  
 result.innerHTML=`
 <div style="background:#f0faf5;border-radius:12px;padding:16px;margin-top:15px;text-align:center">
 
@@ -551,7 +556,13 @@ href="${whatsappUrl2}"
 style="display:block;margin-top:10px">
 💬 WhatsApp 7590075000
 </a>
-
+a class="btn wa"
+target="_blank"
+rel="noopener"
+href="${whatsappUrl2}"
+style="display:block;margin-top:10px">
+💬 WhatsApp 8988889818
+</a>
 </div>`;
 
 }
