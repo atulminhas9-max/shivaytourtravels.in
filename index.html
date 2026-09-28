@@ -478,10 +478,8 @@ Call Now
   document.getElementById("bookingResult").innerHTML =
   "✅ Opening WhatsApp for booking...";
 
-  window.open(
-    "https://wa.me/918219360228?text=" + message,
-    "_blank"
-  );
+  window.location.href =
+"https://wa.me/918219360228?text=" + message;
   }
 
 </script>
