@@ -639,10 +639,19 @@ function openBookingWhatsApp(){
   const date = document.getElementById("date").value || "Not selected";
   const passengers = document.getElementById("passenger").value || "1";
 
-  const message =
+  const customerName = prompt("Customer Name:");
+if(!customerName) return;
+
+const customerMobile = prompt("Customer Mobile Number:");
+if(!customerMobile) return;
+
+const message =
 `Hello Shivay Tour & Travels,
 
 🚕 CAB FARE / BOOKING ENQUIRY
+
+👤 Customer Name: ${customerName}
+📱 Customer Mobile: ${customerMobile}
 
 📍 From: ${from}
 📍 To: ${to}
@@ -650,12 +659,6 @@ function openBookingWhatsApp(){
 👥 Passengers: ${passengers}
 
 Please send the fare and confirm availability.`;
-
-  const numbers = [
-    "8219360228",
-    "7590075000",
-    "8988889818"
-  ];
 
   const result = document.getElementById("result");
 
