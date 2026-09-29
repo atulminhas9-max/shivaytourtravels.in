@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Shivay Tour & Travels | Admin Dashboard</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f1f5f9;
+    color:#1e293b;
+}
+
+/* LOGIN */
+
+.login-screen{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:linear-gradient(135deg,#075985,#0284c7);
+}
+
+.login-box{
+    width:100%;
+    max-width:390px;
+    background:white;
+    padding:30px 24px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    text-align:center;
+}
+
+.login-logo{
+    font-size:42px;
+    margin-bottom:5px;
+}
+
+.login-box h1{
+    color:#075985;
+    font-size:25px;
+    margin-bottom:5px;
+}
+
+.login-box p{
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+.login-box input{
+    width:100%;
+    padding:14px;
+    margin-bottom:12px;
+    border:1px solid #cbd5e1;
+    border-radius:9px;
+    font-size:16px;
+    outline:none;
+}
+
+.login-box input:focus{
+    border-color:#0284c7;
+}
+
+.login-btn{
+    width:100%;
+    padding:14px;
+    border:0;
+    border-radius:9px;
+    background:#075985;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.login-btn:hover{
+    background:#0369a1;
+}
+
+.login-error{
+    color:#dc2626;
+    font-size:14px;
+    margin-top:12px;
+    display:none;
+}
+
+
+/* DASHBOARD */
+
+.dashboard{
+    display:none;
+    min-height:100vh;
+}
+
+
+/* HEADER */
+
+.dashboard-header{
+    background:linear-gradient(135deg,#075985,#0284c7);
+    color:white;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.dashboard-title{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.dashboard-title span{
+    display:block;
+    font-size:12px;
+    font-weight:normal;
+    opacity:.9;
+}
+
+.logout-btn{
+    background:#dc2626;
+    color:white;
+    border:0;
+    padding:9px 14px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+
+/* MAIN */
+
+.dashboard-main{
+    max-width:1200px;
+    margin:auto;
+    padding:25px 18px;
+}
+
+
+/* WELCOME */
+
+.welcome{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    margin-bottom:20px;
+}
+
+.welcome h2{
+    color:#075985;
+    margin-bottom:5px;
+}
+
+.welcome p{
+    color:#64748b;
+}
+
+
+/* STATS */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.stat-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
+}
+
+.stat-icon{
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+.stat-card h3{
+    color:#64748b;
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.stat-number{
+    color:#075985;
+    font-size:27px;
+    font-weight:bold;
+}
+
+
+/* MENU */
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.menu-card{
+    background:white;
+    border-radius:15px;
+    padding:22px;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
+    cursor:pointer;
+    transition:.2s;
+}
+
+.menu-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+.menu-card .icon{
+    font-size:35px;
+    margin-bottom:8px;
+}
+
+.menu-card h3{
+    color:#075985;
+    margin-bottom:5px;
+}
+
+.menu-card p{
+    color:#64748b;
+    font-size:14px;
+}
+
+
+/* SECTION */
+
+.admin-section{
+    background:white;
+    margin-top:25px;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
+}
+
+.admin-section h2{
+    color:#075985;
+    margin-bottom:18px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select{
+    padding:12px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color:#0284c7;
+}
+
+.save-btn{
+    margin-top:18px;
+    padding:12px 20px;
+    border:0;
+    border-radius:8px;
+    background:#16a34a;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.cancel-btn{
+    margin-top:18px;
+    padding:12px 20px;
+    border:0;
+    border-radius:8px;
+    background:#64748b;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+
+/* TABLE */
+
+.table-wrap{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:650px;
+}
+
+th,
+td{
+    padding:12px;
+    border-bottom:1px solid #e2e8f0;
+    text-align:left;
+}
+
+th{
+    background:#075985;
+    color:white;
+}
+
+.action-btn{
+    padding:7px 10px;
+    border:0;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.edit-btn{
+    background:#f59e0b;
+    color:white;
+}
+
+.delete-btn{
+    background:#dc2626;
+    color:white;
+}
+
+
+/* HIDDEN */
+
+.hidden{
+    display:none;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .menu-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .dashboard-header{
+        padding:12px 14px;
+    }
+
+    .dashboard-title{
+        font-size:18px;
+    }
+
+    .dashboard-main{
+        padding:18px 12px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .stat-card{
+        padding:15px;
+    }
+
+    .stat-number{
+        font-size:23px;
+    }
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .admin-section{
+        padding:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- LOGIN SCREEN -->
+
+<div class="login-screen" id="loginScreen">
+
+<div class="login-box">
+
+<div class="login-logo">🚕</div>
+
+<h1>Shivay Tour & Travels</h1>
+
+<p>Admin Dashboard</p>
+
+<input
+type="text"
+id="adminUsername"
+placeholder="Admin Username"
+autocomplete="username">
+
+<input
+type="password"
+id="adminPassword"
+placeholder="Password"
+autocomplete="current-password">
+
+<button
+class="login-btn"
+onclick="adminLogin()">
+
+🔐 Login
+
+</button>
+
+<div
+class="login-error"
+id="loginError">
+
+Invalid username or password.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div class="dashboard" id="dashboard">
+
+
+<header class="dashboard-header">
+
+<div class="dashboard-title">
+
+🚕 Shivay Tour & Travels
+
+<span>Admin Dashboard</span>
+
+</div>
+
+<button
+class="logout-btn"
+onclick="adminLogout()">
+
+Logout
+
+</button>
+
+</header>
+
+
+<main class="dashboard-main">
+
+
+<div class="welcome">
+
+<h2>Welcome, Admin 👋</h2>
+
+<p>
+Manage your cab routes, fares, vehicles, bookings and WhatsApp contacts from here.
+</p>
+
+</div>
+
+
+<!-- STAT CARDS -->
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<div class="stat-icon">🚕</div>
+
+<h3>Total Routes</h3>
+
+<div class="stat-number">6</div>
+
+</div>
+
+
+<div class="stat-card">
+
+<div class="stat-icon">🚗</div>
+
+<h3>Vehicles</h3>
+
+<div class="stat-number">5</div>
+
+</div>
+
+
+<div class="stat-card">
+
+<div class="stat-icon">💺</div>
+
+<h3>Shared Routes</h3>
+
+<div class="stat-number">6</div>
+
+</div>
+
+
+<div class="stat-card">
+
+<div class="stat-icon">📱</div>
+
+<h3>WhatsApp Numbers</h3>
+
+<div class="stat-number">3</div>
+
+</div>
+
+</div>
+
+
+<!-- MENU -->
+
+<div class="menu-grid">
+
+
+<div
+class="menu-card"
+onclick="showSection('routesAdmin')">
+
+<div class="icon">🛣️</div>
+
+<h3>Routes & Fares</h3>
+
+<p>
+Manage cab routes and fixed fares.
+</p>
+
+</div>
+
+
+<div
+class="menu-card"
+onclick="showSection('vehiclesAdmin')">
+
+<div class="icon">🚗</div>
+
+<h3>Vehicles</h3>
+
+<p>
+Manage vehicle names and per-km rates.
+</p>
+
+</div>
+
+
+<div
+class="menu-card"
+onclick="showSection('sharedAdmin')">
+
+<div class="icon">💺</div>
+
+<h3>Shared Cab</h3>
+
+<p>
+Manage shared routes and seat prices.
+</p>
+
+</div>
+
+
+<div
+class="menu-card"
+onclick="showSection('bookingAdmin')">
+
+<div class="icon">📅</div>
+
+<h3>Bookings</h3>
+
+<p>
+View booking information.
+</p>
+
+</div>
+
+
+<div
+class="menu-card"
+onclick="showSection('whatsappAdmin')">
+
+<div class="icon">📱</div>
+
+<h3>WhatsApp</h3>
+
+<p>
+Manage the three booking numbers.
+</p>
+
+</div>
+
+
+<div
+class="menu-card"
+onclick="showSection('contactAdmin')">
+
+<div class="icon">📧</div>
+
+<h3>Contact Details</h3>
+
+<p>
+Manage email and website information.
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================================
+     ROUTES & FARES
+========================================= -->
+
+<section
+class="admin-section hidden"
+id="routesAdmin">
+
+<h2>🛣️ Routes & Fares</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Route</th>
+<th>Fare</th>
+<th>Type</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Chandigarh → Palampur</td>
+<td>₹3,500</td>
+<td>One Way</td>
+</tr>
+
+<tr>
+<td>Palampur → Chandigarh</td>
+<td>₹3,500</td>
+<td>One Way</td>
+</tr>
+
+<tr>
+<td>Chandigarh → Baijnath</td>
+<td>₹3,500</td>
+<td>One Way</td>
+</tr>
+
+<tr>
+<td>Baijnath → Chandigarh</td>
+<td>₹3,500</td>
+<td>One Way</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     VEHICLES
+========================================= -->
+
+<section
+class="admin-section hidden"
+id="vehiclesAdmin">
+
+<h2>🚗 Vehicle Rates</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Vehicle</th>
+<th>Rate</th>
+<th>Passengers</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Wagon-R / Alto</td>
+<td>₹13/km</td>
+<td>1–4</td>
+</tr>
+
+<tr>
+<td>Dzire / Etios</td>
+<td>₹15/km</td>
+<td>1–4</td>
+</tr>
+
+<tr>
+<td>Ertiga</td>
+<td>₹17/km</td>
+<td>4–6</td>
+</tr>
+
+<tr>
+<td>Innova Crysta</td>
+<td>₹28/km</td>
+<td>5–7</td>
+</tr>
+
+<tr>
+<td>Tempo Traveller</td>
+<td>₹30/km</td>
+<td>9–16</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     SHARED CAB
+========================================= -->
+
+<section
+class="admin-section hidden"
+id="sharedAdmin">
+
+<h2>💺 Shared Cab Routes</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Route</th>
+<th>Price / Seat</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Chandigarh → Palampur</td>
+<td>₹800</td>
+</tr>
+
+<tr>
+<td>Palampur → Chandigarh</td>
+<td>₹800</td>
+</tr>
+
+<tr>
+<td>Chandigarh → Baijnath</td>
+<td>₹900</td>
+</tr>
+
+<tr>
+<td>Baijnath → Chandigarh</td>
+<td>₹900</td>
+</tr>
+
+<tr>
+<td>Chandigarh → Panchrukhi</td>
+<td>₹900</td>
+</tr>
+
+<tr>
+<td>Panchrukhi → Chandigarh</td>
+<td>₹900</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     BOOKINGS
+========================================= -->
+
+<section
+class="admin-section hidden
+  <script>
+
+/* =========================================
+   ADMIN LOGIN
+========================================= */
+
+function adminLogin(){
+
+    const username =
+        document.getElementById("adminUsername").value.trim();
+
+    const password =
+        document.getElementById("adminPassword").value;
+
+    const error =
+        document.getElementById("loginError");
+
+
+    /*
+       DEMO LOGIN
+
+       Username: admin
+       Password: 123456
+    */
+
+    if(
+        username === "admin" &&
+        password === "123456"
+    ){
+
+        document.getElementById("loginScreen")
+            .style.display = "none";
+
+        document.getElementById("dashboard")
+            .style.display = "block";
+
+        error.style.display = "none";
+
+        sessionStorage.setItem(
+            "shivayAdminLogin",
+            "yes"
+        );
+
+    }else{
+
+        error.style.display = "block";
+
+    }
+
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+function adminLogout(){
+
+    sessionStorage.removeItem(
+        "shivayAdminLogin"
+    );
+
+    document.getElementById("dashboard")
+        .style.display = "none";
+
+    document.getElementById("loginScreen")
+        .style.display = "flex";
+
+    document.getElementById("adminUsername")
+        .value = "";
+
+    document.getElementById("adminPassword")
+        .value = "";
+
+}
+
+
+/* =========================================
+   SHOW DASHBOARD SECTION
+========================================= */
+
+function showSection(sectionId){
+
+    const sections =
+        document.querySelectorAll(".admin-section");
+
+    sections.forEach(function(section){
+
+        section.class
