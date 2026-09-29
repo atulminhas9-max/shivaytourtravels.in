@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Shivay Tour & Travels | Admin Dashboard</title>
+<title>Shivay Tour & Travels - Admin Dashboard</title>
 
 <style>
 
@@ -15,884 +12,976 @@ content="width=device-width, initial-scale=1.0">
     box-sizing:border-box;
     margin:0;
     padding:0;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f1f5f9;
-    color:#1e293b;
+    background:#f2f5f9;
+    color:#222;
 }
 
 /* LOGIN */
 
-.login-screen{
+#loginScreen{
     min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
+    background:linear-gradient(135deg,#075e54,#128c7e);
     padding:20px;
-    background:linear-gradient(135deg,#075985,#0284c7);
 }
 
-.login-box{
+.loginBox{
     width:100%;
-    max-width:390px;
+    max-width:400px;
     background:white;
-    padding:30px 24px;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
     text-align:center;
 }
 
-.login-logo{
-    font-size:42px;
-    margin-bottom:5px;
+.loginBox h1{
+    color:#075e54;
+    margin-bottom:8px;
 }
 
-.login-box h1{
-    color:#075985;
-    font-size:25px;
-    margin-bottom:5px;
-}
-
-.login-box p{
-    color:#64748b;
+.loginBox p{
+    color:#666;
     margin-bottom:25px;
 }
 
-.login-box input{
+.loginBox input{
     width:100%;
     padding:14px;
-    margin-bottom:12px;
-    border:1px solid #cbd5e1;
-    border-radius:9px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
     font-size:16px;
     outline:none;
 }
 
-.login-box input:focus{
-    border-color:#0284c7;
+.loginBox input:focus{
+    border-color:#128c7e;
 }
 
-.login-btn{
+.loginBtn{
     width:100%;
     padding:14px;
-    border:0;
-    border-radius:9px;
-    background:#075985;
+    border:none;
+    border-radius:10px;
+    background:#128c7e;
     color:white;
-    font-size:16px;
+    font-size:17px;
     font-weight:bold;
     cursor:pointer;
 }
 
-.login-btn:hover{
-    background:#0369a1;
+.loginBtn:hover{
+    background:#075e54;
 }
 
-.login-error{
-    color:#dc2626;
-    font-size:14px;
-    margin-top:12px;
+#loginError{
     display:none;
+    color:#d32f2f;
+    margin-top:15px;
+    font-weight:bold;
 }
-
 
 /* DASHBOARD */
 
-.dashboard{
+#dashboard{
     display:none;
-    min-height:100vh;
 }
 
-
-/* HEADER */
-
-.dashboard-header{
-    background:linear-gradient(135deg,#075985,#0284c7);
+.topbar{
+    background:#075e54;
     color:white;
-    padding:15px 20px;
+    padding:18px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:15px;
-    position:sticky;
-    top:0;
-    z-index:1000;
+    flex-wrap:wrap;
 }
 
-.dashboard-title{
+.topbar h1{
     font-size:22px;
-    font-weight:bold;
 }
 
-.dashboard-title span{
-    display:block;
-    font-size:12px;
-    font-weight:normal;
-    opacity:.9;
-}
-
-.logout-btn{
-    background:#dc2626;
-    color:white;
-    border:0;
-    padding:9px 14px;
+.logoutBtn{
+    background:#fff;
+    color:#075e54;
+    border:none;
+    padding:10px 18px;
     border-radius:8px;
     font-weight:bold;
     cursor:pointer;
 }
 
-
-/* MAIN */
-
-.dashboard-main{
-    max-width:1200px;
+.container{
+    width:100%;
+    max-width:1100px;
     margin:auto;
-    padding:25px 18px;
+    padding:20px;
 }
 
+/* MENU */
 
-/* WELCOME */
-
-.welcome{
-    background:white;
-    padding:22px;
-    border-radius:15px;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-    margin-bottom:20px;
-}
-
-.welcome h2{
-    color:#075985;
-    margin-bottom:5px;
-}
-
-.welcome p{
-    color:#64748b;
-}
-
-
-/* STATS */
-
-.stats-grid{
+.menuGrid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:15px;
     margin-bottom:25px;
 }
 
-.stat-card{
+.menuCard{
     background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 3px 12px rgba(0,0,0,.07);
-}
-
-.stat-icon{
-    font-size:30px;
-    margin-bottom:5px;
-}
-
-.stat-card h3{
-    color:#64748b;
-    font-size:14px;
-    margin-bottom:5px;
-}
-
-.stat-number{
-    color:#075985;
-    font-size:27px;
-    font-weight:bold;
-}
-
-
-/* MENU */
-
-.menu-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.menu-card{
-    background:white;
-    border-radius:15px;
-    padding:22px;
-    box-shadow:0 3px 12px rgba(0,0,0,.07);
+    padding:22px 15px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
     cursor:pointer;
     transition:.2s;
 }
 
-.menu-card:hover{
-    transform:translateY(-2px);
+.menuCard:hover{
+    transform:translateY(-3px);
     box-shadow:0 6px 18px rgba(0,0,0,.12);
 }
 
-.menu-card .icon{
-    font-size:35px;
+.menuCard .icon{
+    font-size:32px;
     margin-bottom:8px;
 }
 
-.menu-card h3{
-    color:#075985;
-    margin-bottom:5px;
+.menuCard h3{
+    color:#075e54;
+    font-size:16px;
 }
 
-.menu-card p{
-    color:#64748b;
-    font-size:14px;
-}
-
-
-/* SECTION */
+/* SECTIONS */
 
 .admin-section{
     background:white;
-    margin-top:25px;
     padding:22px;
-    border-radius:15px;
+    border-radius:14px;
+    margin-bottom:20px;
     box-shadow:0 3px 12px rgba(0,0,0,.07);
 }
 
+.hidden{
+    display:none !important;
+}
+
 .admin-section h2{
-    color:#075985;
+    color:#075e54;
     margin-bottom:18px;
 }
 
-.form-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
+.admin-section h3{
+    margin:18px 0 10px;
+    color:#333;
 }
 
-.form-group{
-    display:flex;
-    flex-direction:column;
+.formGroup{
+    margin-bottom:15px;
 }
 
-.form-group label{
-    font-size:14px;
-    font-weight:bold;
+.formGroup label{
+    display:block;
     margin-bottom:6px;
+    font-weight:bold;
 }
 
-.form-group input,
-.form-group select{
+.formGroup input,
+.formGroup select,
+.formGroup textarea{
+    width:100%;
     padding:12px;
-    border:1px solid #cbd5e1;
+    border:1px solid #ddd;
     border-radius:8px;
     font-size:15px;
-    outline:none;
 }
 
-.form-group input:focus,
-.form-group select:focus{
-    border-color:#0284c7;
+.formGroup textarea{
+    min-height:100px;
+    resize:vertical;
 }
 
-.save-btn{
-    margin-top:18px;
+.saveBtn{
+    background:#128c7e;
+    color:white;
+    border:none;
     padding:12px 20px;
-    border:0;
     border-radius:8px;
-    background:#16a34a;
-    color:white;
-    font-weight:bold;
     cursor:pointer;
+    font-weight:bold;
 }
 
-.cancel-btn{
-    margin-top:18px;
-    padding:12px 20px;
-    border:0;
+.infoBox{
+    background:#f1f8f7;
+    border-left:4px solid #128c7e;
+    padding:15px;
     border-radius:8px;
-    background:#64748b;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
+    margin-bottom:15px;
 }
 
-
-/* TABLE */
-
-.table-wrap{
-    overflow-x:auto;
+.routeBox{
+    border:1px solid #ddd;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:12px;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    min-width:650px;
+.routeBox strong{
+    color:#075e54;
 }
 
-th,
-td{
-    padding:12px;
-    border-bottom:1px solid #e2e8f0;
-    text-align:left;
+.footer{
+    text-align:center;
+    color:#777;
+    padding:25px;
 }
-
-th{
-    background:#075985;
-    color:white;
-}
-
-.action-btn{
-    padding:7px 10px;
-    border:0;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.edit-btn{
-    background:#f59e0b;
-    color:white;
-}
-
-.delete-btn{
-    background:#dc2626;
-    color:white;
-}
-
-
-/* HIDDEN */
-
-.hidden{
-    display:none;
-}
-
 
 /* MOBILE */
 
-@media(max-width:900px){
-
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .menu-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-
 @media(max-width:600px){
 
-    .dashboard-header{
-        padding:12px 14px;
+    .topbar{
+        align-items:flex-start;
+        flex-direction:column;
     }
 
-    .dashboard-title{
-        font-size:18px;
+    .topbar h1{
+        font-size:19px;
     }
 
-    .dashboard-main{
-        padding:18px 12px;
-    }
-
-    .stats-grid{
-        grid-template-columns:1fr 1fr;
-        gap:10px;
-    }
-
-    .stat-card{
-        padding:15px;
-    }
-
-    .stat-number{
-        font-size:23px;
-    }
-
-    .menu-grid{
-        grid-template-columns:1fr;
-    }
-
-    .form-grid{
-        grid-template-columns:1fr;
+    .container{
+        padding:12px;
     }
 
     .admin-section{
         padding:16px;
     }
 
+    .menuGrid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .menuCard{
+        padding:17px 8px;
+    }
+
+    .menuCard .icon{
+        font-size:27px;
+    }
+
+    .menuCard h3{
+        font-size:14px;
+    }
 }
 
 </style>
-
 </head>
 
 <body>
 
-
 <!-- LOGIN SCREEN -->
 
-<div class="login-screen" id="loginScreen">
+<div id="loginScreen">
 
-<div class="login-box">
+    <div class="loginBox">
 
-<div class="login-logo">🚕</div>
+        <h1>🚕 Shivay Tour & Travels</h1>
 
-<h1>Shivay Tour & Travels</h1>
+        <p>Admin Dashboard Login</p>
 
-<p>Admin Dashboard</p>
+        <input
+            type="text"
+            id="adminUsername"
+            placeholder="Username"
+            autocomplete="username"
+        >
 
-<input
-type="text"
-id="adminUsername"
-placeholder="Admin Username"
-autocomplete="username">
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password"
+            autocomplete="current-password"
+        >
 
-<input
-type="password"
-id="adminPassword"
-placeholder="Password"
-autocomplete="current-password">
+        <button
+            type="button"
+            class="loginBtn"
+            onclick="adminLogin()"
+        >
+            🔐 Login
+        </button>
 
-<button
-class="login-btn"
-onclick="adminLogin()">
+        <div id="loginError">
+            ❌ Wrong Username or Password
+        </div>
 
-🔐 Login
-
-</button>
-
-<div
-class="login-error"
-id="loginError">
-
-Invalid username or password.
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 
 <!-- DASHBOARD -->
 
-<div class="dashboard" id="dashboard">
+<div id="dashboard">
+
+    <div class="topbar">
+
+        <h1>🚕 Shivay Tour & Travels - Admin</h1>
+
+        <button
+            type="button"
+            class="logoutBtn"
+            onclick="adminLogout()"
+        >
+            Logout
+        </button>
+
+    </div>
+
+    <div class="container">
+
+        <!-- MENU -->
+
+        <div class="menuGrid">
+
+            <div
+                class="menuCard"
+                onclick="showSection('homeAdmin')"
+            >
+                <div class="icon">🏠</div>
+                <h3>Dashboard</h3>
+            </div>
+
+            <div
+                class="menuCard"
+                onclick="showSection('routesAdmin')"
+            >
+                <div class="icon">🛣️</div>
+                <h3>Routes & Fares</h3>
+            </div>
+
+            <div
+                class="menuCard"
+                onclick="showSection('vehiclesAdmin')"
+            >
+                <div class="icon">🚕</div>
+                <h3>Vehicles</h3>
+            </div>
+
+            <div
+                class="menuCard"
+                onclick="showSection('sharedAdmin')"
+            >
+                <div class="icon">👥</div>
+                <h3>Shared Cab</h3>
+            </div>
+
+            <div
+                class="menuCard"
+                onclick="showSection('bookingAdmin')"
+            >
+                <div class="icon">📋</div>
+                <h3>Bookings</h3>
+            </div>
+
+            <div
+                class="menuCard"
+                onclick="showSection('whatsappAdmin')"
+            >
+                <div class="icon">📱</div>
+                <h3>WhatsApp</h3>
+            </div>
+
+            <div
+                class="menuCard"
+                onclick="showSection('contactAdmin')"
+            >
+                <div class="icon">📞</div>
+                <h3>Contact</h3>
+            </div>
+
+            <div
+                class="menuCard"
+                onclick="showSection('businessAdmin')"
+            >
+                <div class="icon">🏢</div>
+                <h3>Business Info</h3>
+            </div>
+
+        </div>
 
 
-<header class="dashboard-header">
+        <!-- HOME -->
 
-<div class="dashboard-title">
+        <section id="homeAdmin" class="admin-section">
 
-🚕 Shivay Tour & Travels
+            <h2>🏠 Dashboard</h2>
 
-<span>Admin Dashboard</span>
+            <div class="infoBox">
+                <strong>Welcome to Shivay Tour & Travels Admin Panel.</strong>
+                <br><br>
+                Yahan se aap routes, fares, vehicles, shared cab,
+                bookings aur contact information manage kar sakte hain.
+            </div>
+
+            <h3>Website</h3>
+
+            <p>
+                <strong>Shivay Tour & Travels</strong>
+            </p>
+
+            <p style="margin-top:8px;">
+                Himachal • Cabs • Tours
+            </p>
+
+        </section>
+                <!-- ROUTES & FARES -->
+
+        <section id="routesAdmin" class="admin-section hidden">
+
+            <h2>🛣️ Routes & Fares</h2>
+
+            <div class="routeBox">
+                <strong>Chandigarh → Palampur</strong>
+                <p>One Way Fare: ₹3,500</p>
+                <p>Shared Cab: ₹800 / Seat</p>
+            </div>
+
+            <div class="routeBox">
+                <strong>Palampur → Chandigarh</strong>
+                <p>One Way Fare: ₹3,500</p>
+                <p>Shared Cab: ₹800 / Seat</p>
+            </div>
+
+            <div class="routeBox">
+                <strong>Chandigarh → Baijnath</strong>
+                <p>One Way Fare: ₹3,500</p>
+                <p>Shared Cab: ₹900 / Seat</p>
+            </div>
+
+            <div class="routeBox">
+                <strong>Baijnath → Chandigarh</strong>
+                <p>One Way Fare: ₹3,500</p>
+                <p>Shared Cab: ₹900 / Seat</p>
+            </div>
+
+            <div class="routeBox">
+                <strong>Chandigarh → Panchrukhi</strong>
+                <p>Shared Cab: ₹900 / Seat</p>
+            </div>
+
+            <h3>✏️ Add / Edit Route</h3>
+
+            <div class="formGroup">
+                <label>From</label>
+                <input type="text" id="routeFrom" placeholder="Example: Palampur">
+            </div>
+
+            <div class="formGroup">
+                <label>To</label>
+                <input type="text" id="routeTo" placeholder="Example: Chandigarh">
+            </div>
+
+            <div class="formGroup">
+                <label>One Way Fare</label>
+                <input type="text" id="routeFare" placeholder="Example: ₹3500">
+            </div>
+
+            <div class="formGroup">
+                <label>Shared Seat Fare</label>
+                <input type="text" id="sharedFare" placeholder="Example: ₹800">
+            </div>
+
+            <button
+                type="button"
+                class="saveBtn"
+                onclick="saveRoute()"
+            >
+                💾 Save Route
+            </button>
+
+        </section>
+
+
+        <!-- VEHICLES -->
+
+        <section id="vehiclesAdmin" class="admin-section hidden">
+
+            <h2>🚕 Vehicles & Rates</h2>
+
+            <div class="routeBox">
+                <strong>Wagon-R / Alto</strong>
+                <p>₹13 / km</p>
+            </div>
+
+            <div class="routeBox">
+                <strong>Dzire / Etios</strong>
+                <p>₹15 / km</p>
+            </div>
+
+            <div class="routeBox">
+                <strong>Ertiga</strong>
+                <p>₹17 / km</p>
+            </div>
+
+            <div class="routeBox">
+                <strong>Innova Crysta</strong>
+                <p>₹28 / km</p>
+            </div>
+
+            <div class="routeBox">
+                <strong>Tempo Traveller</strong>
+                <p>₹30 / km</p>
+            </div>
+
+            <h3>✏️ Vehicle Information</h3>
+
+            <div class="formGroup">
+                <label>Vehicle Name</label>
+                <input
+                    type="text"
+                    id="vehicleName"
+                    placeholder="Example: Ertiga"
+                >
+            </div>
+
+            <div class="formGroup">
+                <label>Rate Per KM</label>
+                <input
+                    type="text"
+                    id="vehicleRate"
+                    placeholder="Example: ₹17/km"
+                >
+            </div>
+
+            <button
+                type="button"
+                class="saveBtn"
+                onclick="saveVehicle()"
+            >
+                💾 Save Vehicle
+            </button>
+
+        </section>
+
+
+        <!-- SHARED CAB -->
+
+        <section id="sharedAdmin" class="admin-section hidden">
+
+            <h2>👥 Shared Cab</h2>
+
+            <div class="infoBox">
+
+                <strong>Available Shared Cab Routes</strong>
+
+                <br><br>
+
+                Chandigarh ↔ Palampur
+                <br>
+                ₹800 / Seat
+
+                <br><br>
+
+                Chandigarh ↔ Baijnath
+                <br>
+                ₹900 / Seat
+
+                <br><br>
+
+                Chandigarh ↔ Panchrukhi
+                <br>
+                ₹900 / Seat
+
+            </div>
+
+            <h3>✏️ Shared Cab Settings</h3>
+
+            <div class="formGroup">
+
+                <label>Route</label>
+
+                <input
+                    type="text"
+                    id="sharedRoute"
+                    placeholder="Example: Chandigarh to Palampur"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Price Per Seat</label>
+
+                <input
+                    type="text"
+                    id="sharedPrice"
+                    placeholder="Example: ₹800"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Available Seats</label>
+
+                <input
+                    type="number"
+                    id="sharedSeats"
+                    placeholder="Example: 6"
+                >
+
+            </div>
+
+            <button
+                type="button"
+                class="saveBtn"
+                onclick="saveShared()"
+            >
+                💾 Save Shared Cab
+            </button>
+
+        </section>
+
+
+        <!-- BOOKINGS -->
+
+        <section id="bookingAdmin" class="admin-section hidden">
+
+            <h2>📋 Booking Information</h2>
+
+            <div class="infoBox">
+
+                Website booking requests WhatsApp ke
+                through receive hongi.
+
+                <br><br>
+
+                Customer Name, Mobile, Route, Date,
+                Passengers aur Pickup/Drop details
+                WhatsApp par milengi.
+
+            </div>
+
+            <h3>Booking Details</h3>
+
+            <div class="formGroup">
+
+                <label>Customer Name</label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Customer Name"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Customer Mobile</label>
+
+                <input
+                    type="tel"
+                    id="customerMobile"
+                    placeholder="Mobile Number"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>From</label>
+
+                <input
+                    type="text"
+                    id="bookingFrom"
+                    placeholder="Pickup Location"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>To</label>
+
+                <input
+                    type="text"
+                    id="bookingTo"
+                    placeholder="Drop Location"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Travel Date</label>
+
+                <input
+                    type="date"
+                    id="bookingDate"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Passengers</label>
+
+                <input
+                    type="number"
+                    id="bookingPassengers"
+                    min="1"
+                    placeholder="Number of Passengers"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Pickup / Drop Details</label>
+
+                <textarea
+                    id="bookingDetails"
+                    placeholder="Enter pickup and drop details"
+                ></textarea>
+
+            </div>
+
+            <button
+                type="button"
+                class="saveBtn"
+                onclick="saveBooking()"
+            >
+                💾 Save Booking
+            </button>
+
+        </section>
+
+
+        <!-- WHATSAPP -->
+
+        <section id="whatsappAdmin" class="admin-section hidden">
+
+            <h2>📱 WhatsApp Numbers</h2>
+
+            <div class="infoBox">
+
+                Website booking ke liye WhatsApp numbers:
+
+                <br><br>
+
+                <strong>WhatsApp 1:</strong>
+                8219360228
+
+                <br><br>
+
+                <strong>WhatsApp 2:</strong>
+                8988889818
+
+            </div>
+
+            <h3>✏️ WhatsApp Settings</h3>
+
+            <div class="formGroup">
+
+                <label>WhatsApp Number 1</label>
+
+                <input
+                    type="tel"
+                    id="whatsapp1"
+                    value="8219360228"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>WhatsApp Number 2</label>
+
+                <input
+                    type="tel"
+                    id="whatsapp2"
+                    value="8988889818"
+                >
+
+            </div>
+
+            <button
+                type="button"
+                class="saveBtn"
+                onclick="saveWhatsApp()"
+            >
+                💾 Save WhatsApp Numbers
+            </button>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section id="contactAdmin" class="admin-section hidden">
+
+            <h2>📞 Contact Details</h2>
+
+            <div class="formGroup">
+
+                <label>Business Name</label>
+
+                <input
+                    type="text"
+                    id="contactBusiness"
+                    value="Shivay Tour & Travels"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Phone</label>
+
+                <input
+                    type="tel"
+                    id="contactPhone"
+                    placeholder="Enter phone number"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="contactEmail"
+                    value="atulminhas9@gmail.com"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Website</label>
+
+                <input
+                    type="text"
+                    id="contactWebsite"
+                    value="shivaytourtravels.in"
+                >
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Address</label>
+
+                <textarea
+                    id="contactAddress"
+                    placeholder="Enter business address"
+                ></textarea>
+
+            </div>
+
+            <button
+                type="button"
+                class="saveBtn"
+                onclick="saveContact()"
+            >
+                💾 Save Contact
+            </button>
+
+        </section>
+
+
+        <!-- BUSINESS INFO -->
+
+        <section id="businessAdmin" class="admin-section hidden">
+
+            <h2>🏢 Business Information</h2>
+
+            <div class="infoBox">
+
+                <strong>Shivay Tour & Travels</strong>
+
+                <br><br>
+
+                Himachal • Cabs • Tours
+
+                <br><br>
+
+                Comfortable cabs, shared rides
+                and beautiful Himalayan journeys.
+
+                <br><br>
+
+                Services:
+                <br>
+                • Cab / Taxi
+                <br>
+                • Shared Cab
+                <br>
+                • One Way Taxi
+                <br>
+                • Himachal Tours
+                <br>
+                • Vehicle Hire
+
+            </div>
+
+            <div class="formGroup">
+
+                <label>Business Description</label>
+
+                <textarea id="businessDescription">
+Shivay Tour & Travels provides cab, taxi, shared cab and Himachal travel services.
+                </textarea>
+
+            </div>
+
+            <button
+                type="button"
+                class="saveBtn"
+                onclick="saveBusiness()"
+            >
+                💾 Save Business Information
+            </button>
+
+        </section>
+
+
+        <div class="footer">
+            © 2026 Shivay Tour & Travels
+        </div>
+
+    </div>
 
 </div>
-
-<button
-class="logout-btn"
-onclick="adminLogout()">
-
-Logout
-
-</button>
-
-</header>
-
-
-<main class="dashboard-main">
-
-
-<div class="welcome">
-
-<h2>Welcome, Admin 👋</h2>
-
-<p>
-Manage your cab routes, fares, vehicles, bookings and WhatsApp contacts from here.
-</p>
-
-</div>
-
-
-<!-- STAT CARDS -->
-
-<div class="stats-grid">
-
-<div class="stat-card">
-
-<div class="stat-icon">🚕</div>
-
-<h3>Total Routes</h3>
-
-<div class="stat-number">6</div>
-
-</div>
-
-
-<div class="stat-card">
-
-<div class="stat-icon">🚗</div>
-
-<h3>Vehicles</h3>
-
-<div class="stat-number">5</div>
-
-</div>
-
-
-<div class="stat-card">
-
-<div class="stat-icon">💺</div>
-
-<h3>Shared Routes</h3>
-
-<div class="stat-number">6</div>
-
-</div>
-
-
-<div class="stat-card">
-
-<div class="stat-icon">📱</div>
-
-<h3>WhatsApp Numbers</h3>
-
-<div class="stat-number">3</div>
-
-</div>
-
-</div>
-
-
-<!-- MENU -->
-
-<div class="menu-grid">
-
-
-<div
-class="menu-card"
-onclick="showSection('routesAdmin')">
-
-<div class="icon">🛣️</div>
-
-<h3>Routes & Fares</h3>
-
-<p>
-Manage cab routes and fixed fares.
-</p>
-
-</div>
-
-
-<div
-class="menu-card"
-onclick="showSection('vehiclesAdmin')">
-
-<div class="icon">🚗</div>
-
-<h3>Vehicles</h3>
-
-<p>
-Manage vehicle names and per-km rates.
-</p>
-
-</div>
-
-
-<div
-class="menu-card"
-onclick="showSection('sharedAdmin')">
-
-<div class="icon">💺</div>
-
-<h3>Shared Cab</h3>
-
-<p>
-Manage shared routes and seat prices.
-</p>
-
-</div>
-
-
-<div
-class="menu-card"
-onclick="showSection('bookingAdmin')">
-
-<div class="icon">📅</div>
-
-<h3>Bookings</h3>
-
-<p>
-View booking information.
-</p>
-
-</div>
-
-
-<div
-class="menu-card"
-onclick="showSection('whatsappAdmin')">
-
-<div class="icon">📱</div>
-
-<h3>WhatsApp</h3>
-
-<p>
-Manage the three booking numbers.
-</p>
-
-</div>
-
-
-<div
-class="menu-card"
-onclick="showSection('contactAdmin')">
-
-<div class="icon">📧</div>
-
-<h3>Contact Details</h3>
-
-<p>
-Manage email and website information.
-</p>
-
-</div>
-
-
-</div>
-
-
-<!-- =========================================
-     ROUTES & FARES
-========================================= -->
-
-<section
-class="admin-section hidden"
-id="routesAdmin">
-
-<h2>🛣️ Routes & Fares</h2>
-
-<div class="table-wrap">
-
-<table>
-
-<thead>
-
-<tr>
-<th>Route</th>
-<th>Fare</th>
-<th>Type</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-<td>Chandigarh → Palampur</td>
-<td>₹3,500</td>
-<td>One Way</td>
-</tr>
-
-<tr>
-<td>Palampur → Chandigarh</td>
-<td>₹3,500</td>
-<td>One Way</td>
-</tr>
-
-<tr>
-<td>Chandigarh → Baijnath</td>
-<td>₹3,500</td>
-<td>One Way</td>
-</tr>
-
-<tr>
-<td>Baijnath → Chandigarh</td>
-<td>₹3,500</td>
-<td>One Way</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</section>
-
-
-<!-- =========================================
-     VEHICLES
-========================================= -->
-
-<section
-class="admin-section hidden"
-id="vehiclesAdmin">
-
-<h2>🚗 Vehicle Rates</h2>
-
-<div class="table-wrap">
-
-<table>
-
-<thead>
-
-<tr>
-<th>Vehicle</th>
-<th>Rate</th>
-<th>Passengers</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-<td>Wagon-R / Alto</td>
-<td>₹13/km</td>
-<td>1–4</td>
-</tr>
-
-<tr>
-<td>Dzire / Etios</td>
-<td>₹15/km</td>
-<td>1–4</td>
-</tr>
-
-<tr>
-<td>Ertiga</td>
-<td>₹17/km</td>
-<td>4–6</td>
-</tr>
-
-<tr>
-<td>Innova Crysta</td>
-<td>₹28/km</td>
-<td>5–7</td>
-</tr>
-
-<tr>
-<td>Tempo Traveller</td>
-<td>₹30/km</td>
-<td>9–16</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</section>
-
-
-<!-- =========================================
-     SHARED CAB
-========================================= -->
-
-<section
-class="admin-section hidden"
-id="sharedAdmin">
-
-<h2>💺 Shared Cab Routes</h2>
-
-<div class="table-wrap">
-
-<table>
-
-<thead>
-
-<tr>
-<th>Route</th>
-<th>Price / Seat</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-<td>Chandigarh → Palampur</td>
-<td>₹800</td>
-</tr>
-
-<tr>
-<td>Palampur → Chandigarh</td>
-<td>₹800</td>
-</tr>
-
-<tr>
-<td>Chandigarh → Baijnath</td>
-<td>₹900</td>
-</tr>
-
-<tr>
-<td>Baijnath → Chandigarh</td>
-<td>₹900</td>
-</tr>
-
-<tr>
-<td>Chandigarh → Panchrukhi</td>
-<td>₹900</td>
-</tr>
-
-<tr>
-<td>Panchrukhi → Chandigarh</td>
-<td>₹900</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</section>
-
-
-<!-- =========================================
-     BOOKINGS
-========================================= -->
-
-<section
-class="admin-section hidden"
-id="bookingAdmin">
-
-<h2>📅 Booking Information</h2>
-
-<p style="
-color:#64748b;
-margin-bottom:18px;
-">
-
-Bookings made through the website are sent directly to WhatsApp.
-This dashboard version does not store customer bookings in a database.
-
-</p>
-
-<div style="
-background:#f0fdf4;
-border:1px solid #bbf7d0;
-padding:16px;
-border-radius:10px;
-">
-
-<strong>WhatsApp Booking System</strong>
-
-<br><br>
-
-Customer booking details are sent to the WhatsApp number selected by the customer.
-
-</div>
-
-</section>
-
-
-
 <script>
+
+/* =========================
+   ADMIN LOGIN
+========================= */
 
 function adminLogin(){
 
-    var username = document.getElementById("adminUsername").value;
-    var password = document.getElementById("adminPassword").value;
+    var username =
+        document.getElementById("adminUsername").value.trim();
+
+    var password =
+        document.getElementById("adminPassword").value.trim();
+
+    var error =
+        document.getElementById("loginError");
 
     if(username === "admin" && password === "123456"){
 
@@ -900,51 +989,62 @@ function adminLogin(){
 
         document.getElementById("dashboard").style.display = "block";
 
-    }else{
+        error.style.display = "none";
 
-        document.getElementById("loginError").style.display = "block";
-
-    }
-
-}
-
-
-<script>
-
-function adminLogin(){
-
-    var username =
-        document.getElementById("adminUsername").value;
-
-    var password =
-        document.getElementById("adminPassword").value;
-
-    if(username === "admin" && password === "123456"){
-
-        document.getElementById("loginScreen")
-        .style.display = "none";
-
-        document.getElementById("dashboard")
-        .style.display = "block";
+        showSection("homeAdmin");
 
     }else{
 
-        document.getElementById("loginError")
-        .style.display = "block";
+        error.style.display = "block";
 
     }
-
 }
+
+
+/* =========================
+   ENTER KEY LOGIN
+========================= */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    var passwordBox =
+        document.getElementById("adminPassword");
+
+    passwordBox.addEventListener("keydown", function(event){
+
+        if(event.key === "Enter"){
+
+            adminLogin();
+
+        }
+
+    });
+
+});
+
+
+/* =========================
+   LOGOUT
+========================= */
 
 function adminLogout(){
 
-    document.getElementById("dashboard")
-    .style.display = "none";
+    document.getElementById("dashboard").style.display = "none";
 
-    document.getElementById("loginScreen")
-    .style.display = "flex";
+    document.getElementById("loginScreen").style.display = "flex";
+
+    document.getElementById("adminUsername").value = "";
+
+    document.getElementById("adminPassword").value = "";
+
+    document.getElementById("loginError").style.display = "none";
 
 }
+
+
+/* =========================
+   SHOW ADMIN SECTION
+========================= */
 
 function showSection(sectionId){
 
@@ -957,18 +1057,233 @@ function showSection(sectionId){
 
     }
 
-    var section =
+    var selected =
         document.getElementById(sectionId);
 
-    if(section){
+    if(selected){
 
-        section.classList.remove("hidden");
+        selected.classList.remove("hidden");
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
 
     }
+
+}
+
+
+/* =========================
+   SAVE ROUTE
+========================= */
+
+function saveRoute(){
+
+    var from =
+        document.getElementById("routeFrom").value;
+
+    var to =
+        document.getElementById("routeTo").value;
+
+    var fare =
+        document.getElementById("routeFare").value;
+
+    var sharedFare =
+        document.getElementById("sharedFare").value;
+
+    if(from === "" || to === ""){
+
+        alert("Please enter From and To route.");
+
+        return;
+
+    }
+
+    alert(
+        "Route Saved!\n\n" +
+        from + " → " + to +
+        "\nOne Way Fare: " + fare +
+        "\nShared Fare: " + sharedFare
+    );
+
+}
+
+
+/* =========================
+   SAVE VEHICLE
+========================= */
+
+function saveVehicle(){
+
+    var name =
+        document.getElementById("vehicleName").value;
+
+    var rate =
+        document.getElementById("vehicleRate").value;
+
+    if(name === ""){
+
+        alert("Please enter vehicle name.");
+
+        return;
+
+    }
+
+    alert(
+        "Vehicle Saved!\n\n" +
+        name +
+        "\nRate: " + rate
+    );
+
+}
+
+
+/* =========================
+   SAVE SHARED CAB
+========================= */
+
+function saveShared(){
+
+    var route =
+        document.getElementById("sharedRoute").value;
+
+    var price =
+        document.getElementById("sharedPrice").value;
+
+    var seats =
+        document.getElementById("sharedSeats").value;
+
+    if(route === ""){
+
+        alert("Please enter shared cab route.");
+
+        return;
+
+    }
+
+    alert(
+        "Shared Cab Saved!\n\n" +
+        "Route: " + route +
+        "\nPrice: " + price +
+        "\nSeats: " + seats
+    );
+
+}
+
+
+/* =========================
+   SAVE BOOKING
+========================= */
+
+function saveBooking(){
+
+    var name =
+        document.getElementById("customerName").value;
+
+    var mobile =
+        document.getElementById("customerMobile").value;
+
+    var from =
+        document.getElementById("bookingFrom").value;
+
+    var to =
+        document.getElementById("bookingTo").value;
+
+    var date =
+        document.getElementById("bookingDate").value;
+
+    var passengers =
+        document.getElementById("bookingPassengers").value;
+
+    if(name === "" || mobile === ""){
+
+        alert("Please enter customer name and mobile.");
+
+        return;
+
+    }
+
+    alert(
+        "Booking Saved!\n\n" +
+        "Customer: " + name +
+        "\nMobile: " + mobile +
+        "\nRoute: " + from + " → " + to +
+        "\nDate: " + date +
+        "\nPassengers: " + passengers
+    );
+
+}
+
+
+/* =========================
+   SAVE WHATSAPP
+========================= */
+
+function saveWhatsApp(){
+
+    var number1 =
+        document.getElementById("whatsapp1").value;
+
+    var number2 =
+        document.getElementById("whatsapp2").value;
+
+    alert(
+        "WhatsApp Numbers Saved!\n\n" +
+        "Number 1: " + number1 +
+        "\nNumber 2: " + number2
+    );
+
+}
+
+
+/* =========================
+   SAVE CONTACT
+========================= */
+
+function saveContact(){
+
+    var business =
+        document.getElementById("contactBusiness").value;
+
+    var phone =
+        document.getElementById("contactPhone").value;
+
+    var email =
+        document.getElementById("contactEmail").value;
+
+    alert(
+        "Contact Details Saved!\n\n" +
+        "Business: " + business +
+        "\nPhone: " + phone +
+        "\nEmail: " + email
+    );
+
+}
+
+
+/* =========================
+   SAVE BUSINESS
+========================= */
+
+function saveBusiness(){
+
+    var description =
+        document.getElementById("businessDescription").value;
+
+    if(description === ""){
+
+        alert("Please enter business description.");
+
+        return;
+
+    }
+
+    alert("Business Information Saved!");
 
 }
 
 </script>
 
 </body>
-</html>    
+</html>
