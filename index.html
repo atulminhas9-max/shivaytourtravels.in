@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="Shivay Tour & Travels - Palampur to Chandigarh cabs, Chandigarh to Palampur cabs, Baijnath to Chandigarh taxi, shared cabs and Himachal tours. Book your cab on WhatsApp.">
-
-<meta name="keywords"
-content="Palampur to Chandigarh cab, Palampur to Chandigarh taxi, Chandigarh to Palampur cab, Baijnath to Chandigarh cab, Chandigarh to Baijnath taxi, Himachal cab, shared cab, Shivay Tour Travels">
-
-<meta name="author" content="Shivay Tour & Travels">
-
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://shivaytourtravels.in/">
-
-<title>Shivay Tour & Travels | Himachal Cabs & Tours</title>
+<title>
+Shivay Tour & Travels - Admin
+</title>
 
 <style>
 
@@ -26,385 +18,259 @@ content="Palampur to Chandigarh cab, Palampur to Chandigarh taxi, Chandigarh to 
     box-sizing:border-box;
     margin:0;
     padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
+    font-family:Arial,sans-serif;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f8fc;
+    background:#f2f5f9;
     color:#222;
-    line-height:1.6;
 }
 
-header{
-    background:linear-gradient(135deg,#075985,#0284c7);
-    color:white;
-    padding:15px 20px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 12px rgba(0,0,0,.18);
-}
+/* LOGIN */
 
-.navbar{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-}
-
-.logo{
-    font-size:23px;
-    font-weight:bold;
-}
-
-.logo span{
-    display:block;
-    font-size:12px;
-    font-weight:normal;
-}
-
-.nav-buttons{
-    display:flex;
-    gap:7px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.nav-buttons a{
-    color:white;
-    text-decoration:none;
-    padding:8px 11px;
-    border-radius:8px;
-    font-size:14px;
-    font-weight:bold;
-}
-
-.nav-buttons a:hover{
-    background:rgba(255,255,255,.18);
-}
-
-/* HERO */
-
-.hero{
-    background:
-    linear-gradient(rgba(0,42,70,.68),rgba(0,42,70,.68)),
-    url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80");
-    background-size:cover;
-    background-position:center;
-    min-height:440px;
+#loginScreen{
+    min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    text-align:center;
-    padding:50px 20px;
-    color:white;
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.hero h1{
-    font-size:46px;
-    margin-bottom:12px;
-    text-shadow:0 3px 10px rgba(0,0,0,.5);
-}
-
-.hero p{
-    font-size:20px;
-    margin-bottom:25px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:12px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:13px 20px;
-    border-radius:10px;
-    text-decoration:none;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
-    font-size:15px;
-}
-
-.btn-primary{
-    background:#25d366;
-    color:white;
-}
-
-.btn-secondary{
-    background:white;
-    color:#075985;
-}
-
-/* GENERAL */
-
-.container{
-    max-width:1150px;
-    margin:auto;
-    padding:0 18px;
-}
-
-section{
-    padding:45px 0;
-}
-
-.section-title{
-    text-align:center;
-    font-size:30px;
-    color:#075985;
-    margin-bottom:10px;
-}
-
-.section-subtitle{
-    text-align:center;
-    color:#666;
-    margin-bottom:28px;
-}
-
-/* SEARCH */
-
-.search-section{
-    margin-top:-45px;
-    position:relative;
-    z-index:10;
-}
-
-.search-box{
-    max-width:1050px;
-    margin:auto;
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 8px 30px rgba(0,0,0,.15);
-}
-
-.search-box h2{
-    color:#075985;
-    margin-bottom:18px;
-    text-align:center;
-}
-
-.form-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.form-group{
-    display:flex;
-    flex-direction:column;
-}
-
-.form-group label{
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:6px;
-    color:#444;
-}
-
-.form-group input,
-.form-group select{
-    width:100%;
-    padding:12px;
-    border:1px solid #d5dce5;
-    border-radius:8px;
-    outline:none;
-    font-size:14px;
-    background:white;
-}
-
-.form-group input:focus,
-.form-group select:focus{
-    border-color:#0284c7;
-}
-
-.full-width{
-    grid-column:1/-1;
-}
-
-.location-btn{
-    margin-top:8px;
-    padding:9px 12px;
-    background:#eef7ff;
-    color:#075985;
-    border:1px solid #b8def5;
-    border-radius:7px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.search-btn{
-    width:100%;
-    background:#075985;
-    color:white;
-    border:none;
-    padding:14px;
-    border-radius:9px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* ROUTES */
-
-.route-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.route-card{
-    background:white;
-    border-radius:15px;
     padding:20px;
-    box-shadow:0 4px 16px rgba(0,0,0,.08);
-    border:1px solid #e5edf5;
-    text-align:center;
+    background:linear-gradient(
+        135deg,
+        #075e54,
+        #128c7e
+    );
 }
 
-.route-card h3{
-    color:#075985;
+.loginBox{
+    width:100%;
+    max-width:400px;
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.25);
+}
+
+.loginBox h1{
+    color:#075e54;
     margin-bottom:8px;
 }
 
-.route-arrow{
-    font-size:24px;
-    margin:5px 0;
+.loginBox p{
+    color:#666;
+    margin-bottom:25px;
 }
 
-.price{
-    color:#e85d04;
-    font-size:21px;
-    font-weight:bold;
-    margin:10px 0;
-}
-
-.route-card button{
+.loginBox input{
     width:100%;
-    padding:10px;
-    border:none;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.loginBtn{
+    width:100%;
+    padding:14px;
+    border:0;
+    border-radius:10px;
+    background:#128c7e;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+}
+
+#loginError{
+    display:none;
+    color:#d32f2f;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* DASHBOARD */
+
+#dashboard{
+    display:none;
+}
+
+.topbar{
+    background:#075e54;
+    color:white;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.topbar h1{
+    font-size:22px;
+}
+
+.logoutBtn{
+    background:white;
+    color:#075e54;
+    border:0;
+    padding:10px 18px;
     border-radius:8px;
-    background:#25d366;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* FARES */
-
-.fare-table-wrap{
-    overflow-x:auto;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 4px 16px rgba(0,0,0,.08);
-}
-
-.fare-table{
-    width:100%;
-    border-collapse:collapse;
-    min-width:600px;
-}
-
-.fare-table th,
-.fare-table td{
-    padding:14px;
-    border-bottom:1px solid #e5e7eb;
-    text-align:center;
-}
-
-.fare-table th{
-    background:#075985;
-    color:white;
-}
-
-/* VEHICLES */
-
-.vehicle-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:15px;
-}
-
-.vehicle-card{
-    background:white;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-    text-align:center;
-}
-
-.vehicle-card img{
-    width:100%;
-    height:140px;
-    object-fit:cover;
-}
-
-.vehicle-card h3{
-    padding:10px 8px 2px;
-    color:#075985;
-}
-
-.vehicle-card p{
-    padding:0 8px 12px;
-    color:#555;
     font-weight:bold;
 }
 
-/* SHARED */
-
-.shared-box{
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 5px 20px rgba(0,0,0,.09);
-    max-width:950px;
+.container{
+    max-width:1100px;
     margin:auto;
+    padding:20px;
 }
 
-.shared-grid{
+/* MENU */
+
+.menuGrid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:
+        repeat(auto-fit,minmax(180px,1fr));
     gap:15px;
+    margin-bottom:25px;
 }
 
-.shared-box h3{
-    color:#075985;
-    margin-bottom:5px;
-}
-
-.whatsapp-main{
-    display:block;
+.menuCard{
+    background:white;
+    padding:22px 15px;
+    border-radius:14px;
     text-align:center;
-    background:#25d366;
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.08);
+}
+
+.menuCard .icon{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.menuCard h3{
+    color:#075e54;
+}
+
+/* SECTIONS */
+
+.admin-section{
+    background:white;
+    padding:22px;
+    border-radius:14px;
+    margin-bottom:20px;
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.07);
+}
+
+.hidden{
+    display:none !important;
+}
+
+.admin-section h2{
+    color:#075e54;
+    margin-bottom:18px;
+}
+
+/* BOOKING CARD */
+
+.bookingCard{
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:16px;
+    margin-bottom:15px;
+    background:#fff;
+}
+
+.bookingCard h3{
+    color:#075e54;
+    margin-bottom:10px;
+}
+
+.bookingRow{
+    margin:7px 0;
+}
+
+.bookingRow strong{
+    color:#333;
+}
+
+.status{
+    display:inline-block;
+    padding:6px 10px;
+    border-radius:6px;
+    background:#e8f5e9;
+    color:#2e7d32;
+    font-weight:bold;
+}
+
+.deleteBtn{
+    margin-top:12px;
+    padding:9px 15px;
+    border:0;
+    border-radius:7px;
+    background:#d32f2f;
     color:white;
-    text-decoration:none;
-    padding:14px;
-    border-radius:9px;
     font-weight:bold;
-    margin-top:18px;
 }
 
-.contact-item{
-    padding:8px 0;
+.refreshBtn{
+    padding:10px 16px;
+    border:0;
+    border-radius:8px;
+    background:#128c7e;
+    color:white;
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
-.contact-item a{
-    color:#075985;
-    font-weight:bold;
-    text-decoration:none;
+.emptyBox{
+    padding:25px;
+    text-align:center;
+    background:#f5f5f5;
+    border-radius:10px;
+    color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .topbar h1{
+        font-size:19px;
+    }
+
+    .container{
+        padding:12px;
+    }
+
+    .admin-section{
+        padding:16px;
+    }
+
+    .menuGrid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .menuCard{
+        padding:17px 8px;
+    }
+
+    .menuCard .icon{
+        font-size:27px;
+    }
+
+    .menuCard h3{
+        font-size:14px;
+    }
+
 }
 
 </style>
@@ -413,1072 +279,1036 @@ section{
 
 <body>
 
-<header>
 
-<div class="navbar">
+<!-- =========================
+     LOGIN
+========================= -->
 
-<div class="logo">
-🚕 Shivay Tour & Travels
-<span>Himachal • Cabs • Tours</span>
-</div>
+<div id="loginScreen">
 
-<div class="nav-buttons">
-<a href="#routes">Routes</a>
-<a href="#fares">Fares</a>
-<a href="#shared">Shared Cab</a>
-<a href="#contact">Contact</a>
-</div>
+    <div class="loginBox">
 
-</div>
+        <h1>
+            🚕 Shivay Tour & Travels
+        </h1>
 
-</header>
-
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>Explore Himachal With Shivay</h1>
-
-<p>
-Comfortable cabs, shared rides and beautiful Himalayan journeys.
-</p>
-
-<div class="hero-buttons">
-
-<a
-class="btn btn-primary"
-href="https://wa.me/917590075000?text=Hello%20Shivay%20Tour%20%26%20Travels,%20I%20want%20to%20book%20a%20cab."
-target="_blank">
-
-💬 WhatsApp Booking
-
-</a>
-
-<a class="btn btn-secondary" href="#search">
-🔎 Search Route & Fare
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="search-section" id="search">
-
-<div class="search-box">
-
-<h2>🔎 Search Route & Fare</h2>
-
-<div class="form-grid">
-
-<div class="form-group">
-
-<label>From</label>
-
-<input
-type="text"
-id="from"
-list="places"
-placeholder="e.g. Palampur">
-
-</div>
-
-
-<div class="form-group">
-
-<label>To</label>
-
-<input
-type="text"
-id="to"
-list="places"
-placeholder="e.g. Chandigarh">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Travel Date</label>
-
-<input
-type="date"
-id="travelDate">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Passengers</label>
-
-<input
-type="number"
-id="passengers"
-min="1"
-value="1">
-
-</div>
-
-
-<div class="full-width">
-
-<button
-class="search-btn"
-onclick="searchRoute()">
-
-🔎 Search Route & Book on WhatsApp
-
-</button>
-
-<button
-class="location-btn"
-onclick="getLocation('search')">
-
-📍 Use My Current Location
-
-</button>
-
-</div>
-
-</div>
-
-
-<datalist id="places">
-
-<option value="Palampur">
-<option value="Chandigarh">
-<option value="Baijnath">
-<option value="Panchrukhi">
-<option value="Kangra">
-<option value="Dharamshala">
-<option value="Amritsar">
-<option value="Jalandhar">
-<option value="Shimla">
-<option value="Manali">
-
-</datalist>
-
-</div>
-
-</section>
-<!-- POPULAR ROUTES -->
-
-<section id="routes">
-
-<div class="container">
-
-<h2 class="section-title">Popular Cab Routes</h2>
-
-<p class="section-subtitle">
-Book comfortable private cabs from Shivay Tour & Travels
-</p>
-
-<div class="route-grid">
-
-<div class="route-card">
-
-<h3>Chandigarh → Palampur</h3>
-
-<div class="route-arrow">🚕 ↓</div>
-
-<div class="price">₹3,500</div>
-
-<p>One Way Fixed Fare</p>
-
-<button onclick="setRoute('Chandigarh','Palampur')">
-Book Now
-</button>
-
-</div>
-
-
-<div class="route-card">
-
-<h3>Palampur → Chandigarh</h3>
-
-<div class="route-arrow">🚕 ↓</div>
-
-<div class="price">₹3,500</div>
-
-<p>One Way Fixed Fare</p>
-
-<button onclick="setRoute('Palampur','Chandigarh')">
-Book Now
-</button>
-
-</div>
-
-
-<div class="route-card">
-
-<h3>Chandigarh → Baijnath</h3>
-
-<div class="route-arrow">🚕 ↓</div>
-
-<div class="price">₹3,500</div>
-
-<p>One Way Fixed Fare</p>
-
-<button onclick="setRoute('Chandigarh','Baijnath')">
-Book Now
-</button>
-
-</div>
-
-
-<div class="route-card">
-
-<h3>Baijnath → Chandigarh</h3>
-
-<div class="route-arrow">🚕 ↓</div>
-
-<div class="price">₹3,500</div>
-
-<p>One Way Fixed Fare</p>
-
-<button onclick="setRoute('Baijnath','Chandigarh')">
-Book Now
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FARE SECTION -->
-
-<section id="fares">
-
-<div class="container">
-
-<h2 class="section-title">
-Cab Fare & Vehicle Rates
-</h2>
-
-<p class="section-subtitle">
-Choose the vehicle according to your travel requirements
-</p>
-
-<div class="fare-table-wrap">
-
-<table class="fare-table">
-
-<thead>
-
-<tr>
-<th>Vehicle</th>
-<th>Rate</th>
-<th>Suitable For</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-<td>🚗 Wagon-R / Alto</td>
-<td>₹13/km</td>
-<td>1–4 Passengers</td>
-</tr>
-
-<tr>
-<td>🚘 Dzire / Etios</td>
-<td>₹15/km</td>
-<td>1–4 Passengers</td>
-</tr>
-
-<tr>
-<td>🚙 Ertiga</td>
-<td>₹17/km</td>
-<td>4–6 Passengers</td>
-</tr>
-
-<tr>
-<td>🚙 Innova Crysta</td>
-<td>₹28/km</td>
-<td>5–7 Passengers</td>
-</tr>
-
-<tr>
-<td>🚌 Tempo Traveller</td>
-<td>₹30/km</td>
-<td>9–16 Passengers</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- VEHICLES -->
-
-<section>
-
-<div class="container">
-
-<h2 class="section-title">
-Our Vehicles
-</h2>
-
-<p class="section-subtitle">
-Comfortable vehicles for Himachal journeys
-</p>
-
-<div class="vehicle-grid">
-
-
-<div class="vehicle-card">
-
-<img
-src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=700&q=80"
-alt="Wagon R Alto cab">
-
-<h3>Wagon-R / Alto</h3>
-
-<p>₹13/km</p>
-
-</div>
-
-
-<div class="vehicle-card">
-
-<img
-src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=700&q=80"
-alt="Dzire Etios cab">
-
-<h3>Dzire / Etios</h3>
-
-<p>₹15/km</p>
-
-</div>
-
-
-<div class="vehicle-card">
-
-<img
-src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=700&q=80"
-alt="Ertiga cab">
-
-<h3>Ertiga</h3>
-
-<p>₹17/km</p>
-
-</div>
-
-
-<div class="vehicle-card">
-
-<img
-src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=700&q=80"
-alt="Innova Crysta cab">
-
-<h3>Innova Crysta</h3>
-
-<p>₹28/km</p>
-
-</div>
-
-
-<div class="vehicle-card">
-
-<img
-src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=700&q=80"
-alt="Tempo Traveller">
-
-<h3>Tempo Traveller</h3>
-
-<p>₹30/km</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SHARED CAB -->
-
-<section id="shared">
-
-<div class="container">
-
-<h2 class="section-title">
-🚕 Shared Cab Booking
-</h2>
-
-<p class="section-subtitle">
-Affordable shared seats for regular Himachal routes
-</p>
-
-<div class="shared-box">
-
-<h3>Available Shared Routes</h3>
-
-<div class="shared-grid">
-
-
-<div class="form-group">
-
-<label>Route</label>
-
-<select id="sharedRoute">
-
-<option value="Chandigarh → Palampur">
-Chandigarh → Palampur — ₹800/seat
-</option>
-
-<option value="Palampur → Chandigarh">
-Palampur → Chandigarh — ₹800/seat
-</option>
-
-<option value="Chandigarh → Baijnath">
-Chandigarh → Baijnath — ₹900/seat
-</option>
-
-<option value="Baijnath → Chandigarh">
-Baijnath → Chandigarh — ₹900/seat
-</option>
-
-<option value="Chandigarh → Panchrukhi">
-Chandigarh → Panchrukhi — ₹900/seat
-</option>
-
-<option value="Panchrukhi → Chandigarh">
-Panchrukhi → Chandigarh — ₹900/seat
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Travel Date</label>
-
-<input
-type="date"
-id="sharedDate">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Travel Time</label>
-
-<input
-type="time"
-id="sharedTime">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Seats</label>
-
-<input
-type="number"
-id="sharedSeats"
-min="1"
-value="1">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Customer Name</label>
-
-<input
-type="text"
-id="customerName"
-placeholder="Your Name">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Customer Mobile</label>
-
-<input
-type="tel"
-id="customerMobile"
-placeholder="Mobile Number">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Pickup Details</label>
-
-<input
-type="text"
-id="pickupDetails"
-placeholder="Pickup location">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Drop Details</label>
-
-<input
-type="text"
-id="dropDetails"
-placeholder="Drop location">
-
-</div>
-
-
-<div class="full-width">
-
-<button
-class="location-btn"
-onclick="getLocation('shared')">
-
-📍 Use My Current Location
-
-</button>
-
-</div>
-
-</div>
-
-
-<!-- 3 WHATSAPP BUTTONS -->
-
-<div style="margin-top:20px;">
-
-<p style="text-align:center;font-weight:bold;color:#075985;">
-Choose WhatsApp Number for Booking
-</p>
-
-
-<a
-href="#"
-class="whatsapp-main"
-onclick="bookSharedCab(event,'917590075000')">
-
-💬 WhatsApp 7590075000
-
-</a>
-
-
-<a
-href="#"
-class="whatsapp-main"
-onclick="bookSharedCab(event,'918219360228')">
-
-💬 WhatsApp 8219360228
-
-</a>
-
-
-<a
-href="#"
-class="whatsapp-main"
-onclick="bookSharedCab(event,'918988889818')">
-
-💬 WhatsApp 8988889818
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-<h2 class="section-title">
-Contact Shivay Tour & Travels
-</h2>
-
-<p class="section-subtitle">
-For cab booking, shared cab and Himachal tours
-</p>
-
-<div class="shared-box">
-
-<div class="shared-grid">
-
-
-<div class="contact-item">
-
-<h3>📱 WhatsApp 1</h3>
-
-<p>
-<a
-href="https://wa.me/917590075000"
-target="_blank">
-
-7590075000
-
-</a>
-</p>
-
-</div>
-
-
-<div class="contact-item">
-
-<h3>📱 WhatsApp 2</h3>
-
-<p>
-<a
-href="https://wa.me/918219360228"
-target="_blank">
-
-8219360228
-
-</a>
-</p>
-
-</div>
-
-
-<div class="contact-item">
-
-<h3>📱 WhatsApp 3</h3>
-
-<p>
-<a
-href="https://wa.me/918988889818"
-target="_blank">
-
-8988889818
-
-</a>
-</p>
-
-</div>
-
-
-<div class="contact-item">
-
-<h3>📧 Email</h3>
-
-<p>
-
-<a
-href="mailto:atulminhas9@gmail.com">
-
-atulminhas9@gmail.com
-
-</a>
-
-</p>
-
-</div>
-
-
-<div class="contact-item">
-
-<h3>🌐 Website</h3>
-
-<p>
-
-<a
-href="https://shivaytourtravels.in/"
-target="_blank">
-
-shivaytourtravels.in
-
-</a>
-
-</p>
-
-</div>
-
-
-<div class="contact-item">
-
-<h3>🚕 Services</h3>
-
-<p>
-Himachal Cabs • Shared Cab • Tours
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer
-style="
-background:#075985;
-color:white;
-text-align:center;
-padding:25px 15px;
-">
-
-<strong>Shivay Tour & Travels</strong>
-
-<br>
-
-Himachal • Cabs • Tours
-
-<br><br>
-
-© 2026 Shivay Tour & Travels. All Rights Reserved.
-
-</footer>
-
-<script>
-
-/* =========================================
-   SHIVAY TOUR & TRAVELS
-   WHATSAPP NUMBERS
-   ========================================= */
-
-const whatsappNumbers = [
-    "917590075000",
-    "918219360228",
-    "918988889818"
-];
-
-
-/* =========================================
-   OPEN WHATSAPP
-   ========================================= */
-
-function openWhatsApp(number, message){
-
-    const url =
-        "https://wa.me/" +
-        number +
-        "?text=" +
-        encodeURIComponent(message);
-
-    window.open(url, "_blank");
-
-}
-
-
-/* =========================================
-   SET ROUTE
-   ========================================= */
-
-function setRoute(from, to){
-
-    document.getElementById("from").value = from;
-
-    document.getElementById("to").value = to;
-
-    document.getElementById("search").scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-/* =========================================
-   GET FARE
-   ========================================= */
-
-function getFare(from, to){
-
-    from = from.trim().toLowerCase();
-    to = to.trim().toLowerCase();
-
-
-    if(
-        (from === "chandigarh" && to === "palampur") ||
-        (from === "palampur" && to === "chandigarh")
-    ){
-
-        return "₹3,500";
-
-    }
-
-
-    if(
-        (from === "chandigarh" && to === "baijnath") ||
-        (from === "baijnath" && to === "chandigarh")
-    ){
-
-        return "₹3,500";
-
-    }
-
-
-    return "Fare will be confirmed on WhatsApp";
-
-}
-
-
-/* =========================================
-   SEARCH ROUTE
-   ========================================= */
-
-function searchRoute(){
-
-    const from =
-        document.getElementById("from").value.trim();
-
-    const to =
-        document.getElementById("to").value.trim();
-
-    const date =
-        document.getElementById("travelDate").value;
-
-    const passengers =
-        document.getElementById("passengers").value;
-
-
-    if(!from){
-
-        alert("Please enter pickup location.");
-
-        return;
-
-    }
-
-
-    if(!to){
-
-        alert("Please enter destination.");
-
-        return;
-
-    }
-
-
-    const fare = getFare(from,to);
-
-
-    const message =
-`🚕 *SHIVAY TOUR & TRAVELS - CAB BOOKING*
-
-📍 From: ${from}
-📍 To: ${to}
-📅 Travel Date: ${date || "Not selected"}
-👥 Passengers: ${passengers}
-
-💰 Estimated Fare: ${fare}
-
-Please confirm cab availability and booking.
-
-Thank you.
-*Shivay Tour & Travels*`;
-
-
-    /*
-       WhatsApp selection screen
-       This avoids browser blocking multiple
-       automatic WhatsApp windows.
-    */
-
-    showWhatsAppChoices(message);
-
-}
-
-
-/* =========================================
-   WHATSAPP CHOICE BOX
-   ========================================= */
-
-function showWhatsAppChoices(message){
-
-    const oldBox =
-        document.getElementById("whatsappChoiceBox");
-
-    if(oldBox){
-
-        oldBox.remove();
-
-    }
-
-
-    const box =
-        document.createElement("div");
-
-    box.id = "whatsappChoiceBox";
-
-    box.style.position = "fixed";
-    box.style.left = "50%";
-    box.style.top = "50%";
-    box.style.transform = "translate(-50%,-50%)";
-    box.style.width = "92%";
-    box.style.maxWidth = "430px";
-    box.style.background = "white";
-    box.style.padding = "25px";
-    box.style.borderRadius = "18px";
-    box.style.boxShadow = "0 10px 40px rgba(0,0,0,.3)";
-    box.style.zIndex = "99999";
-    box.style.textAlign = "center";
-
-
-    box.innerHTML = `
-
-        <h2 style="color:#075985;margin-bottom:8px;">
-            📱 Choose WhatsApp
-        </h2>
-
-        <p style="color:#555;margin-bottom:18px;">
-            Select the number you want to send the booking to.
+        <p>
+            Admin Dashboard
         </p>
 
-        <button
-        onclick="sendToWhatsApp('917590075000',window.pendingWhatsAppMessage)"
-        style="
-        width:100%;
-        padding:13px;
-        margin:6px 0;
-        border:0;
-        border-radius:9px;
-        background:#25d366;
-        color:white;
-        font-size:15px;
-        font-weight:bold;
-        cursor:pointer;">
-        💬 7590075000
-        </button>
+        <input
+            type="text"
+            id="adminUsername"
+            placeholder="Username"
+        >
 
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password"
+        >
 
         <button
-        onclick="sendToWhatsApp('918219360228',window.pendingWhatsAppMessage)"
-        style="
-        width:100%;
-        padding:13px;
-        margin:6px 0;
-        border:0;
-        border-radius:9px;
-        background:#25d366;
-        color:white;
-        font-size:15px;
-        font-weight:bold;
-        cursor:pointer;">
-        💬 8219360228
+            type="button"
+            class="loginBtn"
+            onclick="adminLogin()"
+        >
+            🔐 Login
         </button>
 
+        <div id="loginError">
+            ❌ Wrong Username or Password
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     DASHBOARD
+========================= -->
+
+<div id="dashboard">
+
+    <div class="topbar">
+
+        <h1>
+            🚕 Shivay Tour & Travels - Admin
+        </h1>
 
         <button
-        onclick="sendToWhatsApp('918988889818',window.pendingWhatsAppMessage)"
-        style="
-        width:100%;
-        padding:13px;
-        margin:6px 0;
-        border:0;
-        border-radius:9px;
-        background:#25d366;
-        color:white;
-        font-size:15px;
-        font-weight:bold;
-        cursor:pointer;">
-        💬 8988889818
+            type="button"
+            class="logoutBtn"
+            onclick="adminLogout()"
+        >
+            Logout
         </button>
 
-
-        <button
-        onclick="closeWhatsAppChoices()"
-        style="
-        width:100%;
-        padding:11px;
-        margin-top:10px;
-        border:1px solid #ddd;
-        border-radius:9px;
-        background:#f5f5f5;
-        color:#444;
-        font-weight:bold;
-        cursor:pointer;">
-        Cancel
-        </button>
-
-    `;
+    </div>
 
 
-    document.body.appendChild(box);
-
-    window.pendingWhatsAppMessage = message;
-
-}
+    <div class="container">
 
 
-/* =========================================
-   SEND WHATSAPP
-   ========================================= */
+        <!-- MENU -->
 
-function sendToWhatsApp(number,message){
+        <div class="menuGrid">
 
-    const url =
-        "https://wa.me/" +
-        number +
-        "?text=" +
-        encodeURIComponent(message);
+            <div
+                class="menuCard"
+                onclick="showSection('homeAdmin')"
+            >
 
-    window.open(url,"_blank");
+                <div class="icon">🏠</div>
 
-    closeWhatsAppChoices();
+                <h3>Dashboard</h3>
 
-}
+            </div>
 
 
-/* =========================================
-   CLOSE WHATSAPP CHOICE
-   ========================================= */
+            <div
+                class="menuCard"
+                onclick="showSection('bookingAdmin')"
+            >
 
-function closeWhatsAppChoices(){
+                <div class="icon">📋</div>
 
-    const box =
-        document.getElementById("whatsappChoiceBox");
+                <h3>Bookings</h3>
 
-    if(box){
+            </div>
 
-        box.remove();
+
+            <div
+                class="menuCard"
+                onclick="showSection('routesAdmin')"
+            >
+
+                <div class="icon">🛣️</div>
+
+                <h3>Routes & Fares</h3>
+
+            </div>
+
+
+            <div
+                class="menuCard"
+                onclick="showSection('vehiclesAdmin')"
+            >
+
+                <div class="icon">🚕</div>
+
+                <h3>Vehicles</h3>
+
+            </div>
+
+
+            <div
+                class="menuCard"
+                onclick="showSection('sharedAdmin')"
+            >
+
+                <div class="icon">👥</div>
+
+                <h3>Shared Cab</h3>
+
+            </div>
+
+
+            <div
+                class="menuCard"
+                onclick="showSection('whatsappAdmin')"
+            >
+
+                <div class="icon">📱</div>
+
+                <h3>WhatsApp</h3>
+
+            </div>
+
+
+            <div
+                class="menuCard"
+                onclick="showSection('contactAdmin')"
+            >
+
+                <div class="icon">📞</div>
+
+                <h3>Contact</h3>
+
+            </div>
+
+
+            <div
+                class="menuCard"
+                onclick="showSection('businessAdmin')"
+            >
+
+                <div class="icon">🏢</div>
+
+                <h3>Business Info</h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- HOME -->
+
+        <section
+            id="homeAdmin"
+            class="admin-section"
+        >
+
+            <h2>
+                🏠 Dashboard
+            </h2>
+
+            <div class="emptyBox">
+
+                <h3>
+                    Welcome to Shivay Tour & Travels
+                </h3>
+
+                <br>
+
+                Customer bookings will appear
+                in the Bookings section.
+
+            </div>
+
+        </section>
+
+
+        <!-- BOOKINGS -->
+
+        <section
+            id="bookingAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                📋 Customer Bookings
+            </h2>
+
+            <button
+                type="button"
+                class="refreshBtn"
+                onclick="loadBookings()"
+            >
+                🔄 Refresh Bookings
+            </button>
+
+            <div id="bookingList">
+
+                <div class="emptyBox">
+
+                    No bookings yet.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ROUTES -->
+
+        <section
+            id="routesAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                🛣️ Routes & Fares
+            </h2>
+
+            <p>
+                Chandigarh → Palampur:
+                ₹3,500
+            </p>
+
+            <br>
+
+            <p>
+                Palampur → Chandigarh:
+                ₹3,500
+            </p>
+
+            <br>
+
+            <p>
+                Chandigarh → Baijnath:
+                ₹3,500
+            </p>
+
+            <br>
+
+            <p>
+                Baijnath → Chandigarh:
+                ₹3,500
+            </p>
+
+        </section>
+
+
+        <!-- VEHICLES -->
+
+        <section
+            id="vehiclesAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                🚕 Vehicles
+            </h2>
+
+            <p>
+                Wagon-R / Alto — ₹13/km
+            </p>
+
+            <br>
+
+            <p>
+                Dzire / Etios — ₹15/km
+            </p>
+
+            <br>
+
+            <p>
+                Ertiga — ₹17/km
+            </p>
+
+            <br>
+
+            <p>
+                Innova Crysta — ₹28/km
+            </p>
+
+            <br>
+
+            <p>
+                Tempo Traveller — ₹30/km
+            </p>
+
+        </section>
+
+
+        <!-- SHARED -->
+
+        <section
+            id="sharedAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                👥 Shared Cab
+            </h2>
+
+            <p>
+                Chandigarh ↔ Palampur
+                — ₹800/seat
+            </p>
+
+            <br>
+
+            <p>
+                Chandigarh ↔ Baijnath
+                — ₹900/seat
+            </p>
+
+            <br>
+
+            <p>
+                Chandigarh ↔ Panchrukhi
+                — ₹900/seat
+            </p>
+
+        </section>
+
+
+        <!-- WHATSAPP -->
+
+        <section
+            id="whatsappAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                📱 WhatsApp
+            </h2>
+
+            <p>
+                WhatsApp 1:
+                <strong>8219360228</strong>
+            </p>
+
+            <br>
+
+            <p>
+                WhatsApp 2:
+                <strong>8988889818</strong>
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section
+            id="contactAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                📞 Contact
+            </h2>
+
+            <p>
+                Shivay Tour & Travels
+            </p>
+
+            <br>
+
+            <p>
+                Email:
+                atulminhas9@gmail.com
+            </p>
+
+            <br>
+
+            <p>
+                Website:
+                shivaytourtravels.in
+            </p>
+
+        </section>
+
+
+        <!-- BUSINESS -->
+
+        <section
+            id="businessAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                🏢 Business Info
+            </h2>
+
+            <p>
+                Himachal • Cabs • Tours
+            </p>
+
+            <br>
+
+            <p>
+                Comfortable cabs, shared rides
+                and beautiful Himalayan journeys.
+            </p>
+
+        </section>
+
+
+    </div>
+
+</div>
+        <!-- BOOKING DETAILS / FILTER -->
+
+        <section
+            id="bookingDetailsAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                🔎 Booking Search
+            </h2>
+
+            <div style="margin-bottom:15px;">
+
+                <input
+                    type="text"
+                    id="bookingSearch"
+                    placeholder="Search Name / Mobile / Route"
+                    oninput="filterBookings()"
+                    style="
+                        width:100%;
+                        padding:13px;
+                        border:1px solid #ddd;
+                        border-radius:8px;
+                        font-size:15px;
+                    "
+                >
+
+            </div>
+
+            <div
+                id="bookingCount"
+                style="
+                    margin-bottom:15px;
+                    font-weight:bold;
+                    color:#075e54;
+                "
+            >
+                Total Bookings: 0
+            </div>
+
+        </section>
+
+
+        <!-- NEW BOOKING FORM -->
+
+        <section
+            id="newBookingAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                ➕ Add Booking
+            </h2>
+
+            <div class="formGroup">
+
+                <label>Customer Name</label>
+
+                <input
+                    type="text"
+                    id="newCustomerName"
+                    placeholder="Customer Name"
+                >
+
+            </div>
+
+
+            <div class="formGroup">
+
+                <label>Customer Mobile</label>
+
+                <input
+                    type="tel"
+                    id="newCustomerMobile"
+                    placeholder="Customer Mobile"
+                >
+
+            </div>
+
+
+            <div class="formGroup">
+
+                <label>From</label>
+
+                <input
+                    type="text"
+                    id="newBookingFrom"
+                    placeholder="Pickup Location"
+                >
+
+            </div>
+
+
+            <div class="formGroup">
+
+                <label>To</label>
+
+                <input
+                    type="text"
+                    id="newBookingTo"
+                    placeholder="Drop Location"
+                >
+
+            </div>
+
+
+            <div class="formGroup">
+
+                <label>Travel Date</label>
+
+                <input
+                    type="date"
+                    id="newBookingDate"
+                >
+
+            </div>
+
+
+            <div class="formGroup">
+
+                <label>Passengers</label>
+
+                <input
+                    type="number"
+                    id="newBookingPassengers"
+                    min="1"
+                    value="1"
+                >
+
+            </div>
+
+
+            <div class="formGroup">
+
+                <label>Pickup / Drop Details</label>
+
+                <textarea
+                    id="newBookingDetails"
+                    placeholder="Pickup / Drop details"
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="refreshBtn"
+                onclick="addNewBooking()"
+            >
+                💾 Save Booking
+            </button>
+
+        </section>
+
+
+        <!-- BOOKING STATUS -->
+
+        <section
+            id="bookingStatusAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                📊 Booking Status
+            </h2>
+
+            <div
+                style="
+                    display:grid;
+                    grid-template-columns:
+                    repeat(auto-fit,minmax(140px,1fr));
+                    gap:12px;
+                "
+            >
+
+                <div
+                    style="
+                        background:#f1f8f7;
+                        padding:18px;
+                        border-radius:10px;
+                        text-align:center;
+                    "
+                >
+
+                    <div
+                        id="totalBookingNumber"
+                        style="
+                            font-size:28px;
+                            font-weight:bold;
+                            color:#075e54;
+                        "
+                    >
+                        0
+                    </div>
+
+                    <div>
+                        Total
+                    </div>
+
+                </div>
+
+
+                <div
+                    style="
+                        background:#e8f5e9;
+                        padding:18px;
+                        border-radius:10px;
+                        text-align:center;
+                    "
+                >
+
+                    <div
+                        id="newBookingNumber"
+                        style="
+                            font-size:28px;
+                            font-weight:bold;
+                            color:#2e7d32;
+                        "
+                    >
+                        0
+                    </div>
+
+                    <div>
+                        New
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOOKING DATA SETTINGS -->
+
+        <section
+            id="bookingSettingsAdmin"
+            class="admin-section hidden"
+        >
+
+            <h2>
+                ⚙️ Booking Settings
+            </h2>
+
+            <div class="infoBox">
+
+                Customer website se booking aane ke baad
+                booking information Admin Dashboard ke
+                Bookings section mein display hogi.
+
+                <br><br>
+
+                Booking mein ye details rahengi:
+
+                <br><br>
+
+                • Customer Name
+                <br>
+                • Mobile Number
+                <br>
+                • From
+                <br>
+                • To
+                <br>
+                • Travel Date
+                <br>
+                • Passengers
+                <br>
+                • Pickup / Drop Details
+                <br>
+                • Booking Time
+                <br>
+                • Booking Status
+
+            </div>
+
+        </section>
+        <script>
+
+/* =========================
+   LOGIN
+========================= */
+
+function adminLogin(){
+
+    var username =
+        document.getElementById("adminUsername").value.trim();
+
+    var password =
+        document.getElementById("adminPassword").value.trim();
+
+    var error =
+        document.getElementById("loginError");
+
+    if(username === "admin" && password === "123456"){
+
+        document.getElementById("loginScreen").style.display =
+            "none";
+
+        document.getElementById("dashboard").style.display =
+            "block";
+
+        error.style.display = "none";
+
+        showSection("homeAdmin");
+
+    }else{
+
+        error.style.display = "block";
 
     }
 
 }
 
 
-/* =========================================
-   CURRENT LOCATION
-   ========================================= */
+/* =========================
+   LOGOUT
+========================= */
 
-function getLocation(type){
+function adminLogout(){
 
-    if(!navigator.geolocation){
+    document.getElementById("dashboard").style.display =
+        "none";
+
+    document.getElementById("loginScreen").style.display =
+        "flex";
+
+    document.getElementById("adminUsername").value = "";
+
+    document.getElementById("adminPassword").value = "";
+
+}
+
+
+/* =========================
+   SHOW SECTION
+========================= */
+
+function showSection(sectionId){
+
+    var sections =
+        document.querySelectorAll(".admin-section");
+
+    for(var i = 0; i < sections.length; i++){
+
+        sections[i].classList.add("hidden");
+
+    }
+
+    var selected =
+        document.getElementById(sectionId);
+
+    if(selected){
+
+        selected.classList.remove("hidden");
+
+    }
+
+}
+
+
+/* =========================
+   DEMO BOOKING STORAGE
+========================= */
+
+var bookings = [];
+
+try{
+
+    var savedBookings =
+        localStorage.getItem("shivayBookings");
+
+    if(savedBookings){
+
+        bookings = JSON.parse(savedBookings);
+
+    }
+
+}catch(error){
+
+    bookings = [];
+
+}
+
+
+/* =========================
+   SAVE BOOKINGS
+========================= */
+
+function saveBookings(){
+
+    localStorage.setItem(
+        "shivayBookings",
+        JSON.stringify(bookings)
+    );
+
+}
+
+
+/* =========================
+   LOAD BOOKINGS
+========================= */
+
+function loadBookings(){
+
+    var list =
+        document.getElementById("bookingList");
+
+    if(!list){
+
+        return;
+
+    }
+
+    if(bookings.length === 0){
+
+        list.innerHTML = `
+            <div class="emptyBox">
+                📭 No bookings yet.
+            </div>
+        `;
+
+        updateBookingCount();
+
+        return;
+
+    }
+
+
+    list.innerHTML = "";
+
+
+    for(var i = bookings.length - 1; i >= 0; i--){
+
+        var booking = bookings[i];
+
+
+        var card =
+            document.createElement("div");
+
+        card.className = "bookingCard";
+
+
+        card.innerHTML = `
+
+            <h3>
+                🚕 Booking #${i + 1}
+            </h3>
+
+            <div class="bookingRow">
+                <strong>Customer:</strong>
+                ${escapeHTML(booking.name)}
+            </div>
+
+            <div class="bookingRow">
+                <strong>Mobile:</strong>
+                ${escapeHTML(booking.mobile)}
+            </div>
+
+            <div class="bookingRow">
+                <strong>Route:</strong>
+                ${escapeHTML(booking.from)}
+                →
+                ${escapeHTML(booking.to)}
+            </div>
+
+            <div class="bookingRow">
+                <strong>Travel Date:</strong>
+                ${escapeHTML(booking.date)}
+            </div>
+
+            <div class="bookingRow">
+                <strong>Passengers:</strong>
+                ${escapeHTML(booking.passengers)}
+            </div>
+
+            <div class="bookingRow">
+                <strong>Pickup / Drop:</strong>
+                ${escapeHTML(booking.details)}
+            </div>
+
+            <div class="bookingRow">
+                <strong>Booking Time:</strong>
+                ${escapeHTML(booking.time)}
+            </div>
+
+            <div class="bookingRow">
+                <span class="status">
+                    ${escapeHTML(booking.status)}
+                </span>
+            </div>
+
+            <button
+                type="button"
+                class="deleteBtn"
+                onclick="deleteBooking(${i})"
+            >
+                🗑️ Delete Booking
+            </button>
+
+        `;
+
+
+        list.appendChild(card);
+
+    }
+
+
+    updateBookingCount();
+
+}
+
+
+/* =========================
+   ESCAPE HTML
+========================= */
+
+function escapeHTML(value){
+
+    if(value === undefined || value === null){
+
+        return "";
+
+    }
+
+    return String(value)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================
+   DELETE BOOKING
+========================= */
+
+function deleteBooking(index){
+
+    if(!confirm(
+        "Kya aap ye booking delete karna chahte hain?"
+    )){
+
+        return;
+
+    }
+
+
+    bookings.splice(index,1);
+
+    saveBookings();
+
+    loadBookings();
+
+}
+
+
+/* =========================
+   ADD NEW BOOKING
+========================= */
+
+function addNewBooking(){
+
+    var name =
+        document.getElementById("newCustomerName").value.trim();
+
+    var mobile =
+        document.getElementById("newCustomerMobile").value.trim();
+
+    var from =
+        document.getElementById("newBookingFrom").value.trim();
+
+    var to =
+        document.getElementById("newBookingTo").value.trim();
+
+    var date =
+        document.getElementById("newBookingDate").value;
+
+    var passengers =
+        document.getElementById("newBookingPassengers").value;
+
+    var details =
+        document.getElementById("newBookingDetails").value.trim();
+
+
+    if(
+        name === "" ||
+        mobile === "" ||
+        from === "" ||
+        to === ""
+    ){
 
         alert(
-            "Your browser does not support location."
+            "Please fill Customer, Mobile, From and To."
         );
 
         return;
@@ -1486,402 +1316,192 @@ function getLocation(type){
     }
 
 
-    navigator.geolocation.getCurrentPosition(
-
-        function(position){
-
-            const lat =
-                position.coords.latitude;
-
-            const lon =
-                position.coords.longitude;
+    var now =
+        new Date();
 
 
-            const mapsLink =
-                "https://www.google.com/maps?q=" +
-                lat +
-                "," +
-                lon;
+    var booking = {
+
+        name:name,
+
+        mobile:mobile,
+
+        from:from,
+
+        to:to,
+
+        date:date,
+
+        passengers:passengers,
+
+        details:details,
+
+        time:now.toLocaleString(),
+
+        status:"New"
+
+    };
 
 
-            window.currentLocationLink =
-                mapsLink;
+    bookings.push(booking);
 
+    saveBookings();
 
-            if(type === "search"){
-
-                alert(
-                    "📍 Current location found successfully."
-                );
-
-            }
-
-
-            if(type === "shared"){
-
-                alert(
-                    "📍 Current location added to your booking."
-                );
-
-            }
-
-        },
-
-        function(){
-
-            alert(
-                "Unable to get your location. Please allow location permission."
-            );
-
-        },
-
-        {
-            enableHighAccuracy:true,
-            timeout:10000,
-            maximumAge:0
-        }
-
+    alert(
+        "✅ Booking successfully saved."
     );
 
-}
+
+    document.getElementById("newCustomerName").value = "";
+
+    document.getElementById("newCustomerMobile").value = "";
+
+    document.getElementById("newBookingFrom").value = "";
+
+    document.getElementById("newBookingTo").value = "";
+
+    document.getElementById("newBookingDate").value = "";
+
+    document.getElementById("newBookingPassengers").value = "1";
+
+    document.getElementById("newBookingDetails").value = "";
 
 
-/* =========================================
-   SHARED CAB BOOKING
-   ========================================= */
-
-function bookSharedCab(event,number){
-
-    event.preventDefault();
-
-
-    const route =
-        document.getElementById("sharedRoute").value;
-
-    const date =
-        document.getElementById("sharedDate").value;
-
-    const time =
-        document.getElementById("sharedTime").value;
-
-    const seats =
-        document.getElementById("sharedSeats").value;
-
-    const name =
-        document.getElementById("customerName").value.trim();
-
-    const mobile =
-        document.getElementById("customerMobile").value.trim();
-
-    const pickup =
-        document.getElementById("pickupDetails").value.trim();
-
-    const drop =
-        document.getElementById("dropDetails").value.trim();
-
-
-    if(!name){
-
-        alert("Please enter your name.");
-
-        return;
-
-    }
-
-
-    if(!mobile){
-
-        alert("Please enter your mobile number.");
-
-        return;
-
-    }
-
-
-    if(!date){
-
-        alert("Please select travel date.");
-
-        return;
-
-    }
-
-
-    let locationText =
-        window.currentLocationLink ||
-        "Not provided";
-
-
-    const message =
-`🚕 *SHIVAY TOUR & TRAVELS - SHARED CAB BOOKING*
-
-🛣 Route: ${route}
-
-📅 Travel Date: ${date}
-
-⏰ Travel Time: ${time || "Not selected"}
-
-💺 Seats: ${seats}
-
-👤 Customer Name: ${name}
-
-📱 Customer Mobile: ${mobile}
-
-📍 Pickup: ${pickup || "Not provided"}
-
-📍 Drop: ${drop || "Not provided"}
-
-📌 Current Location:
-${locationText}
-
-Please confirm my shared cab booking.
-
-Thank you.
-*Shivay Tour & Travels*`;
-
-
-    openWhatsApp(number,message);
+    loadBookings();
 
 }
 
 
-/* =========================================
-   SET SHARED ROUTE
-   ========================================= */
+/* =========================
+   SEARCH BOOKINGS
+========================= */
 
-function setSharedRoute(route){
+function filterBookings(){
 
-    const select =
-        document.getElementById("sharedRoute");
+    var search =
+        document.getElementById("bookingSearch")
+        .value
+        .toLowerCase()
+        .trim();
 
 
-    for(let i=0;i<select.options.length;i++){
+    var cards =
+        document.querySelectorAll(".bookingCard");
 
-        if(select.options[i].value === route){
 
-            select.selectedIndex = i;
+    for(var i = 0; i < cards.length; i++){
 
-            break;
+        var text =
+            cards[i].innerText.toLowerCase();
+
+        if(text.indexOf(search) !== -1){
+
+            cards[i].style.display = "block";
+
+        }else{
+
+            cards[i].style.display = "none";
 
         }
 
     }
 
+}
 
-    document.getElementById("shared")
-        .scrollIntoView({
-            behavior:"smooth"
-        });
+
+/* =========================
+   BOOKING COUNT
+========================= */
+
+function updateBookingCount(){
+
+    var count =
+        bookings.length;
+
+
+    var countBox =
+        document.getElementById("bookingCount");
+
+    if(countBox){
+
+        countBox.innerText =
+            "Total Bookings: " + count;
+
+    }
+
+
+    var total =
+        document.getElementById("totalBookingNumber");
+
+    if(total){
+
+        total.innerText = count;
+
+    }
+
+
+    var newCount =
+        document.getElementById("newBookingNumber");
+
+    if(newCount){
+
+        var newBookings = 0;
+
+
+        for(var i = 0; i < bookings.length; i++){
+
+            if(bookings[i].status === "New"){
+
+                newBookings++;
+
+            }
+
+        }
+
+
+        newCount.innerText = newBookings;
+
+    }
 
 }
 
 
-/* =========================================
-   TODAY AS MINIMUM DATE
-   ========================================= */
+/* =========================
+   ENTER KEY LOGIN
+========================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     function(){
 
-        const today =
-            new Date()
-            .toISOString()
-            .split("T")[0];
+        var password =
+            document.getElementById("adminPassword");
 
 
-        const travelDate =
-            document.getElementById("travelDate");
+        if(password){
 
+            password.addEventListener(
+                "keydown",
+                function(event){
 
-        const sharedDate =
-            document.getElementById("sharedDate");
+                    if(event.key === "Enter"){
 
+                        adminLogin();
 
-        if(travelDate){
+                    }
 
-            travelDate.min = today;
-
-        }
-
-
-        if(sharedDate){
-
-            sharedDate.min = today;
+                }
+            );
 
         }
+
+
+        loadBookings();
 
     }
-);
-
-
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
-
-function mobileAdjust(){
-
-    if(window.innerWidth <= 600){
-
-        const heroTitle =
-            document.querySelector(".hero h1");
-
-        if(heroTitle){
-
-            heroTitle.style.fontSize = "32px";
-
-        }
-
-    }
-
-}
-
-
-window.addEventListener(
-    "load",
-    mobileAdjust
-);
-
-window.addEventListener(
-    "resize",
-    mobileAdjust
 );
 
 </script>
 
-
-<style>
-
-/* =========================================
-   MOBILE RESPONSIVE DESIGN
-   ========================================= */
-
-@media(max-width:900px){
-
-    .form-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .route-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .vehicle-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-}
-
-
-@media(max-width:600px){
-
-    header{
-        position:relative;
-    }
-
-    .navbar{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .logo{
-        text-align:center;
-    }
-
-    .nav-buttons{
-        width:100%;
-        justify-content:center;
-    }
-
-    .nav-buttons a{
-        font-size:12px;
-        padding:7px 8px;
-    }
-
-    .hero{
-        min-height:390px;
-        padding:40px 15px;
-    }
-
-    .hero h1{
-        font-size:32px;
-    }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .hero-buttons .btn{
-        width:100%;
-        text-align:center;
-    }
-
-    .search-section{
-        margin-top:-25px;
-    }
-
-    .search-box{
-        padding:18px;
-    }
-
-    .form-grid{
-        grid-template-columns:1fr;
-    }
-
-    .route-grid{
-        grid-template-columns:1fr;
-    }
-
-    .vehicle-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .shared-grid{
-        grid-template-columns:1fr;
-    }
-
-    .section-title{
-        font-size:26px;
-    }
-
-    .vehicle-card img{
-        height:115px;
-    }
-
-    .search-btn{
-        font-size:14px;
-    }
-
-}
-
-
-@media(max-width:380px){
-
-    .vehicle-grid{
-        grid-template-columns:1fr;
-    }
-
-    .nav-buttons a{
-        font-size:11px;
-    }
-
-}
-
-
-/* WHATSAPP POPUP MOBILE */
-
-#whatsappChoiceBox button{
-    -webkit-tap-highlight-color:transparent;
-}
-
-</style>
-
-
 </body>
-
 </html>
