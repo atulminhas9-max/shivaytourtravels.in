@@ -887,92 +887,88 @@ Customer booking details are sent to the WhatsApp number selected by the custome
 
 
 
-  <script>
-
-/* =========================================
-   ADMIN LOGIN
-========================================= */
+<script>
 
 function adminLogin(){
 
-    const username =
-        document.getElementById("adminUsername").value.trim();
+    var username = document.getElementById("adminUsername").value;
+    var password = document.getElementById("adminPassword").value;
 
-    const password =
-        document.getElementById("adminPassword").value;
+    if(username === "admin" && password === "123456"){
 
-    const error =
-        document.getElementById("loginError");
+        document.getElementById("loginScreen").style.display = "none";
 
-
-    /*
-       DEMO LOGIN
-
-       Username: admin
-       Password: 123456
-    */
-
-    if(
-        username === "admin" &&
-        password === "123456"
-    ){
-
-        document.getElementById("loginScreen")
-            .style.display = "none";
-
-        document.getElementById("dashboard")
-            .style.display = "block";
-
-        error.style.display = "none";
-
-        sessionStorage.setItem(
-            "shivayAdminLogin",
-            "yes"
-        );
+        document.getElementById("dashboard").style.display = "block";
 
     }else{
 
-        error.style.display = "block";
+        document.getElementById("loginError").style.display = "block";
 
     }
 
 }
 
 
-/* =========================================
-   LOGOUT
-========================================= */
+<script>
 
-function adminLogout(){
+function adminLogin(){
 
-    sessionStorage.removeItem(
-        "shivayAdminLogin"
-    );
+    var username =
+        document.getElementById("adminUsername").value;
 
-    document.getElementById("dashboard")
+    var password =
+        document.getElementById("adminPassword").value;
+
+    if(username === "admin" && password === "123456"){
+
+        document.getElementById("loginScreen")
         .style.display = "none";
 
-    document.getElementById("loginScreen")
-        .style.display = "flex";
+        document.getElementById("dashboard")
+        .style.display = "block";
 
-    document.getElementById("adminUsername")
-        .value = "";
+    }else{
 
-    document.getElementById("adminPassword")
-        .value = "";
+        document.getElementById("loginError")
+        .style.display = "block";
+
+    }
 
 }
 
+function adminLogout(){
 
-/* =========================================
-   SHOW DASHBOARD SECTION
-========================================= */
+    document.getElementById("dashboard")
+    .style.display = "none";
+
+    document.getElementById("loginScreen")
+    .style.display = "flex";
+
+}
 
 function showSection(sectionId){
 
-    const sections =
+    var sections =
         document.querySelectorAll(".admin-section");
 
-    sections.forEach(function(section){
+    for(var i = 0; i < sections.length; i++){
 
-        section.class
+        sections[i].classList.add("hidden");
+
+    }
+
+    var section =
+        document.getElementById(sectionId);
+
+    if(section){
+
+        section.classList.remove("hidden");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>    
