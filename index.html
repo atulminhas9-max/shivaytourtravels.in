@@ -1977,7 +1977,19 @@ window.addEventListener(
 
 </style>
 
-
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("./sw.js")
+      .then(function () {
+        console.log("Shivay Service Worker registered");
+      })
+      .catch(function (error) {
+        console.log("Service Worker error:", error);
+      });
+  });
+}
+</script>
 </body>
 
 </html>
