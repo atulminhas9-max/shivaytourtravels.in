@@ -1,637 +1,574 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Pahadi Miles Tour & Travels - Palampur to Chandigarh cabs, Chandigarh to Palampur cabs, Baijnath to Chandigarh taxi, Panchrukhi to Chandigarh cab, shared cabs and Himachal tours.">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-<meta name="keywords" content="Palampur to Chandigarh cab, Palampur to Chandigarh taxi, Chandigarh to Palampur cab, Baijnath to Chandigarh cab, Chandigarh to Baijnath taxi, Panchrukhi to Chandigarh cab, Himachal cab, Manali tour, Dharamshala tour, Dalhousie tour, Spiti tour, Shimla tour, Haridwar tour, shared cab">
+<meta name="description"
+      content="Pahadi Miles Tour & Travels - Himachal cab, shared cab and tour booking.">
 
-<meta name="author" content="Pahadi Miles Tour & Travels">
-<meta name="robots" content="index, follow">
+<meta name="keywords"
+      content="Himachal cabs, Palampur Chandigarh cab, Panchrukhi Chandigarh cab, shared cab, Himachal tours, Pahadi Miles">
+
+<meta name="theme-color"
+      content="#87CEEB">
 
 <link rel="manifest" href="manifest.json">
-
-<link rel="canonical" href="https://shivaytourtravels.in/">
 
 <title>Pahadi Miles Tour & Travels | Himachal Cabs & Tours</title>
 
 <style>
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+/* =========================
+   BASIC RESET
+========================= */
 
-html{
-scroll-behavior:smooth;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f5fbff;
-color:#123;
-line-height:1.6;
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-header{
-background:#87CEEB;
-color:white;
-padding:15px 20px;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 3px 12px rgba(0,0,0,.18);
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #12345a;
+  background: #f3f8fc;
+  line-height: 1.55;
 }
 
-.navbar{
-max-width:1200px;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:15px;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.logo{
-font-size:23px;
-font-weight:bold;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.logo span{
-display:block;
-font-size:12px;
-font-weight:normal;
+button,
+input,
+select {
+  font-family: inherit;
 }
 
-.nav-buttons{
-display:flex;
-gap:7px;
-flex-wrap:wrap;
-justify-content:center;
-}
 
-.nav-buttons a{
-color:white;
-text-decoration:none;
-padding:8px 11px;
-border-radius:8px;
-font-size:14px;
-font-weight:bold;
-}
+/* =========================
+   HEADER
+========================= */
 
-.nav-buttons a:hover{
-background:rgba(255,255,255,.20);
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #ffffff;
+  color: #12345a;
+  box-shadow: 0 3px 18px rgba(11,59,100,0.12);
+  border-bottom: 1px solid #dce8f2;
 }
-
-
-/* HERO */
-
-.hero{
-background:
-linear-gradient(rgba(0,42,70,.60),rgba(0,42,70,.60)),
-url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80");
-
-background-size:cover;
-background-position:center;
 
-min-height:440px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-text-align:center;
-padding:50px 20px;
-
-color:white;
+.nav {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-.hero-content{
-max-width:850px;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
 }
 
-.welcome{
-font-size:25px;
-font-weight:bold;
-letter-spacing:2px;
-margin-bottom:8px;
-text-shadow:0 3px 10px rgba(0,0,0,.5);
+.brand img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
 }
 
-.hero h1{
-font-size:46px;
-margin-bottom:12px;
-text-shadow:0 3px 10px rgba(0,0,0,.5);
+.brand-text {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1261a0;
+  white-space: nowrap;
 }
 
-.hero p{
-font-size:20px;
-margin-bottom:25px;
+.brand small {
+  display: block;
+  font-size: 9px;
+  color: #607d99;
+  font-weight: 600;
 }
 
-.hero-buttons{
-display:flex;
-gap:12px;
-justify-content:center;
-flex-wrap:wrap;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
-.btn{
-display:inline-block;
-padding:13px 20px;
-border-radius:10px;
-text-decoration:none;
-border:none;
-cursor:pointer;
-font-weight:bold;
-font-size:15px;
+nav a {
+  padding: 8px 9px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #12345a;
 }
 
-.btn-primary{
-background:#25d366;
-color:white;
+nav a:hover {
+  background: #eef6ff;
+  color: #0b5dbb;
 }
 
-.btn-secondary{
-background:white;
-color:#075985;
+.nav-wa {
+  background: #25d366 !important;
+  color: #fff !important;
+  border-radius: 25px !important;
+  padding: 9px 13px !important;
 }
-
 
-/* GENERAL */
 
-.container{
-max-width:1150px;
-margin:auto;
-padding:0 18px;
-}
+/* =========================
+   HERO
+========================= */
 
-section{
-padding:45px 0;
-background:#fff;
-}
+.hero {
+  width: 100%;
+  min-height: 570px;
 
-.section-title{
-text-align:center;
-font-size:30px;
-color:#0879b8;
-margin-bottom:10px;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.section-subtitle{
-text-align:center;
-color:#456;
-margin-bottom:28px;
-}
+  text-align: center;
+  color: #fff;
 
+  padding: 40px 18px;
 
-/* SEARCH */
+  background:
+    linear-gradient(
+      rgba(0,30,60,0.58),
+      rgba(0,30,60,0.58)
+    ),
+    url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80");
 
-.search-section{
-margin-top:-45px;
-position:relative;
-z-index:10;
+  background-size: cover;
+  background-position: center;
 }
 
-.search-box{
-max-width:1050px;
-margin:auto;
-background:white;
-border-radius:18px;
-padding:25px;
-box-shadow:0 8px 30px rgba(0,0,0,.15);
+.hero-content {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
 }
 
-.search-box h2{
-color:#075985;
-margin-bottom:18px;
-text-align:center;
+.welcome {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: #ffffff;
 }
 
-.form-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
+.hero h1 {
+  font-size: clamp(28px, 5vw, 52px);
+  line-height: 1.15;
+  margin-bottom: 16px;
 }
 
-.form-group{
-display:flex;
-flex-direction:column;
+.hero p {
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 25px;
 }
 
-.form-group label{
-font-size:13px;
-font-weight:bold;
-margin-bottom:6px;
-color:#444;
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.form-group input,
-.form-group select{
-width:100%;
-padding:12px;
-border:1px solid #9edcf2;
-border-radius:8px;
-outline:none;
-font-size:14px;
-background:white;
-}
 
-.form-group input:focus,
-.form-group select:focus{
-border-color:#38a9d6;
-}
+/* =========================
+   BUTTONS
+========================= */
 
-.full-width{
-grid-column:1/-1;
+.btn,
+button {
+  border: none;
+  cursor: pointer;
 }
 
-.location-btn{
-margin-top:8px;
-padding:9px 12px;
-background:#eef7ff;
-color:#075985;
-border:1px solid #b8def5;
-border-radius:7px;
-cursor:pointer;
-font-weight:bold;
+.primary-btn {
+  background: #25d366;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 8px;
+  font-weight: 800;
 }
 
-.search-btn{
-width:100%;
-background:#38a9d6;
-color:white;
-border:none;
-padding:14px;
-border-radius:9px;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
+.secondary-btn {
+  background: #ffffff;
+  color: #1261a0;
+  padding: 13px 20px;
+  border-radius: 8px;
+  font-weight: 800;
 }
-
 
-/* ROUTES */
 
-.route-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px;
-}
+/* =========================
+   COMMON SECTION
+========================= */
 
-.route-card{
-background:white;
-border-radius:15px;
-padding:20px;
-box-shadow:0 4px 16px rgba(0,0,0,.08);
-border:1px solid #b9e6f7;
-text-align:center;
+.section {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 55px 18px;
 }
 
-.route-card h3{
-color:#075985;
-margin-bottom:8px;
+.section-title,
+.section h2 {
+  text-align: center;
+  color: #1261a0;
+  margin-bottom: 8px;
+  font-size: 28px;
 }
 
-.route-arrow{
-font-size:24px;
-margin:5px 0;
+.section-subtitle {
+  text-align: center;
+  color: #607d99;
+  margin-bottom: 28px;
+  font-size: 14px;
 }
 
-.price{
-color:#e85d04;
-font-size:21px;
-font-weight:bold;
-margin:10px 0;
-}
 
-.route-card button{
-width:100%;
-padding:10px;
-border:none;
-border-radius:8px;
-background:#25d366;
-color:white;
-font-weight:bold;
-cursor:pointer;
-}
+/* =========================
+   SEARCH
+========================= */
 
+.search-box {
+  width: 100%;
+  max-width: 1100px;
+  margin: 25px auto 0;
 
-/* TOURS */
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
 
-.tours-section{
-background:#f5fbff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.10);
 }
 
-.tour-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
+.search-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.tour-card{
-background:#fff;
-border-radius:18px;
-overflow:hidden;
-border:1px solid #b9e6f7;
-box-shadow:0 5px 18px rgba(0,0,0,.10);
-transition:transform .2s,box-shadow .2s;
+.field {
+  width: 100%;
 }
 
-.tour-card:hover{
-transform:translateY(-4px);
-box-shadow:0 9px 25px rgba(0,0,0,.14);
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #45647f;
 }
 
-.tour-card img{
-width:100%;
-height:210px;
-object-fit:cover;
-display:block;
+.field input,
+.field select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbdce9;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
 }
 
-.tour-content{
-padding:18px;
+.search-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 13px;
+  background: #0799c9;
+  color: white;
+  border-radius: 8px;
+  font-weight: 800;
 }
 
-.tour-content h3{
-color:#075985;
-font-size:21px;
-margin-bottom:7px;
+.location-btn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #eef6ff;
+  color: #1261a0;
+  border-radius: 8px;
+  font-weight: 700;
 }
 
-.tour-content p{
-color:#555;
-font-size:14px;
-margin-bottom:8px;
-}
 
-.tour-price{
-color:#e85d04;
-font-size:20px;
-font-weight:bold;
-margin:10px 0;
-}
+/* =========================
+   ROUTES
+========================= */
 
-.tour-button{
-display:block;
-width:100%;
-text-align:center;
-background:#25d366;
-color:white;
-text-decoration:none;
-padding:11px;
-border-radius:9px;
-font-weight:bold;
+.routes-section {
+  width: 100%;
+  background: #ffffff;
 }
 
-.tour-note{
-text-align:center;
-margin-top:25px;
-color:#555;
-font-size:13px;
+.route-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 12px;
 }
-
 
-/* FARES */
-
-.fare-table-wrap{
-overflow-x:auto;
-background:white;
-border-radius:15px;
-box-shadow:0 4px 16px rgba(0,0,0,.08);
+.route-card {
+  background: #fff;
+  border: 1px solid #dce8f2;
+  border-radius: 12px;
+  padding: 18px 12px;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
 }
 
-.fare-table{
-width:100%;
-border-collapse:collapse;
-min-width:600px;
+.route-card h3 {
+  color: #1261a0;
+  font-size: 15px;
+  min-height: 40px;
 }
 
-.fare-table th,
-.fare-table td{
-padding:14px;
-border-bottom:1px solid #e5e7eb;
-text-align:center;
+.route-arrow {
+  margin: 7px 0;
 }
 
-.fare-table th{
-background:#075985;
-color:white;
+.route-card .price {
+  color: #e85d04;
+  font-size: 18px;
+  font-weight: 800;
 }
-
 
-/* VEHICLES */
-
-.vehicle-grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:15px;
+.route-card p {
+  font-size: 11px;
+  color: #555;
+  margin: 5px 0 10px;
 }
 
-.vehicle-card{
-background:white;
-border-radius:14px;
-overflow:hidden;
-box-shadow:0 4px 15px rgba(0,0,0,.08);
-border:1px solid #b9e6f7;
-text-align:center;
+.route-card button {
+  width: 100%;
+  padding: 9px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 7px;
+  font-weight: 700;
 }
 
-.vehicle-card img{
-width:100%;
-height:140px;
-object-fit:cover;
-}
 
-.vehicle-card h3{
-padding:10px 8px 2px;
-color:#0879b8;
+/* =========================
+   TOURS
+========================= */
+
+.tours-section {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 55px 18px;
 }
 
-.vehicle-card p{
-padding:0 8px 12px;
-color:#555;
-font-weight:bold;
+.tour-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 15px;
 }
 
+.tour-card {
+  min-width: 0;
+  overflow: hidden;
 
-/* SHARED */
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #dce8f2;
 
-.shared-box{
-background:white;
-border-radius:18px;
-padding:25px;
-box-shadow:0 5px 20px rgba(0,0,0,.09);
-max-width:950px;
-margin:auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-.shared-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
+.tour-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
 }
 
-.shared-box h3{
-color:#075985;
-margin-bottom:5px;
+.tour-content {
+  padding: 13px;
 }
 
-.whatsapp-main{
-display:block;
-text-align:center;
-background:#25d366;
-color:white;
-text-decoration:none;
-padding:14px;
-border-radius:9px;
-font-weight:bold;
-margin-top:18px;
+.tour-content h3 {
+  color: #1261a0;
+  font-size: 15px;
+  margin-bottom: 5px;
 }
 
-.contact-item{
-padding:8px 0;
+.tour-content p {
+  color: #607d99;
+  font-size: 11px;
+  min-height: 38px;
 }
 
-.contact-item a{
-color:#075985;
-font-weight:bold;
-text-decoration:none;
+.tour-price {
+  color: #e85d04;
+  font-weight: 800;
+  margin: 8px 0;
 }
-
 
-/* MOBILE */
+.tour-button {
+  display: block;
+  width: 100%;
+  text-align: center;
 
-@media(max-width:900px){
+  background: #25d366;
+  color: white;
 
-.form-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.route-grid{
-grid-template-columns:repeat(2,1fr);
-}
+  padding: 9px;
+  border-radius: 7px;
 
-.tour-grid{
-grid-template-columns:repeat(2,1fr);
+  font-size: 12px;
+  font-weight: 800;
 }
 
-.vehicle-grid{
-grid-template-columns:repeat(3,1fr);
-}
-
-}
 
-@media(max-width:600px){
+/* =========================
+   MOBILE FIX
+========================= */
 
-header{
-position:relative;
-}
+@media (max-width: 800px) {
 
-.navbar{
-flex-direction:column;
-align-items:center;
-}
+  .nav {
+    padding: 7px 8px;
+  }
 
-.logo{
-text-align:center;
-}
+  .brand img {
+    width: 42px;
+    height: 42px;
+  }
 
-.nav-buttons{
-width:100%;
-justify-content:center;
-}
+  .brand-text {
+    font-size: 11px;
+  }
 
-.nav-buttons a{
-font-size:12px;
-padding:7px 8px;
-}
+  .brand small {
+    font-size: 7px;
+  }
 
-.hero{
-min-height:390px;
-padding:40px 15px;
-}
+  nav {
+    gap: 2px;
+  }
 
-.welcome{
-font-size:21px;
-}
+  nav a {
+    padding: 6px 5px;
+    font-size: 9px;
+  }
 
-.hero h1{
-font-size:32px;
-}
+  .nav-wa {
+    padding: 7px 8px !important;
+  }
 
-.hero p{
-font-size:17px;
-}
+  .hero {
+    min-height: 450px;
+    padding: 35px 12px;
+  }
 
-.hero-buttons{
-flex-direction:column;
-align-items:stretch;
-}
+  .welcome {
+    font-size: 16px;
+  }
 
-.hero-buttons .btn{
-width:100%;
-text-align:center;
-}
+  .search-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
 
-.search-section{
-margin-top:-25px;
-}
+  .route-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
 
-.search-box{
-padding:18px;
-}
+  .tour-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
 
-.form-grid{
-grid-template-columns:1fr;
 }
 
-.route-grid{
-grid-template-columns:1fr;
-}
+@media (max-width: 480px) {
 
-.tour-grid{
-grid-template-columns:1fr;
-}
+  .hero {
+    min-height: 430px;
+  }
 
-.vehicle-grid{
-grid-template-columns:repeat(2,1fr);
-}
+  .search-box {
+    padding: 15px 10px;
+  }
 
-.shared-grid{
-grid-template-columns:1fr;
-}
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
 
-.section-title{
-font-size:26px;
-}
+  .route-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-.vehicle-card img{
-height:115px;
-}
+  .tour-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-.tour-card img{
-height:200px;
-}
+  .tour-card img {
+    height: 135px;
+  }
 
-.search-btn{
-font-size:14px;
-}
+  .tour-content {
+    padding: 9px;
+  }
 
-}
+  .tour-content h3 {
+    font-size: 12px;
+  }
 
-@media(max-width:380px){
+  .tour-content p {
+    font-size: 9px;
+  }
 
-.vehicle-grid{
-grid-template-columns:1fr;
-}
+  .tour-price {
+    font-size: 12px;
+  }
 
-.nav-buttons a{
-font-size:11px;
-}
+  .tour-button {
+    font-size: 9px;
+    padding: 8px 4px;
+  }
 
 }
 
@@ -641,365 +578,295 @@ font-size:11px;
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-<div class="navbar">
+<div class="nav">
 
-<div class="logo">
+  <a href="#home" class="brand">
 
-🚕 Pahadi Miles Tour & Travels
+    <img
+      src="https://shivaytourtravels.in/shivay-logo-4.png"
+      alt="Pahadi Miles Tour & Travels Logo">
 
-<span>Himachal • Cabs • Tours</span>
+    <div>
+      <div class="brand-text">
+        Pahadi Miles Tour & Travels
+      </div>
 
-</div>
+      <small>
+        Himachal • Cabs • Tours
+      </small>
+    </div>
 
-<div class="nav-buttons">
+  </a>
 
-<a href="#routes">Routes</a>
 
-<a href="#tours">Tours</a>
+  <nav>
 
-<a href="#fares">Fares</a>
+    <a href="#routes">Routes</a>
 
-<a href="#vehicles">Vehicles</a>
+    <a href="#tours">Tours</a>
 
-<a href="#shared">Shared Cab</a>
+    <a href="#fares">Fares</a>
 
-<a href="#contact">Contact</a>
+    <a href="#vehicles">Vehicles</a>
 
-</div>
+    <a href="#shared">Shared Cab</a>
+
+    <a href="#contact">Contact</a>
+
+    <a
+      class="nav-wa"
+      href="https://wa.me/918219360228"
+      target="_blank">
+      WhatsApp
+    </a>
+
+  </nav>
 
 </div>
 
 </header>
 
-<section class="hero">
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="home" class="hero">
 
 <div class="hero-content">
 
-<div class="welcome">
-WELCOME TO PAHADI MILES
-</div>
+  <div class="welcome">
+    WELCOME TO PAHADI MILES
+  </div>
 
-<h1>
-Explore Himachal With Pahadi Miles
-</h1>
+  <h1>
+    Explore Himachal With Pahadi Miles
+  </h1>
 
-<p>
-Comfortable cabs, shared rides and beautiful Himalayan journeys.
-</p>
+  <p>
+    Comfortable cabs, shared rides and beautiful Himalayan journeys.
+  </p>
 
-<div class="hero-buttons">
+  <div class="hero-buttons">
 
-<a
-class="btn btn-primary"
-href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels,%20I%20want%20to%20book%20a%20cab."
-target="_blank">
+    <a
+      class="primary-btn"
+      href="https://wa.me/918219360228"
+      target="_blank">
+      💬 WhatsApp Booking
+    </a>
 
-💬 WhatsApp Booking
+    <a
+      class="secondary-btn"
+      href="#search">
+      🔎 Search Route & Fare
+    </a>
 
-</a>
-
-<a
-class="btn btn-secondary"
-href="#search">
-
-🔎 Search Route & Fare
-
-</a>
-
-</div>
+  </div>
 
 </div>
 
 </section>
 
-<section class="search-section" id="search">
 
-<div class="search-box">
-
-<h2>🔎 Search Route & Fare</h2>
-
-<div class="form-grid">
-
-<div class="form-group">
-
-<label>From</label>
-
-<input
-type="text"
-id="from"
-list="places"
-placeholder="e.g. Palampur">
-
-</div>
-
-<div class="form-group">
-
-<label>To</label>
-
-<input
-type="text"
-id="to"
-list="places"
-placeholder="e.g. Chandigarh">
-
-</div>
-
-<div class="form-group">
-
-<label>Travel Date</label>
-
-<input
-type="date"
-id="travelDate">
-
-</div>
-
-<div class="form-group">
-
-<label>Passengers</label>
-
-<input
-type="number"
-id="passengers"
-min="1"
-value="1">
-
-</div>
-
-<div class="full-width">
-
-<button
-class="search-btn"
-onclick="searchRoute()">
-
-🔎 Search Route & Book on WhatsApp
-
-</button>
-
-<button
-class="location-btn"
-onclick="getLocation('search')">
-
-📍 Use My Current Location
-
-</button>
-
-</div>
-
-</div>
-
-<datalist id="places">
-
-<option value="Palampur">
-<option value="Chandigarh">
-<option value="Baijnath">
-<option value="Panchrukhi">
-<option value="Kangra">
-<option value="Dharamshala">
-<option value="Amritsar">
-<option value="Jalandhar">
-<option value="Shimla">
-<option value="Manali">
-<option value="Dalhousie">
-<option value="Spiti">
-<option value="Haridwar">
-<option value="Rishikesh">
-
-</datalist>
-
-</div>
-
-</section>
 <!-- =========================
-     POPULAR CAB ROUTES
+     SEARCH ROUTE
 ========================= -->
 
-<section id="routes">
+<section id="search" class="section">
 
-<div class="container">
-
-<h2 class="section-title">
-Popular Cab Routes
+<h2>
+  🔎 Search Route & Fare
 </h2>
 
 <p class="section-subtitle">
-Book comfortable private cabs from Pahadi Miles Tour & Travels
+  Enter your journey details and book directly on WhatsApp.
 </p>
 
-<div class="route-grid">
+<div class="search-box">
 
-<div class="route-card">
+  <div class="search-grid">
 
-<h3>
-Chandigarh → Palampur
-</h3>
+    <div class="field">
 
-<div class="route-arrow">
-🚕 ↓
-</div>
+      <label>From</label>
 
-<div class="price">
-₹3,500
-</div>
+      <input
+        type="text"
+        id="from"
+        list="places"
+        placeholder="e.g. Palampur">
 
-<p>
-One Way Fixed Fare
-</p>
-
-<button
-onclick="setRoute('Chandigarh','Palampur')">
-
-Book Now
-
-</button>
-
-</div>
+    </div>
 
 
-<div class="route-card">
+    <div class="field">
 
-<h3>
-Palampur → Chandigarh
-</h3>
+      <label>To</label>
 
-<div class="route-arrow">
-🚕 ↓
-</div>
+      <input
+        type="text"
+        id="to"
+        list="places"
+        placeholder="e.g. Chandigarh">
 
-<div class="price">
-₹3,500
-</div>
-
-<p>
-One Way Fixed Fare
-</p>
-
-<button
-onclick="setRoute('Palampur','Chandigarh')">
-
-Book Now
-
-</button>
-
-</div>
+    </div>
 
 
-<div class="route-card">
+    <div class="field">
 
-<h3>
-Chandigarh → Baijnath
-</h3>
+      <label>Travel Date</label>
 
-<div class="route-arrow">
-🚕 ↓
-</div>
+      <input
+        type="date"
+        id="travelDate">
 
-<div class="price">
-₹3,500
-</div>
-
-<p>
-One Way Fixed Fare
-</p>
-
-<button
-onclick="setRoute('Chandigarh','Baijnath')">
-
-Book Now
-
-</button>
-
-</div>
+    </div>
 
 
-<div class="route-card">
+    <div class="field">
 
-<h3>
-Baijnath → Chandigarh
-</h3>
+      <label>Passengers</label>
 
-<div class="route-arrow">
-🚕 ↓
-</div>
+      <input
+        type="number"
+        id="passengers"
+        min="1"
+        value="1">
 
-<div class="price">
-₹3,500
-</div>
+    </div>
 
-<p>
-One Way Fixed Fare
-</p>
+  </div>
 
-<button
-onclick="setRoute('Baijnath','Chandigarh')">
 
-Book Now
+  <datalist id="places">
 
-</button>
+    <option value="Palampur">
+    <option value="Chandigarh">
+    <option value="Baijnath">
+    <option value="Panchrukhi">
+    <option value="Kangra">
+    <option value="Dharamshala">
+    <option value="Amritsar">
+    <option value="Jalandhar">
+    <option value="Shimla">
+    <option value="Manali">
+
+  </datalist>
+
+
+  <button
+    class="search-btn"
+    onclick="searchRoute()">
+
+    🔎 Search Route & Book on WhatsApp
+
+  </button>
+
+
+  <button
+    class="location-btn"
+    onclick="getLocation('search')">
+
+    📍 Use My Current Location
+
+  </button>
 
 </div>
 
-
-<div class="route-card">
-
-<h3>
-Panchrukhi → Chandigarh
-</h3>
-
-<div class="route-arrow">
-🚕 ↓
-</div>
-
-<div class="price">
-₹3,500
-</div>
-
-<p>
-One Way Fixed Fare
-</p>
-
-<button
-onclick="setRoute('Panchrukhi','Chandigarh')">
-
-Book Now
-
-</button>
-
-</div>
+</section>
 
 
-<div class="route-card">
+<!-- =========================
+     POPULAR ROUTES
+========================= -->
 
-<h3>
-Chandigarh → Panchrukhi
-</h3>
+<section id="routes" class="section routes-section">
 
-<div class="route-arrow">
-🚕 ↓
-</div>
+  <h2>
+    🚕 Popular Cab Routes
+  </h2>
 
-<div class="price">
-₹3,500
-</div>
+  <p class="section-subtitle">
+    Book comfortable private cabs from Pahadi Miles Tour & Travels
+  </p>
 
-<p>
-One Way Fixed Fare
-</p>
 
-<button
-onclick="setRoute('Chandigarh','Panchrukhi')">
+  <div class="route-grid">
 
-Book Now
+    <div class="route-card">
+      <h3>Chandigarh →<br>Palampur</h3>
+      <div class="route-arrow">🚕 ↓</div>
+      <div class="price">₹3,500</div>
+      <p>One Way Fixed Fare</p>
+      <button onclick="setRoute('Chandigarh','Palampur')">
+        Book Now
+      </button>
+    </div>
 
-</button>
 
-</div>
+    <div class="route-card">
+      <h3>Palampur →<br>Chandigarh</h3>
+      <div class="route-arrow">🚕 ↓</div>
+      <div class="price">₹3,500</div>
+      <p>One Way Fixed Fare</p>
+      <button onclick="setRoute('Palampur','Chandigarh')">
+        Book Now
+      </button>
+    </div>
 
-</div>
 
-</div>
+    <div class="route-card">
+      <h3>Chandigarh →<br>Baijnath</h3>
+      <div class="route-arrow">🚕 ↓</div>
+      <div class="price">₹3,500</div>
+      <p>One Way Fixed Fare</p>
+      <button onclick="setRoute('Chandigarh','Baijnath')">
+        Book Now
+      </button>
+    </div>
+
+
+    <div class="route-card">
+      <h3>Baijnath →<br>Chandigarh</h3>
+      <div class="route-arrow">🚕 ↓</div>
+      <div class="price">₹3,500</div>
+      <p>One Way Fixed Fare</p>
+      <button onclick="setRoute('Baijnath','Chandigarh')">
+        Book Now
+      </button>
+    </div>
+
+
+    <div class="route-card">
+      <h3>Panchrukhi →<br>Chandigarh</h3>
+      <div class="route-arrow">🚕 ↓</div>
+      <div class="price">₹3,500</div>
+      <p>One Way Fixed Fare</p>
+      <button onclick="setRoute('Panchrukhi','Chandigarh')">
+        Book Now
+      </button>
+    </div>
+
+
+    <div class="route-card">
+      <h3>Chandigarh →<br>Panchrukhi</h3>
+      <div class="route-arrow">🚕 ↓</div>
+      <div class="price">₹3,500</div>
+      <p>One Way Fixed Fare</p>
+      <button onclick="setRoute('Chandigarh','Panchrukhi')">
+        Book Now
+      </button>
+    </div>
+
+  </div>
 
 </section>
 
@@ -1010,282 +877,270 @@ Book Now
 
 <section id="tours" class="tours-section">
 
-<div class="container">
+  <h2 class="section-title">
+    🏔️ Himachal & North India Tours
+  </h2>
 
-<h2 class="section-title">
-🏔️ Himachal & North India Tours
-</h2>
+  <p class="section-subtitle">
+    Explore real destinations with Pahadi Miles Tour & Travels
+  </p>
 
-<p class="section-subtitle">
-Explore real destinations with Pahadi Miles Tour & Travels
-</p>
 
+  <div class="tour-grid">
 
-<div class="tour-grid">
 
+    <!-- MANALI -->
 
-<!-- MANALI -->
+    <div class="tour-card">
 
-<div class="tour-card">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Solang%20Valley%20Manali.JPG"
+        alt="Manali Tour">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Solang%20Valley%20Manali.JPG"
-alt="Actual Solang Valley Manali">
+      <div class="tour-content">
 
-<div class="tour-content">
+        <h3>
+          🏔️ Manali Tour
+        </h3>
 
-<h3>
-🏔️ Manali Tour
-</h3>
+        <p>
+          Manali • Solang Valley • Atal Tunnel • Sissu • Old Manali
+        </p>
 
-<p>
-Manali • Solang Valley • Atal Tunnel • Sissu • Old Manali
-</p>
+        <div class="tour-price">
+          Starting ₹3,500/day
+        </div>
 
-<div class="tour-price">
-Starting ₹3,500/day
-</div>
+        <a
+          class="tour-button"
+          href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels%2C%20I%20want%20a%20quote%20for%20Manali%20Tour."
+          target="_blank">
 
-<a
-class="tour-button"
-href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels,%20I%20want%20a%20quote%20for%20Manali%20Tour."
-target="_blank">
+          💬 Get Manali Tour Quote
 
-💬 Get Manali Tour Quote
+        </a>
 
-</a>
+      </div>
 
-</div>
+    </div>
 
-</div>
 
+    <!-- DHARAMSHALA -->
 
-<!-- DHARAMSHALA -->
+    <div class="tour-card">
 
-<div class="tour-card">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Mcleodganj%2C%20Dharamshala%2C%20HP%20India%20%2826336940761%29.jpg"
+        alt="Dharamshala Tour">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Mcleodganj%2C%20Dharamshala%2C%20HP%20India%20%2826336940761%29.jpg"
-alt="Actual McLeod Ganj Dharamshala">
+      <div class="tour-content">
 
-<div class="tour-content">
+        <h3>
+          🏔️ Dharamshala Tour
+        </h3>
 
-<h3>
-🏔️ Dharamshala Tour
-</h3>
+        <p>
+          Dharamshala • McLeod Ganj • Dal Lake • Bhagsu • Kangra
+        </p>
 
-<p>
-Dharamshala • McLeod Ganj • Dal Lake • Bhagsu • Kangra
-</p>
+        <div class="tour-price">
+          Starting ₹3,500/day
+        </div>
 
-<div class="tour-price">
-Starting ₹3,500/day
-</div>
+        <a
+          class="tour-button"
+          href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels%2C%20I%20want%20a%20quote%20for%20Dharamshala%20Tour."
+          target="_blank">
 
-<a
-class="tour-button"
-href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels,%20I%20want%20a%20quote%20for%20Dharamshala%20Tour."
-target="_blank">
+          💬 Get Dharamshala Quote
 
-💬 Get Dharamshala Quote
+        </a>
 
-</a>
+      </div>
 
-</div>
+    </div>
 
-</div>
 
+    <!-- DALHOUSIE -->
 
-<!-- DALHOUSIE -->
+    <div class="tour-card">
 
-<div class="tour-card">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Dalhousie%20Khajjiar.jpg"
+        alt="Dalhousie Khajjiar">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Dalhousie%20Khajjiar.jpg"
-alt="Actual Khajjiar Dalhousie">
+      <div class="tour-content">
 
-<div class="tour-content">
+        <h3>
+          🌲 Dalhousie–Khajjiar
+        </h3>
 
-<h3>
-🌲 Dalhousie–Khajjiar
-</h3>
+        <p>
+          Dalhousie • Khajjiar • Kalatop • Chamba
+        </p>
 
-<p>
-Dalhousie • Khajjiar • Kalatop • Chamba
-</p>
+        <div class="tour-price">
+          Starting ₹3,500/day
+        </div>
 
-<div class="tour-price">
-Starting ₹3,500/day
-</div>
+        <a
+          class="tour-button"
+          href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels%2C%20I%20want%20a%20quote%20for%20Dalhousie%20Khajjiar%20Tour."
+          target="_blank">
 
-<a
-class="tour-button"
-href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels,%20I%20want%20a%20quote%20for%20Dalhousie%20Khajjiar%20Tour."
-target="_blank">
+          💬 Get Dalhousie Quote
 
-💬 Get Dalhousie Quote
+        </a>
 
-</a>
+      </div>
 
-</div>
+    </div>
 
-</div>
 
+    <!-- SPITI -->
 
-<!-- SPITI -->
+    <div class="tour-card">
 
-<div class="tour-card">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Kaza.jpg"
+        alt="Spiti Valley Tour">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Kaza.jpg"
-alt="Actual Kaza Spiti Valley">
+      <div class="tour-content">
 
-<div class="tour-content">
+        <h3>
+          🏔️ Spiti Valley Tour
+        </h3>
 
-<h3>
-🏔️ Spiti Valley Tour
-</h3>
+        <p>
+          Kaza • Key Monastery • Chicham • Langza • Hikkim
+        </p>
 
-<p>
-Kaza • Key Monastery • Chicham • Langza • Hikkim
-</p>
+        <div class="tour-price">
+          Starting ₹3,500/day
+        </div>
 
-<div class="tour-price">
-Starting ₹3,500/day
-</div>
+        <a
+          class="tour-button"
+          href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels%2C%20I%20want%20a%20quote%20for%20Spiti%20Valley%20Tour."
+          target="_blank">
 
-<a
-class="tour-button"
-href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels,%20I%20want%20a%20quote%20for%20Spiti%20Valley%20Tour."
-target="_blank">
+          💬 Get Spiti Tour Quote
 
-💬 Get Spiti Tour Quote
+        </a>
 
-</a>
+      </div>
 
-</div>
+    </div>
 
-</div>
 
+    <!-- SHIMLA MANALI -->
 
-<!-- SHIMLA MANALI -->
+    <div class="tour-card">
 
-<div class="tour-card">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Ridge%2C%20Shimla.jpg"
+        alt="Shimla Manali Tour">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Ridge%2C%20Shimla.jpg"
-alt="Actual Shimla Ridge">
+      <div class="tour-content">
 
-<div class="tour-content">
+        <h3>
+          ❄️ Shimla–Manali Tour
+        </h3>
 
-<h3>
-❄️ Shimla–Manali Tour
-</h3>
+        <p>
+          Shimla • Kufri • Manali • Solang Valley • Atal Tunnel
+        </p>
 
-<p>
-Shimla • Kufri • Manali • Solang Valley • Atal Tunnel
-</p>
+        <div class="tour-price">
+          Starting ₹3,500/day
+        </div>
 
-<div class="tour-price">
-Starting ₹3,500/day
-</div>
+        <a
+          class="tour-button"
+          href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels%2C%20I%20want%20a%20quote%20for%20Shimla%20Manali%20Tour."
+          target="_blank">
 
-<a
-class="tour-button"
-href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels,%20I%20want%20a%20quote%20for%20Shimla%20Manali%20Tour."
-target="_blank">
+          💬 Get Shimla–Manali Quote
 
-💬 Get Shimla–Manali Quote
+        </a>
 
-</a>
+      </div>
 
-</div>
+    </div>
 
-</div>
 
+    <!-- KANGRA PALAMPUR BIR -->
 
-<!-- KANGRA PALAMPUR BIR -->
+    <div class="tour-card">
 
-<div class="tour-card">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Palampur%20tea%20plantation%2C%20Himachal%20Pradesh%2C%20India.jpg"
+        alt="Kangra Palampur Bir Tour">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Palampur%20tea%20plantation%2C%20Himachal%20Pradesh%2C%20India.jpg"
-alt="Actual Palampur Tea Plantation Himachal Pradesh">
+      <div class="tour-content">
 
-<div class="tour-content">
+        <h3>
+          🏞️ Kangra–Palampur–Bir
+        </h3>
 
-<h3>
-🏞️ Kangra–Palampur–Bir
-</h3>
+        <p>
+          Kangra • Palampur • Bir • Baijnath • Tea Gardens
+        </p>
 
-<p>
-Kangra • Palampur • Bir • Baijnath • Tea Gardens
-</p>
+        <div class="tour-price">
+          Starting ₹3,500/day
+        </div>
 
-<div class="tour-price">
-Starting ₹3,500/day
-</div>
+        <a
+          class="tour-button"
+          href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels%2C%20I%20want%20a%20quote%20for%20Kangra%20Palampur%20Bir%20Tour."
+          target="_blank">
 
-<a
-class="tour-button"
-href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels,%20I%20want%20a%20quote%20for%20Kangra%20Palampur%20Bir%20Tour."
-target="_blank">
+          💬 Get Kangra Tour Quote
 
-💬 Get Kangra Tour Quote
+        </a>
 
-</a>
+      </div>
 
-</div>
+    </div>
 
-</div>
 
+    <!-- HARIDWAR RISHIKESH -->
 
-<!-- HARIDWAR RISHIKESH -->
+    <div class="tour-card">
 
-<div class="tour-card">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Ganga%20aarti%20at%20haridwar.jpg"
+        alt="Haridwar Rishikesh Tour">
 
-<img
-src="https://commons.wikimedia.org/wiki/Special:FilePath/Ganga%20aarti%20at%20haridwar.jpg"
-alt="Actual Ganga Aarti Haridwar">
+      <div class="tour-content">
 
-<div class="tour-content">
+        <h3>
+          🛕 Haridwar–Rishikesh
+        </h3>
 
-<h3>
-🛕 Haridwar–Rishikesh
-</h3>
+        <p>
+          Haridwar • Ganga Aarti • Rishikesh • Ram Jhula • Laxman Jhula
+        </p>
 
-<p>
-Haridwar • Ganga Aarti • Rishikesh • Ram Jhula • Laxman Jhula
-</p>
+        <div class="tour-price">
+          Starting ₹3,500/day
+        </div>
 
-<div class="tour-price">
-Starting ₹3,500/day
-</div>
+        <a
+          class="tour-button"
+          href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels%2C%20I%20want%20a%20quote%20for%20Haridwar%20Rishikesh%20Tour."
+          target="_blank">
 
-<a
-class="tour-button"
-href="https://wa.me/918219360228?text=Hello%20Pahadi%20Miles%20Tour%20%26%20Travels,%20I%20want%20a%20quote%20for%20Haridwar%20Rishikesh%20Tour."
-target="_blank">
+          💬 Get Haridwar Quote
 
-💬 Get Haridwar Tour Quote
+        </a>
 
-</a>
+      </div>
 
-</div>
+    </div>
 
-</div>
-
-
-</div>
-
-
-<p class="tour-note">
-
-*₹3,500/day is the starting cab fare. Final fare depends on vehicle, route, season and trip requirements. Hotel, meals and entry tickets are not included unless specifically mentioned.
-
-</p>
-
-</div>
+  </div>
 
 </section>
 
@@ -1294,489 +1149,654 @@ target="_blank">
      FARES
 ========================= -->
 
-<section id="fares">
+<section id="fares" class="section">
 
-<div class="container">
+  <h2>
+    💰 Cab Fare Chart
+  </h2>
 
-<h2 class="section-title">
-💰 Cab Fare & Vehicle Rates
-</h2>
-
-<p class="section-subtitle">
-Private cab rates for Himachal travel
-</p>
-
-
-<div class="fare-table-wrap">
-
-<table class="fare-table">
-
-<thead>
-
-<tr>
-
-<th>
-Vehicle
-</th>
-
-<th>
-Rate
-</th>
-
-<th>
-Suitable For
-</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>
-Wagon-R / Alto
-</td>
-
-<td>
-₹16/km
-</td>
-
-<td>
-1–4 Passengers
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Dzire / Etios
-</td>
-
-<td>
-₹19/km
-</td>
-
-<td>
-1–4 Passengers
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Ertiga
-</td>
-
-<td>
-₹22/km
-</td>
-
-<td>
-4–6 Passengers
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Innova Crysta
-</td>
-
-<td>
-₹28/km
-</td>
-
-<td>
-5–7 Passengers
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Tempo Traveller
-</td>
-
-<td>
-₹30/km
-</td>
-
-<td>
-8–16 Passengers
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-
-<br>
-
-
-<div class="fare-table-wrap">
-
-<table class="fare-table">
-
-<thead>
-
-<tr>
-
-<th>
-Popular One-Way Route
-</th>
-
-<th>
-Starting Fare
-</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>
-Chandigarh → Palampur
-</td>
-
-<td>
-₹3,500
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Palampur → Chandigarh
-</td>
-
-<td>
-₹3,500
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Chandigarh → Baijnath
-</td>
-
-<td>
-₹3,500
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Baijnath → Chandigarh
-</td>
-
-<td>
-₹3,500
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Panchrukhi → Chandigarh
-</td>
-
-<td>
-₹3,500
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Chandigarh → Panchrukhi
-</td>
-
-<td>
-₹3,500
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
-</section>
-<!-- VEHICLES -->
-<section id="vehicles" class="section">
-  <h2>Our Vehicles</h2>
-  <p class="section-subtitle">Comfortable vehicles for Himachal journeys</p>
-
-  <div class="cards">
-
-    <div class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2020_Maruti_Suzuki_Wagon_R_VXi_%28O%29_%28India%29_front_view.png" alt="Wagon R">
-      <h3>Wagon-R / Alto</h3>
-      <p>₹16/km</p>
-      <button onclick="setRoute('', '')">Book on WhatsApp</button>
-    </div>
-
-    <div class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Maruti_Suzuki_Dzire_VXi_VVT_%28front%29.JPG" alt="Dzire">
-      <h3>Dzire / Etios</h3>
-      <p>₹19/km</p>
-      <button onclick="setRoute('', '')">Book on WhatsApp</button>
-    </div>
-
-    <div class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2022_Suzuki_Ertiga_GX_Hybrid.jpg" alt="Ertiga">
-      <h3>Ertiga</h3>
-      <p>₹22/km</p>
-      <button onclick="setRoute('', '')">Book on WhatsApp</button>
-    </div>
-
-    <div class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Innova_Crysta_2.4_Z_front_right.jpg" alt="Innova Crysta">
-      <h3>Innova Crysta</h3>
-      <p>₹28/km</p>
-      <button onclick="setRoute('', '')">Book on WhatsApp</button>
-    </div>
-
-    <div class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ForceTravellerfront.JPG" alt="Tempo Traveller">
-      <h3>Tempo Traveller</h3>
-      <p>₹30/km</p>
-      <button onclick="setRoute('', '')">Book on WhatsApp</button>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- SHARED CAB -->
-<section id="shared" class="section shared-section">
-  <h2>Shared Cab Booking</h2>
   <p class="section-subtitle">
-    Book your seat easily on WhatsApp
+    Vehicle rates for private cab bookings
   </p>
 
-  <div class="booking-box">
 
-    <label>Route</label>
-    <select id="sharedRoute">
-      <option value="">Select Route</option>
-      <option>Chandigarh ↔ Palampur</option>
-      <option>Chandigarh ↔ Baijnath</option>
-      <option>Panchrukhi ↔ Chandigarh</option>
-    </select>
+  <div class="route-grid">
 
-    <label>Travel Date</label>
-    <input type="date" id="sharedDate">
 
-    <label>Travel Time</label>
-    <input type="time" id="sharedTime">
+    <div class="route-card">
+      <h3>🚕 Wagon-R / Alto</h3>
+      <div class="price">₹16/km</div>
+      <p>Comfortable small car</p>
+    </div>
 
-    <label>Number of Seats</label>
-    <input type="number" id="sharedSeats" min="1" max="10" value="1">
 
-    <label>Customer Name</label>
-    <input type="text" id="sharedName" placeholder="Enter your name">
+    <div class="route-card">
+      <h3>🚕 Dzire / Etios</h3>
+      <div class="price">₹19/km</div>
+      <p>Comfortable sedan</p>
+    </div>
 
-    <label>Customer Mobile</label>
-    <input type="tel" id="sharedMobile" placeholder="Enter mobile number">
 
-    <label>Pickup Location</label>
-    <input type="text" id="pickup" placeholder="Pickup location">
+    <div class="route-card">
+      <h3>🚕 Ertiga</h3>
+      <div class="price">₹22/km</div>
+      <p>Family vehicle</p>
+    </div>
 
-    <label>Drop Location</label>
-    <input type="text" id="drop" placeholder="Drop location">
 
-    <button class="location-btn" onclick="getLocation('shared')">
-      📍 Use My Current Location
-    </button>
+    <div class="route-card">
+      <h3>🚕 Innova Crysta</h3>
+      <div class="price">₹28/km</div>
+      <p>Premium family cab</p>
+    </div>
 
-    <button class="whatsapp-btn" onclick="bookSharedCab()">
-      💬 Book Seat on WhatsApp
-    </button>
+
+    <div class="route-card">
+      <h3>🚐 Tempo Traveller</h3>
+      <div class="price">₹30/km</div>
+      <p>Group travel</p>
+    </div>
+
 
   </div>
+
 </section>
 
 
-<!-- CONTACT -->
-<section id="contact" class="section contact-section">
-  <h2>Contact Pahadi Miles</h2>
+<!-- =========================
+     VEHICLES
+========================= -->
 
-  <p>
-    📞 Call:
-    <a href="tel:+918219360228">8219360228</a>
+<section id="vehicles" class="section">
+
+  <h2>
+    🚕 Our Vehicles
+  </h2>
+
+  <p class="section-subtitle">
+    Comfortable vehicles for Himachal journeys
   </p>
 
-  <p>
-    📞 Call:
-    <a href="tel:+918988889818">8988889818</a>
-  </p>
 
-  <p>
-    💬 WhatsApp:
-    <a href="https://wa.me/918219360228" target="_blank">
-      8219360228
-    </a>
-  </p>
+  <div class="route-grid">
 
-  <p>
-    💬 WhatsApp:
-    <a href="https://wa.me/918988889818" target="_blank">
-      8988889818
-    </a>
-  </p>
 
-  <p>
-    📧 Email:
-    <a href="mailto:atulminhas9@gmail.com">
-      atulminhas9@gmail.com
-    </a>
-  </p>
+    <div class="route-card">
 
-  <p>
-    🌐 Website:
-    <a href="https://shivaytourtravels.in/" target="_blank">
-      shivaytourtravels.in
-    </a>
-  </p>
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/2020_Maruti_Suzuki_Wagon_R_VXi_%28O%29_%28India%29_front_view.png"
+        alt="Wagon R">
+
+      <h3>Wagon-R / Alto</h3>
+
+      <div class="price">
+        ₹16/km
+      </div>
+
+      <p>Comfortable small car</p>
+
+      <button
+        onclick="setRoute('','')">
+
+        Book on WhatsApp
+
+      </button>
+
+    </div>
+
+
+    <div class="route-card">
+
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Maruti_Suzuki_Dzire_VXi_VVT_%28front%29.JPG"
+        alt="Dzire">
+
+      <h3>Dzire / Etios</h3>
+
+      <div class="price">
+        ₹19/km
+      </div>
+
+      <p>Comfortable sedan</p>
+
+      <button
+        onclick="setRoute('','')">
+
+        Book on WhatsApp
+
+      </button>
+
+    </div>
+
+
+    <div class="route-card">
+
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/2022_Suzuki_Ertiga_GX_Hybrid.jpg"
+        alt="Ertiga">
+
+      <h3>Ertiga</h3>
+
+      <div class="price">
+        ₹22/km
+      </div>
+
+      <p>Family vehicle</p>
+
+      <button
+        onclick="setRoute('','')">
+
+        Book on WhatsApp
+
+      </button>
+
+    </div>
+
+
+    <div class="route-card">
+
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Innova_Crysta_2.4_Z_front_right.jpg"
+        alt="Innova Crysta">
+
+      <h3>Innova Crysta</h3>
+
+      <div class="price">
+        ₹28/km
+      </div>
+
+      <p>Premium family cab</p>
+
+      <button
+        onclick="setRoute('','')">
+
+        Book on WhatsApp
+
+      </button>
+
+    </div>
+
+
+    <div class="route-card">
+
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/ForceTravellerfront.JPG"
+        alt="Tempo Traveller">
+
+      <h3>Tempo Traveller</h3>
+
+      <div class="price">
+        ₹30/km
+      </div>
+
+      <p>Group travel</p>
+
+      <button
+        onclick="setRoute('','')">
+
+        Book on WhatsApp
+
+      </button>
+
+    </div>
+
+
+  </div>
+
 </section>
 
 
-<!-- FOOTER -->
-<footer>
-  <h3>Pahadi Miles Tour & Travels</h3>
+<!-- =========================
+     SHARED CAB BOOKING
+========================= -->
+
+<section id="shared" class="section">
+
+  <h2>
+    💺 Shared Cab Booking
+  </h2>
+
+  <p class="section-subtitle">
+    Book your shared cab seat easily on WhatsApp
+  </p>
+
+
+  <div class="search-box">
+
+
+    <div class="field">
+
+      <label>Route</label>
+
+      <select id="sharedRoute">
+
+        <option value="">
+          Select Route
+        </option>
+
+        <option>
+          Chandigarh ↔ Palampur
+        </option>
+
+        <option>
+          Chandigarh ↔ Baijnath
+        </option>
+
+        <option>
+          Panchrukhi ↔ Chandigarh
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Travel Date</label>
+
+      <input
+        type="date"
+        id="sharedDate">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Travel Time</label>
+
+      <input
+        type="time"
+        id="sharedTime">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Number of Seats</label>
+
+      <input
+        type="number"
+        id="sharedSeats"
+        min="1"
+        max="10"
+        value="1">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Customer Name</label>
+
+      <input
+        type="text"
+        id="customerName"
+        placeholder="Enter your name">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Customer Mobile</label>
+
+      <input
+        type="tel"
+        id="customerMobile"
+        placeholder="Enter mobile number">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Pickup Location</label>
+
+      <input
+        type="text"
+        id="pickupDetails"
+        placeholder="Pickup location">
+
+    </div>
+
+
+    <div class="field">
+
+      <label>Drop Location</label>
+
+      <input
+        type="text"
+        id="dropDetails"
+        placeholder="Drop location">
+
+    </div>
+
+
+    <button
+      class="location-btn"
+      onclick="getLocation('shared')">
+
+      📍 Use My Current Location
+
+    </button>
+
+
+    <button
+      class="search-btn"
+      onclick="bookSharedCab()">
+
+      💬 Book Seat on WhatsApp
+
+    </button>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="section">
+
+  <h2>
+    📞 Contact Pahadi Miles
+  </h2>
+
+  <p class="section-subtitle">
+    Book your cab or tour directly
+  </p>
+
+
+  <div class="search-box"
+       style="text-align:center;">
+
+
+    <p style="margin:10px;">
+      📞 Call:
+      <a
+        href="tel:+918219360228"
+        style="color:#1261a0;font-weight:800;">
+        8219360228
+      </a>
+    </p>
+
+
+    <p style="margin:10px;">
+      📞 Call:
+      <a
+        href="tel:+918988889818"
+        style="color:#1261a0;font-weight:800;">
+        8988889818
+      </a>
+    </p>
+
+
+    <p style="margin:10px;">
+
+      💬 WhatsApp 1:
+      <a
+        href="https://wa.me/918219360228"
+        target="_blank"
+        style="color:#159447;font-weight:800;">
+
+        8219360228
+
+      </a>
+
+    </p>
+
+
+    <p style="margin:10px;">
+
+      💬 WhatsApp 2:
+      <a
+        href="https://wa.me/918988889818"
+        target="_blank"
+        style="color:#159447;font-weight:800;">
+
+        8988889818
+
+      </a>
+
+    </p>
+
+
+    <p style="margin:10px;">
+
+      📧 Email:
+      <a
+        href="mailto:atulminhas9@gmail.com"
+        style="color:#1261a0;font-weight:800;">
+
+        atulminhas9@gmail.com
+
+      </a>
+
+    </p>
+
+
+    <p style="margin:10px;">
+
+      🌐 Website:
+      <a
+        href="https://shivaytourtravels.in/"
+        target="_blank"
+        style="color:#1261a0;font-weight:800;">
+
+        Pahadi Miles Tour & Travels
+
+      </a>
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer
+  style="
+    width:100%;
+    background:#1261a0;
+    color:#fff;
+    text-align:center;
+    padding:30px 15px;
+  ">
+
+  <h3>
+    Pahadi Miles Tour & Travels
+  </h3>
 
   <p>
-    Himachal • Cabs • Shared Cabs • Tours
+    Himachal • Cabs • Shared Rides • Tours
   </p>
 
   <p>
     Comfortable journeys across Himachal Pradesh
   </p>
 
-  <div class="footer-buttons">
 
-    <a href="tel:+918219360228" class="call-btn">
+  <div
+    style="
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:18px 0;
+    ">
+
+
+    <a
+      href="tel:+918219360228"
+      style="
+        background:#fff;
+        color:#1261a0;
+        padding:10px 16px;
+        border-radius:8px;
+        font-weight:800;
+      ">
+
       📞 Call 8219360228
+
     </a>
 
-    <a href="https://wa.me/918219360228" target="_blank" class="whatsapp-btn">
+
+    <a
+      href="https://wa.me/918219360228"
+      target="_blank"
+      style="
+        background:#25d366;
+        color:#fff;
+        padding:10px 16px;
+        border-radius:8px;
+        font-weight:800;
+      ">
+
       💬 WhatsApp
+
     </a>
 
   </div>
 
-  <p class="copyright">
-    © 2026 Pahadi Miles Tour & Travels. All Rights Reserved.
+
+  <p>
+    © 2026 Pahadi Miles Tour & Travels.
+    All Rights Reserved.
   </p>
+
 </footer>
 
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
 
-/* ================================
+/* =========================
    WHATSAPP NUMBERS
-================================ */
+========================= */
 
-const whatsappNumbers = [
-  "918219360228",
-  "918988889818"
+const WHATSAPP_NUMBERS = [
+  "8219360228",
+  "8988889818"
 ];
 
 
-/* ================================
-   SEND WHATSAPP TO BOTH NUMBERS
-================================ */
+/* =========================
+   SEND WHATSAPP
+========================= */
 
 function sendWhatsApp(message) {
 
-  const encodedMessage = encodeURIComponent(message);
+  const encodedMessage =
+    encodeURIComponent(message);
 
-  whatsappNumbers.forEach((number, index) => {
+  WHATSAPP_NUMBERS.forEach(
+    function(number, index) {
 
-    setTimeout(() => {
+      setTimeout(
+        function() {
 
-      window.open(
-        "https://wa.me/" + number + "?text=" + encodedMessage,
-        "_blank"
+          window.open(
+            "https://wa.me/91" +
+            number +
+            "?text=" +
+            encodedMessage,
+            "_blank"
+          );
+
+        },
+        index * 700
       );
 
-    }, index * 700);
-
-  });
+    }
+  );
 }
 
 
-/* ================================
+/* =========================
    SET ROUTE
-================================ */
+========================= */
 
 function setRoute(from, to) {
 
-  const fromBox = document.getElementById("from");
-  const toBox = document.getElementById("to");
+  const fromBox =
+    document.getElementById("from");
 
-  if (fromBox) fromBox.value = from;
-  if (toBox) toBox.value = to;
+  const toBox =
+    document.getElementById("to");
 
-  const searchSection = document.getElementById("search");
+  if (fromBox) {
+    fromBox.value = from;
+  }
 
-  if (searchSection) {
-    searchSection.scrollIntoView({
+  if (toBox) {
+    toBox.value = to;
+  }
+
+  const search =
+    document.getElementById("search");
+
+  if (search) {
+
+    search.scrollIntoView({
       behavior: "smooth"
     });
+
   }
+
 }
 
 
-/* ================================
+/* =========================
    SEARCH ROUTE
-================================ */
+========================= */
 
 function searchRoute() {
 
-  const from = document.getElementById("from").value.trim();
-  const to = document.getElementById("to").value.trim();
-  const date = document.getElementById("travelDate").value;
-  const passengers = document.getElementById("passengers").value;
+  const from =
+    document
+      .getElementById("from")
+      .value
+      .trim();
+
+  const to =
+    document
+      .getElementById("to")
+      .value
+      .trim();
+
+  const date =
+    document
+      .getElementById("travelDate")
+      .value;
+
+  const passengers =
+    document
+      .getElementById("passengers")
+      .value;
+
 
   if (!from || !to) {
-    alert("Please select From and To locations.");
+
+    alert(
+      "Please select From and To locations."
+    );
+
     return;
   }
+
 
   const message =
 `🚕 NEW CAB BOOKING
@@ -1792,39 +1812,102 @@ Please confirm cab availability and fare.
 
 Thank you.`;
 
+
   sendWhatsApp(message);
+
 }
 
 
-/* ================================
+/* =========================
    SHARED CAB BOOKING
-================================ */
+========================= */
 
 function bookSharedCab() {
 
-  const route = document.getElementById("sharedRoute").value;
-  const date = document.getElementById("sharedDate").value;
-  const time = document.getElementById("sharedTime").value;
-  const seats = document.getElementById("sharedSeats").value;
-  const name = document.getElementById("sharedName").value.trim();
-  const mobile = document.getElementById("sharedMobile").value.trim();
-  const pickup = document.getElementById("pickup").value.trim();
-  const drop = document.getElementById("drop").value.trim();
+  const route =
+    document
+      .getElementById("sharedRoute")
+      .value;
+
+  const date =
+    document
+      .getElementById("sharedDate")
+      .value;
+
+  const time =
+    document
+      .getElementById("sharedTime")
+      .value;
+
+  const seats =
+    document
+      .getElementById("sharedSeats")
+      .value;
+
+  const name =
+    document
+      .getElementById("customerName")
+      .value
+      .trim();
+
+  const mobile =
+    document
+      .getElementById("customerMobile")
+      .value
+      .trim();
+
+  const pickup =
+    document
+      .getElementById("pickupDetails")
+      .value
+      .trim();
+
+  const drop =
+    document
+      .getElementById("dropDetails")
+      .value
+      .trim();
+
 
   if (!route) {
-    alert("Please select your route.");
+
+    alert(
+      "Please select your route."
+    );
+
     return;
   }
+
+
+  if (!date) {
+
+    alert(
+      "Please select travel date."
+    );
+
+    return;
+  }
+
 
   if (!name) {
-    alert("Please enter customer name.");
+
+    alert(
+      "Please enter customer name."
+    );
+
     return;
   }
 
+
   if (!mobile) {
-    alert("Please enter customer mobile number.");
+
+    alert(
+      "Please enter customer mobile number."
+    );
+
     return;
   }
+
 
   const message =
 `🚕 SHARED CAB BOOKING
@@ -1832,7 +1915,7 @@ function bookSharedCab() {
 🏔️ Pahadi Miles Tour & Travels
 
 🛣️ Route: ${route}
-📅 Travel Date: ${date || "Not specified"}
+📅 Travel Date: ${date}
 ⏰ Travel Time: ${time || "Not specified"}
 💺 Seats: ${seats}
 
@@ -1846,57 +1929,90 @@ Please confirm my shared cab booking.
 
 Thank you.`;
 
+
   sendWhatsApp(message);
+
 }
 
 
-/* ================================
+/* =========================
    CURRENT LOCATION
-================================ */
+========================= */
 
 function getLocation(type) {
 
   if (!navigator.geolocation) {
-    alert("Location is not supported by your browser.");
+
+    alert(
+      "Location is not supported by your browser."
+    );
+
     return;
   }
+
 
   navigator.geolocation.getCurrentPosition(
 
     function(position) {
 
-      const lat = position.coords.latitude;
-      const lng = position.coords.longitude;
+      const lat =
+        position.coords.latitude;
+
+      const lng =
+        position.coords.longitude;
+
 
       const mapLink =
-        "https://www.google.com/maps?q=" + lat + "," + lng;
+        "https://www.google.com/maps?q=" +
+        lat +
+        "," +
+        lng;
+
 
       if (type === "search") {
 
-        const fromBox = document.getElementById("from");
+        const fromBox =
+          document.getElementById("from");
 
         if (fromBox) {
-          fromBox.value = "Current Location";
+
+          fromBox.value =
+            "Current Location";
+
         }
+
+        window.open(
+          mapLink,
+          "_blank"
+        );
 
       }
 
+
       if (type === "shared") {
 
-        const pickupBox = document.getElementById("pickup");
+        const pickupBox =
+          document.getElementById(
+            "pickupDetails"
+          );
 
         if (pickupBox) {
 
           pickupBox.value =
-            "Current Location: " + mapLink;
+            "Current Location: " +
+            mapLink;
 
         }
 
       }
 
-      alert("Current location added successfully.");
+
+      alert(
+        "Current location added successfully."
+      );
 
     },
+
 
     function() {
 
@@ -1907,40 +2023,93 @@ function getLocation(type) {
     }
 
   );
+
 }
 
 
-/* ================================
+/* =========================
    SERVICE WORKER
-================================ */
+========================= */
 
 if ("serviceWorker" in navigator) {
 
-  window.addEventListener("load", function() {
+  window.addEventListener(
+    "load",
+    function() {
 
-    navigator.serviceWorker
-      .register("sw.js")
-      .then(function() {
+      navigator.serviceWorker
+        .register("./sw.js")
 
-        console.log(
-          "Pahadi Miles Service Worker registered"
+        .then(
+          function() {
+
+            console.log(
+              "Pahadi Miles Service Worker registered"
+            );
+
+          }
+        )
+
+        .catch(
+          function(error) {
+
+            console.log(
+              "Service Worker registration failed:",
+              error
+            );
+
+          }
         );
 
-      })
-      .catch(function(error) {
-
-        console.log(
-          "Service Worker registration failed:",
-          error
-        );
-
-      });
-
-  });
+    }
+  );
 
 }
 
+
+/* =========================
+   SET MINIMUM DATES
+========================= */
+
+window.addEventListener(
+  "load",
+  function() {
+
+    const today =
+      new Date()
+        .toISOString()
+        .split("T")[0];
+
+
+    const travelDate =
+      document.getElementById(
+        "travelDate"
+      );
+
+    const sharedDate =
+      document.getElementById(
+        "sharedDate"
+      );
+
+
+    if (travelDate) {
+
+      travelDate.min = today;
+
+    }
+
+
+    if (sharedDate) {
+
+      sharedDate.min = today;
+
+    }
+
+  }
+);
+
 </script>
 
+
 </body>
-</html>
+     </html>
