@@ -816,7 +816,7 @@ PART 2A KO IS LINE KE BILKUL NEECHHE PASTE KARNA HAI.
 PART 1 KA KOI CODE DELETE NAHI KARNA.
 =================================================
 -->
- <!-- =================================================
+<!-- =================================================
      PART 2 — CAB FARES + SHARED CAB
 ================================================= -->
 
@@ -1215,473 +1215,814 @@ PART 3 ISKE BILKUL NEECHHE PASTE HOGA.
 
 PART 2 KE BAAD KUCH DELETE NAHI KARNA.
 ================================================= -->
-   <!-- =========================
-     SHARED BOOKING FORM
-========================= -->
+<!-- =====================================================
+     SHARED CAB BOOKING
+===================================================== -->
 
 <div class="booking-card" id="sharedBooking">
 
-<div class="booking-title">
-<h3>📲 Shared Cab Booking</h3>
-<p>Fill your details and send booking request on WhatsApp.</p>
+    <div class="booking-title">
+
+        <h3>📲 Shared Cab Booking</h3>
+
+        <p>
+            Fill your details and send booking request on WhatsApp.
+        </p>
+
+    </div>
+
+
+    <div class="booking-grid">
+
+
+        <div class="form-group">
+
+            <label>Route</label>
+
+            <select id="sharedRoute">
+
+                <option value="">
+                    Select Shared Route
+                </option>
+
+                <option value="Chandigarh → Palampur">
+                    Chandigarh → Palampur — ₹900/seat
+                </option>
+
+                <option value="Palampur → Chandigarh">
+                    Palampur → Chandigarh — ₹900/seat
+                </option>
+
+                <option value="Chandigarh → Panchrukhi">
+                    Chandigarh → Panchrukhi — ₹850/seat
+                </option>
+
+                <option value="Panchrukhi → Chandigarh">
+                    Panchrukhi → Chandigarh — ₹850/seat
+                </option>
+
+                <option value="Chandigarh → Baijnath">
+                    Chandigarh → Baijnath — ₹900/seat
+                </option>
+
+                <option value="Baijnath → Chandigarh">
+                    Baijnath → Chandigarh — ₹900/seat
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Travel Date</label>
+
+            <input
+                type="date"
+                id="sharedDate">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Travel Time</label>
+
+            <input
+                type="time"
+                id="sharedTime">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Seats</label>
+
+            <select id="sharedSeats">
+
+                <option value="1">1 Seat</option>
+                <option value="2">2 Seats</option>
+                <option value="3">3 Seats</option>
+                <option value="4">4 Seats</option>
+                <option value="5">5 Seats</option>
+                <option value="6">6 Seats</option>
+                <option value="7">7 Seats</option>
+                <option value="8">8 Seats</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Customer Name</label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Mobile Number</label>
+
+            <input
+                type="tel"
+                id="customerMobile"
+                placeholder="Enter mobile number">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Pickup Location</label>
+
+            <input
+                type="text"
+                id="pickup"
+                placeholder="Pickup point">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Drop Location</label>
+
+            <input
+                type="text"
+                id="drop"
+                placeholder="Drop point">
+
+        </div>
+
+    </div>
+
+
+    <div class="location-row">
+
+        <button
+            type="button"
+            class="btn location-btn"
+            onclick="getLocation('shared')">
+
+            📍 Use My Current Location
+
+        </button>
+
+
+        <span id="locationStatus">
+
+            Current location not selected
+
+        </span>
+
+    </div>
+
+
+    <button
+        type="button"
+        class="btn btn-whatsapp full-book-btn"
+        onclick="bookSharedCab()">
+
+        💬 Send Booking on WhatsApp
+
+    </button>
+
 </div>
 
-<div class="booking-grid">
-
-<div class="form-group">
-<label>Route</label>
-<select id="sharedRoute">
-
-<option value="">Select Shared Route</option>
-
-<option value="Chandigarh → Palampur">
-Chandigarh → Palampur — ₹900/seat
-</option>
-
-<option value="Palampur → Chandigarh">
-Palampur → Chandigarh — ₹900/seat
-</option>
-
-<option value="Chandigarh → Panchrukhi">
-Chandigarh → Panchrukhi — ₹850/seat
-</option>
-
-<option value="Panchrukhi → Chandigarh">
-Panchrukhi → Chandigarh — ₹850/seat
-</option>
-
-<option value="Chandigarh → Baijnath">
-Chandigarh → Baijnath — ₹900/seat
-</option>
-
-<option value="Baijnath → Chandigarh">
-Baijnath → Chandigarh — ₹900/seat
-</option>
-
-</select>
-</div>
 
 
-<div class="form-group">
-<label>Travel Date</label>
-<input type="date" id="sharedDate">
-</div>
-
-
-<div class="form-group">
-<label>Travel Time</label>
-<input type="time" id="sharedTime">
-</div>
-
-
-<div class="form-group">
-<label>Seats</label>
-
-<select id="sharedSeats">
-
-<option value="1">1 Seat</option>
-<option value="2">2 Seats</option>
-<option value="3">3 Seats</option>
-<option value="4">4 Seats</option>
-<option value="5">5 Seats</option>
-<option value="6">6 Seats</option>
-<option value="7">7 Seats</option>
-<option value="8">8 Seats</option>
-
-</select>
-</div>
-
-
-<div class="form-group">
-<label>Customer Name</label>
-
-<input
-type="text"
-id="customerName"
-placeholder="Enter your name">
-</div>
-
-
-<div class="form-group">
-<label>Mobile Number</label>
-
-<input
-type="tel"
-id="customerMobile"
-placeholder="Enter mobile number">
-</div>
-
-
-<div class="form-group">
-<label>Pickup Location</label>
-
-<input
-type="text"
-id="pickup"
-placeholder="Pickup point">
-</div>
-
-
-<div class="form-group">
-<label>Drop Location</label>
-
-<input
-type="text"
-id="drop"
-placeholder="Drop point">
-</div>
-
-</div>
-
-
-<div class="location-row">
-
-<button
-type="button"
-class="btn location-btn"
-onclick="getLocation('shared')">
-
-📍 Use My Current Location
-
-</button>
-
-<span id="locationStatus">
-Current location not selected
-</span>
-
-</div>
-
-
-<button
-type="button"
-class="btn btn-whatsapp full-book-btn"
-onclick="bookSharedCab()">
-
-💬 Send Booking on WhatsApp
-
-</button>
-
-</div>
-
-
-
-<!-- =========================
+<!-- =====================================================
      TOUR PACKAGES
-========================= -->
+===================================================== -->
 
 <section class="section" id="tours">
 
-<div class="section-title">
+    <div class="section-title">
 
-<h2>🏔️ Tour Packages</h2>
+        <h2>🏔️ Tour Packages</h2>
 
-<p>
-Explore Himachal and North India with Shivay Tour Travels
-</p>
+        <p>
+            Explore Himachal and North India with Shivay Tour Travels
+        </p>
 
-</div>
+    </div>
 
 
-<div class="tour-grid">
+    <div class="tour-grid">
 
 
-<!-- MANALI -->
+        <!-- =================================================
+             1. MANALI
+        ================================================== -->
 
-<div class="tour-card">
+        <div class="tour-card">
 
-<div class="tour-image">
+            <div class="tour-image">
 
-<img
-src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=900&q=80"
-alt="Manali Tour">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Himalayan_mountains_in_Manali%2C_Himachal_Pradesh.jpg"
+                    alt="Manali Himachal Pradesh"
+                    loading="lazy">
 
-</div>
+            </div>
 
-<div class="tour-content">
 
-<span class="tour-tag">
-Himachal
-</span>
+            <div class="tour-content">
 
-<h3>Manali Tour</h3>
+                <span class="tour-tag">
+                    HIMACHAL
+                </span>
 
-<p>
-Explore Manali, Solang Valley, Mall Road and beautiful Himalayan surroundings.
-</p>
+                <h3>
+                    Manali Tour
+                </h3>
 
-<div class="tour-bottom">
+                <p>
+                    Explore Manali, Solang Valley, Mall Road
+                    and beautiful Himalayan surroundings.
+                </p>
 
-<strong>Custom Quote</strong>
 
-<button
-onclick="bookTour('Manali Tour')">
+                <div class="tour-bottom">
 
-WhatsApp Quote
+                    <strong>
+                        Custom Quote
+                    </strong>
 
-</button>
+                    <button
+                        onclick="bookTour('Manali Tour')">
 
-</div>
+                        WhatsApp Quote
 
-</div>
+                    </button>
 
-</div>
+                </div>
 
+            </div>
 
-<!-- DHARAMSHALA -->
+        </div>
 
-<div class="tour-card">
 
-<div class="tour-image">
 
-<img
-src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80"
-alt="Dharamshala Tour">
+        <!-- =================================================
+             2. DHARAMSHALA
+        ================================================== -->
 
-</div>
+        <div class="tour-card">
 
-<div class="tour-content">
+            <div class="tour-image">
 
-<span class="tour-tag">
-Himachal
-</span>
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dharmshala_from_Mcleodganj_himachal_india.jpg"
+                    alt="Dharamshala McLeod Ganj Himachal Pradesh"
+                    loading="lazy">
 
-<h3>Dharamshala Tour</h3>
+            </div>
 
-<p>
-Visit Dharamshala, McLeod Ganj, Bhagsu and beautiful Dhauladhar mountains.
-</p>
 
-<div class="tour-bottom">
+            <div class="tour-content">
 
-<strong>Custom Quote</strong>
+                <span class="tour-tag">
+                    HIMACHAL
+                </span>
 
-<button
-onclick="bookTour('Dharamshala Tour')">
+                <h3>
+                    Dharamshala Tour
+                </h3>
 
-WhatsApp Quote
+                <p>
+                    Visit Dharamshala, McLeod Ganj,
+                    Bhagsu and beautiful Dhauladhar mountains.
+                </p>
 
-</button>
 
-</div>
+                <div class="tour-bottom">
 
-</div>
+                    <strong>
+                        Custom Quote
+                    </strong>
 
-</div>
+                    <button
+                        onclick="bookTour('Dharamshala Tour')">
 
+                        WhatsApp Quote
 
-<!-- DALHOUSIE -->
+                    </button>
 
-<div class="tour-card">
+                </div>
 
-<div class="tour-image">
+            </div>
 
-<img
-src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=900&q=80"
-alt="Dalhousie Khajjiar Tour">
+        </div>
 
-</div>
 
-<div class="tour-content">
 
-<span class="tour-tag">
-Himachal
-</span>
+        <!-- =================================================
+             3. DALHOUSIE KHAJJIAR
+        ================================================== -->
 
-<h3>Dalhousie – Khajjiar</h3>
+        <div class="tour-card">
 
-<p>
-Enjoy Dalhousie, Khajjiar meadows and peaceful Himalayan views.
-</p>
+            <div class="tour-image">
 
-<div class="tour-bottom">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/KhajjiarDalhousie.jpg"
+                    alt="Khajjiar Dalhousie Himachal Pradesh"
+                    loading="lazy">
 
-<strong>Custom Quote</strong>
+            </div>
 
-<button
-onclick="bookTour('Dalhousie – Khajjiar Tour')">
 
-WhatsApp Quote
+            <div class="tour-content">
 
-</button>
+                <span class="tour-tag">
+                    HIMACHAL
+                </span>
 
-</div>
+                <h3>
+                    Dalhousie – Khajjiar
+                </h3>
 
-</div>
+                <p>
+                    Enjoy Dalhousie, Khajjiar meadows,
+                    forests and peaceful Himalayan views.
+                </p>
 
-</div>
 
+                <div class="tour-bottom">
 
-<!-- SPITI -->
+                    <strong>
+                        Custom Quote
+                    </strong>
 
-<div class="tour-card">
+                    <button
+                        onclick="bookTour('Dalhousie – Khajjiar Tour')">
 
-<div class="tour-image">
+                        WhatsApp Quote
 
-<img
-src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=900&q=80"
-alt="Spiti Valley Tour">
+                    </button>
 
-</div>
+                </div>
 
-<div class="tour-content">
+            </div>
 
-<span class="tour-tag">
-Adventure
-</span>
+        </div>
 
-<h3>Spiti Valley Tour</h3>
 
-<p>
-Experience high mountains, monasteries, valleys and unforgettable Himalayan landscapes.
-</p>
 
-<div class="tour-bottom">
+        <!-- =================================================
+             4. SPITI
+        ================================================== -->
 
-<strong>Custom Quote</strong>
+        <div class="tour-card">
 
-<button
-onclick="bookTour('Spiti Valley Tour')">
+            <div class="tour-image">
 
-WhatsApp Quote
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Key_Monastery%2C_Spiti_Valley.JPG"
+                    alt="Key Monastery Spiti Valley"
+                    loading="lazy">
 
-</button>
+            </div>
 
-</div>
 
-</div>
+            <div class="tour-content">
 
-</div>
+                <span class="tour-tag">
+                    ADVENTURE
+                </span>
 
+                <h3>
+                    Spiti Valley Tour
+                </h3>
 
-<!-- SHIMLA MANALI -->
+                <p>
+                    Experience Key Monastery, high mountains,
+                    valleys and unforgettable Himalayan landscapes.
+                </p>
 
-<div class="tour-card">
 
-<div class="tour-image">
+                <div class="tour-bottom">
 
-<img
-src="https://images.unsplash.com/photo-1472345361393-3f6e7f0f6b2f?auto=format&fit=crop&w=900&q=80"
-alt="Shimla Manali Tour">
+                    <strong>
+                        Custom Quote
+                    </strong>
 
-</div>
+                    <button
+                        onclick="bookTour('Spiti Valley Tour')">
 
-<div class="tour-content">
+                        WhatsApp Quote
 
-<span class="tour-tag">
-Popular
-</span>
+                    </button>
 
-<h3>Shimla – Manali Tour</h3>
+                </div>
 
-<p>
-A memorable Himachal journey covering Shimla, Manali and mountain destinations.
-</p>
+            </div>
 
-<div class="tour-bottom">
+        </div>
 
-<strong>Custom Quote</strong>
 
-<button
-onclick="bookTour('Shimla – Manali Tour')">
 
-WhatsApp Quote
+        <!-- =================================================
+             5. SHIMLA MANALI
+        ================================================== -->
 
-</button>
+        <div class="tour-card">
 
-</div>
+            <div class="tour-image">
 
-</div>
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Shimla_l_Himachal_Pradesh.jpg"
+                    alt="Shimla Himachal Pradesh"
+                    loading="lazy">
 
-</div>
+            </div>
 
 
-<!-- KANGRA PALAMPUR BIR -->
+            <div class="tour-content">
 
-<div class="tour-card">
+                <span class="tour-tag">
+                    POPULAR
+                </span>
 
-<div class="tour-image">
+                <h3>
+                    Shimla – Manali Tour
+                </h3>
 
-<img
-src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
-alt="Kangra Palampur Bir Tour">
+                <p>
+                    A memorable Himachal journey covering
+                    Shimla, Manali and beautiful mountain destinations.
+                </p>
 
-</div>
 
-<div class="tour-content">
+                <div class="tour-bottom">
 
-<span class="tour-tag">
-Local Experience
-</span>
+                    <strong>
+                        Custom Quote
+                    </strong>
 
-<h3>Kangra – Palampur – Bir</h3>
+                    <button
+                        onclick="bookTour('Shimla – Manali Tour')">
 
-<p>
-Discover tea gardens, Kangra Valley, Palampur and Bir surroundings.
-</p>
+                        WhatsApp Quote
 
-<div class="tour-bottom">
+                    </button>
 
-<strong>Custom Quote</strong>
+                </div>
 
-<button
-onclick="bookTour('Kangra – Palampur – Bir Tour')">
+            </div>
 
-WhatsApp Quote
+        </div>
 
-</button>
 
-</div>
 
-</div>
+        <!-- =================================================
+             6. KANGRA PALAMPUR BIR
+        ================================================== -->
 
-</div>
+        <div class="tour-card">
 
+            <div class="tour-image">
 
-<!-- HARIDWAR RISHIKESH -->
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Palampur_tea_plantation%2C_Himachal_Pradesh%2C_India.jpg"
+                    alt="Palampur Tea Gardens Kangra Himachal Pradesh"
+                    loading="lazy">
 
-<div class="tour-card">
+            </div>
 
-<div class="tour-image">
 
-<img
-src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80"
-alt="Haridwar Rishikesh Tour">
+            <div class="tour-content">
 
-</div>
+                <span class="tour-tag">
+                    LOCAL EXPERIENCE
+                </span>
 
-<div class="tour-content">
+                <h3>
+                    Kangra – Palampur – Bir
+                </h3>
 
-<span class="tour-tag">
-North India
-</span>
+                <p>
+                    Discover Kangra Valley, Palampur tea gardens,
+                    Dhauladhar views and Bir surroundings.
+                </p>
 
-<h3>Haridwar – Rishikesh</h3>
 
-<p>
-Visit Ganga ghats, temples and beautiful surroundings of Rishikesh.
-</p>
+                <div class="tour-bottom">
 
-<div class="tour-bottom">
+                    <strong>
+                        Custom Quote
+                    </strong>
 
-<strong>Custom Quote</strong>
+                    <button
+                        onclick="bookTour('Kangra – Palampur – Bir Tour')">
 
-<button
-onclick="bookTour('Haridwar – Rishikesh Tour')">
+                        WhatsApp Quote
 
-WhatsApp Quote
+                    </button>
 
-</button>
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
 
 
-</div>
+        <!-- =================================================
+             7. HARIDWAR RISHIKESH
+        ================================================== -->
+
+        <div class="tour-card">
+
+            <div class="tour-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Ganga_at_Rishikesh.jpg"
+                    alt="Ganga Rishikesh"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="tour-content">
+
+                <span class="tour-tag">
+                    NORTH INDIA
+                </span>
+
+                <h3>
+                    Haridwar – Rishikesh
+                </h3>
+
+                <p>
+                    Visit Ganga ghats, temples, bridges
+                    and beautiful surroundings of Rishikesh.
+                </p>
+
+
+                <div class="tour-bottom">
+
+                    <strong>
+                        Custom Quote
+                    </strong>
+
+                    <button
+                        onclick="bookTour('Haridwar – Rishikesh Tour')">
+
+                        WhatsApp Quote
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 </section>
+
+
+
+<!-- =====================================================
+     TOUR PACKAGE DESIGN
+===================================================== -->
+
+<style>
+
+.tour-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+
+.tour-card{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid #dcecf3;
+
+    box-shadow:
+    0 8px 25px rgba(0,70,100,.09);
+
+    transition:.25s;
+
+}
+
+
+.tour-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 14px 32px rgba(0,70,100,.15);
+
+}
+
+
+.tour-image{
+
+    width:100%;
+
+    height:210px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #dff6ff,
+        #edfaff
+    );
+
+}
+
+
+.tour-image img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+}
+
+
+.tour-content{
+
+    padding:19px;
+
+}
+
+
+.tour-tag{
+
+    display:inline-block;
+
+    background:#e8f8fd;
+
+    color:#087ea4;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:.3px;
+
+}
+
+
+.tour-content h3{
+
+    color:#075b7c;
+
+    font-size:20px;
+
+    margin:10px 0 8px;
+
+}
+
+
+.tour-content p{
+
+    color:#6c8290;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    min-height:63px;
+
+}
+
+
+.tour-bottom{
+
+    margin-top:15px;
+
+    padding-top:13px;
+
+    border-top:
+    1px solid #e3eef3;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:8px;
+
+}
+
+
+.tour-bottom strong{
+
+    color:#16a34a;
+
+    font-size:13px;
+
+}
+
+
+.tour-bottom button{
+
+    border:none;
+
+    background:#16a34a;
+
+    color:#ffffff;
+
+    padding:9px 13px;
+
+    border-radius:22px;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+}
+
+
+.tour-bottom button:hover{
+
+    background:#12833d;
+
+}
+
+
+@media(max-width:1000px){
+
+    .tour-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .tour-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+
+    .tour-image{
+
+        height:210px;
+
+    }
+
+
+    .tour-content h3{
+
+        font-size:19px;
+
+    }
+
+}
+
+</style>
 <!-- =========================
      ABOUT
 ========================= -->
